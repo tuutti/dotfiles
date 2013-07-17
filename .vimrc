@@ -164,6 +164,8 @@ nnoremap <silent> g# g#zz
 " Toggle tagbar and auto resize existing spit windows to use exactly same
 " amount of space
 nmap <F8> :TagbarToggle<CR><C-w>=
+" Resize tagbar to use 30 chars instead of 40
+let g:tagbar_width = 30
 
 let g:Powerline_symbols = 'fancy'
 
