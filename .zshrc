@@ -50,6 +50,9 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 function xrdbload() {
   xrdb -load ~/.Xdefaults && xrdb -load ~/.Xresources
 }
+function d-install() { drush pm-download "$@"; drush pm-enable "$@"; }
+function d-cc() { drush cc all; }
+function d-uninstall() { drush pm-disable "$@"; drush pm-uninstall "$@"; }
 
 export TERM='xterm-256color'
 alias tmux='tmux -2'
