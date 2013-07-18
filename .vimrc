@@ -1,5 +1,9 @@
 " <TAB>: completion.
+let g:Powerline_theme = 'tuutti.vim'
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Remove delay between modes.
+set timeoutlen=1000 ttimeoutlen=0
 
 set encoding=utf-8
 
@@ -71,7 +75,7 @@ Bundle "honza/vim-snippets"
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'majutsushi/tagbar'
-"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 filetype plugin indent on     " required!
 "
@@ -167,7 +171,8 @@ nmap <F8> :TagbarToggle<CR><C-w>=
 " Resize tagbar to use 30 chars instead of 40
 let g:tagbar_width = 30
 
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
+let g:powerline_config_path = $HOME.'/.config/powerline/config_files'
 
 " Unimpaired: Move line up/down
 map <S-Up> [e
