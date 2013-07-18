@@ -71,7 +71,7 @@ Bundle "honza/vim-snippets"
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'majutsushi/tagbar'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 filetype plugin indent on     " required!
 "
@@ -167,7 +167,7 @@ nmap <F8> :TagbarToggle<CR><C-w>=
 " Resize tagbar to use 30 chars instead of 40
 let g:tagbar_width = 30
 
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 " Unimpaired: Move line up/down
 map <S-Up> [e
