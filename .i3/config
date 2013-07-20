@@ -191,7 +191,7 @@ for_window [title="Calculator"] floating enable
 ## Colours
 ##---------
 #                         | border | backgrond | text | indigator
-client.focused              #121212   #121212    #8ae234  #121212
+client.focused              #121212   #121212    #87d7ff  #121212
 client.focused_inactive     #121212   #121212    #999999  #121212
 client.unfocused            #121212   #121212    #999999  #121212
 client.urgent               #121212   #121212    #FF0000  #121212
