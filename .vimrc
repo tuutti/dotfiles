@@ -198,6 +198,12 @@ let g:powerline_config_path = $HOME.'/.config/powerline/config_files'
 "let g:airline_powerline_fonts = 1
 "let g:airline_theme='tuutti'
 
+" Leave insert mode when pressing arrows.
+inoremap  <Up>     <Esc><Up>
+inoremap  <Down>   <Esc><Down>
+inoremap  <Left>   <Esc><Left>
+inoremap  <Right>  <Esc><Right>
+
 " Leave mode handling for airline.vim
 set noshowmode
 
