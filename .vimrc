@@ -74,13 +74,14 @@ Bundle 'gmarik/vundle'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "honza/vim-snippets"
-Bundle 'kien/ctrlp.vim'
+"Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'majutsushi/tagbar'
 "Bundle 'bling/vim-airline'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'Shougo/unite.vim'
 
 filetype plugin indent on     " required!
 "
@@ -144,13 +145,14 @@ au BufRead,BufNewFile *.inc 		set filetype=php
 au InsertLeave * set nopaste
 
 " CtrlP settings
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_dotfiles = 0
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_match_window_reversed = 0
+"let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_dotfiles = 0
+"let g:ctrlp_switch_buffer = 0
+"let g:ctrlp_match_window_reversed = 0
+nnoremap <C-p> :Unite file_rec/async<cr>
 
 nmap ; :CtrlPBuffer<CR>
 " Autocenter on ggG
