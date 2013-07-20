@@ -97,7 +97,7 @@ filetype plugin indent on     " required!
 set background=dark
 " Color settings
 set t_Co=256
-colorscheme jellybeans 
+colorscheme tuutti 
 " use filetype plugins, e.g. for PHP
 " filetype plugin on
 
