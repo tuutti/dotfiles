@@ -152,7 +152,19 @@ au InsertLeave * set nopaste
 "let g:ctrlp_dotfiles = 0
 "let g:ctrlp_switch_buffer = 0
 "let g:ctrlp_match_window_reversed = 0
-nnoremap <C-p> :Unite file_rec/async<cr>
+
+" Search files with unite.vim
+nnoremap <C-p> :Unite file_rec<cr>i
+
+" Search from yank history.
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :Unite history/yank<cr>
+
+" Search content with unite.vim
+nnoremap <space>c :Unite grep:.<cr>
+
+" Search buffer with unite.vim
+nnoremap <space>b :Unite -quick-match buffer<cr>
 
 nmap ; :CtrlPBuffer<CR>
 " Autocenter on ggG
