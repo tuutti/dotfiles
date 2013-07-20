@@ -48,6 +48,13 @@ bindsym $mod+Shift+K move down
 bindsym $mod+Shift+L move up
 bindsym $mod+Shift+Odiaeresis move right
 
+# move to another workspace on same screen.
+bindsym Control+Shift+Right workspace next_on_output
+bindsym Control+Shift+Left workspace prev_on_output
+
+# Toggle between 2 workspaces
+bindsym $mod+b workspace back_and_forth
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down

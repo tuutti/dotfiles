@@ -1,6 +1,5 @@
 " <TAB>: completion.
-let g:Powerline_theme = 'tuutti.vim'
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+noremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Remove delay between modes.
 set timeoutlen=1000 ttimeoutlen=0
@@ -14,12 +13,15 @@ set smartcase
 let g:neocomplcache_enable_smart_case = 1 
 let g:neocomplcache_enable_at_startup = 1
 
-" Autocomplete braces
+" Autocomplete braces and apostrophes and move cursor between them.
 inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
+inoremap [ []<Esc>i<right>
 inoremap { {<CR>}<Esc>O
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
+inoremap ' ''<left><Esc>i<right>
+inoremap " ""<left><Esc>i<right>
+
+" w!! will save file as sudo.
+cmap w!! %!sudo tee > /dev/null %
 
 " Create new / change buffer
 map <C-t> :tabnew<CR>
@@ -75,6 +77,9 @@ Bundle "honza/vim-snippets"
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'majutsushi/tagbar'
+"Bundle 'bling/vim-airline'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 filetype plugin indent on     " required!
@@ -88,10 +93,10 @@ filetype plugin indent on     " required!
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 
+set background=dark
 " Color settings
 set t_Co=256
-colorscheme jellybeans
-
+colorscheme jellybeans 
 " use filetype plugins, e.g. for PHP
 " filetype plugin on
 
@@ -156,7 +161,6 @@ nmap <silent> ggG ggGzz
 vnoremap < <gv
 vnoremap > >gv
 
-
 " Keep search pattern at the center of the screen. 
 nnoremap <silent> n nzz
 nnoremap <silent> N Nzz
@@ -164,6 +168,10 @@ nnoremap <silent> * *zz
 nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
 nnoremap <silent> g# g#zz
+
+" keep page up/down at the center of the screen
+nnoremap <silent> <C-d> <C-d>zz
+nnoremap <silent> <C-u> <C-u>zz
 
 " Toggle tagbar and auto resize existing spit windows to use exactly same
 " amount of space
@@ -173,7 +181,20 @@ let g:tagbar_width = 30
 
 let g:Powerline_symbols = 'fancy'
 let g:powerline_config_path = $HOME.'/.config/powerline/config_files'
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme='tuutti'
+
+" Leave mode handling for airline.vim
+set noshowmode
 
 " Unimpaired: Move line up/down
 map <S-Up> [e
 map <S-Down> ]e
+
+" fix mistype :W and :Q
+command! -bang -range=% -complete=file -nargs=* WQ <line1>,<line2>wq<bang> <args>
+command! -bang -complete=file -nargs=* Qa qa<bang>
+command! -bang -complete=file -nargs=* QA qa<bang>
+command! -bang -range=% -complete=file -nargs=* Wq <line1>,<line2>wq<bang> <args>
+command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>w<bang> <args>
+command! -bang Q quit<bang>
