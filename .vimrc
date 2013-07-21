@@ -20,6 +20,9 @@ inoremap { {<CR>}<Esc>O
 inoremap ' ''<left><Esc>i<right>
 inoremap " ""<left><Esc>i<right>
 
+nnoremap j gj
+nnoremap k gk
+
 " w!! will save file as sudo.
 cmap w!! %!sudo tee > /dev/null %
 

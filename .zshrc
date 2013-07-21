@@ -56,3 +56,8 @@ function d-uninstall() { drush pm-disable "$@"; drush pm-uninstall "$@"; }
 
 export TERM='xterm-256color'
 alias tmux='tmux -2'
+alias ls='ls --color=auto'
+alias tmuxd='tmux attach -d'
+
+# Enable dircolors.
+#eval `dircolors ~/.dircolors`
