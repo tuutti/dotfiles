@@ -12,4 +12,4 @@ nnoremap <C-u> <C-v><C-u>
 :imap -builtin <C-v> <C-v><C-v>
 :imap -builtin <C-x> <C-v><C-x>
 :imap -builtin <C-a> <C-v><C-a>
-:set guioptions+=m
+":set guioptions+=m

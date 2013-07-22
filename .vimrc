@@ -13,6 +13,12 @@ set smartcase
 let g:neocomplcache_enable_smart_case = 1 
 let g:neocomplcache_enable_at_startup = 1
 
+" Disable arrows for navigating
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
 " Autocomplete braces and apostrophes and move cursor between them.
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i<right>
@@ -202,10 +208,10 @@ let g:powerline_config_path = $HOME.'/.config/powerline/config_files'
 "let g:airline_theme='tuutti'
 
 " Leave insert mode when pressing arrows.
-inoremap  <Up>     <Esc><Up>
-inoremap  <Down>   <Esc><Down>
-inoremap  <Left>   <Esc><Left>
-inoremap  <Right>  <Esc><Right>
+"inoremap  <Up>     <Esc><Up>
+"inoremap  <Down>   <Esc><Down>
+"inoremap  <Left>   <Esc><Left>
+"inoremap  <Right>  <Esc><Right>
 
 " Leave mode handling for airline.vim
 set noshowmode
