@@ -21,10 +21,10 @@ map <Down> <Nop>
 
 " Autocomplete braces and apostrophes and move cursor between them.
 inoremap ( ()<Esc>i
-inoremap [ []<Esc>i<right>
+inoremap [ []<Esc>i
 inoremap { {<CR>}<Esc>O
-inoremap ' ''<left><Esc>i<right>
-inoremap " ""<left><Esc>i<right>
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
 
 nnoremap j gj
 nnoremap k gk
