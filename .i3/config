@@ -53,8 +53,8 @@ bindsym Control+$mod+Right workspace next_on_output
 bindsym Control+$mod+Left workspace prev_on_output
 
 # Toggle between 2 workspaces
-bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+z exec ~/.i3/i3-toggle.py
+bindsym $mod+z workspace back_and_forth
+bindsym $mod+Tab exec ~/.i3/i3-toggle.py
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
