@@ -19,6 +19,11 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
+nmap <silent> <Up> :wincmd k<CR>
+nmap <silent> <Down> :wincmd j<CR>
+nmap <silent> <Left> :wincmd h<CR>
+nmap <silent> <Right> :wincmd l<CR>
+
 " Autocomplete braces and apostrophes and move cursor between them.
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
