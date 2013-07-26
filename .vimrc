@@ -96,6 +96,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimproc.vim'
 
 filetype plugin indent on     " required!
 "
@@ -168,7 +169,7 @@ au InsertLeave * set nopaste
 "let g:ctrlp_match_window_reversed = 0
 
 " Search files with unite.vim
-nnoremap <C-p> :Unite file_rec<cr>i
+nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
 
 " Search from yank history.
 let g:unite_source_history_yank_enable = 1
