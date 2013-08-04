@@ -1,6 +1,8 @@
 " <TAB>: completion.
 noremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
+imap <M-Space> <Esc>
+
 " Remove delay between modes.
 set timeoutlen=1000 ttimeoutlen=0
 
