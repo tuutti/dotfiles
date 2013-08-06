@@ -23,10 +23,10 @@ bindsym $mod+Shift+Q kill
 bindsym $mod+d exec i3-dmenu-desktop 
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+odiaeresis focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -35,9 +35,9 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+J move left
-bindsym $mod+Shift+K move down
-bindsym $mod+Shift+L move up
+bindsym $mod+Shift+H move left
+bindsym $mod+Shift+J move down
+bindsym $mod+Shift+K move up
 bindsym $mod+Shift+Odiaeresis move right
 
 # move to another workspace on same screen.
@@ -60,10 +60,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym Mod1+Shift+H split horizontal
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym Mod1+Shift+V split vertical
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -101,6 +101,12 @@ bindsym $mod+0 workspace 10
 bindsym $mod+Shift+x move workspace to output right
 bindsym $mod+Shift+z move workspace to output left
 
+# Move current window to scratchpad
+bindsym $mod+Shift+greater move scratchpad
+# Show first scratchpad window
+bindsym $mod+greater scratchpad show
+
+
 # move focused container to workspace
 bindsym $mod+Shift+F1 move container to workspace 1
 bindsym $mod+Shift+F2 move container to workspace 2
@@ -128,10 +134,10 @@ mode "resize" {
   # Pressing right will grow the window’s width.
   # Pressing up will shrink the window’s height.
   # Pressing down will grow the window’s height.
-  bindsym j resize shrink width 10 px or 10 ppt
+  bindsym l resize shrink width 10 px or 10 ppt
   bindsym k resize grow height 10 px or 10 ppt
-  bindsym l resize shrink height 10 px or 10 ppt
-  bindsym odiaeresis resize grow width 10 px or 10 ppt
+  bindsym j resize shrink height 10 px or 10 ppt
+  bindsym h resize grow width 10 px or 10 ppt
 
   # same bindings, but for the arrow keys
   bindsym 113 resize shrink width 10 px or 10 ppt
