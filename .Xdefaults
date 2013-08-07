@@ -1,6 +1,6 @@
 !-- https://github.com/muennich/urxvt-perls parcellite and xclip are required --!
 URxvt.iso14755 : false
-URxvt.perl-ext-common: clipboard
+URxvt.perl-ext-common: clipboard,default,matcher
 ! Ctrl+shift+c = copy 
 URxvt.keysym.C-C: perl:clipboard:copy
 ! Ctrl+v = paste
