@@ -1,6 +1,10 @@
 !-- https://github.com/muennich/urxvt-perls parcellite and xclip are required --!
 URxvt.iso14755 : false
-URxvt.perl-ext-common: clipboard,default,matcher,url-select
+URxvt.perl-ext-common: default,matcher,keyboard-select,url-select,clipboard
+
+URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+
 ! Ctrl+shift+c = copy 
 URxvt.keysym.C-C: perl:clipboard:copy
 ! Ctrl+v = paste
@@ -13,11 +17,11 @@ URxvt.keysym.C-v: perl:clipboard:paste
 ! q/Escape: Deactivate URL selection mode
 URxvt.keysym.M-u: perl:url-select:select_next
 
+! Alt+escape = keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
 URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1
-
-URxvt.clipboard.copycmd:  xclip -i -selection clipboard
-URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 
 URxvt.foreground: #C8C8C8
 URxvt.background: #121212
