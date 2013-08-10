@@ -1,10 +1,17 @@
 !-- https://github.com/muennich/urxvt-perls parcellite and xclip are required --!
 URxvt.iso14755 : false
-URxvt.perl-ext-common: clipboard,default,matcher
+URxvt.perl-ext-common: clipboard,default,matcher,url-select
 ! Ctrl+shift+c = copy 
 URxvt.keysym.C-C: perl:clipboard:copy
 ! Ctrl+v = paste
 URxvt.keysym.C-v: perl:clipboard:paste
+! Alt+u = select url
+! j/k:      Select next downward/upward URL (also with arrow keys)
+! g/G:      Select first/last URL (also with home/end key)
+! o/Return: Open selected URL in browser, Return: deactivate afterwards
+! y:        Copy (yank) selected URL and deactivate selection mode
+! q/Escape: Deactivate URL selection mode
+URxvt.keysym.M-u: perl:url-select:select_next
 
 URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1
