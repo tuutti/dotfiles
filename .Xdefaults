@@ -17,6 +17,8 @@ URxvt.keysym.C-v: perl:clipboard:paste
 ! q/Escape: Deactivate URL selection mode
 URxvt.keysym.M-u: perl:url-select:select_next
 
+URxvt.url-select.launcher: firefox
+
 ! Alt+escape = keyboard-select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 
