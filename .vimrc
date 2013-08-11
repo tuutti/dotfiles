@@ -161,17 +161,9 @@ au BufRead,BufNewFile *.inc 		set filetype=php
 " Disable pastemode when leaving insert mode.
 au InsertLeave * set nopaste
 
-" CtrlP settings
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-" let g:ctrlp_working_path_mode = 'ra'
-"let g:ctrlp_working_path_mode = 0
-"let g:ctrlp_dotfiles = 0
-"let g:ctrlp_switch_buffer = 0
-"let g:ctrlp_match_window_reversed = 0
-
 " Search files with unite.vim
-nnoremap <C-p> :Unite -start-insert file_rec/async<cr>
+nnoremap <C-p> :Unite -start-insert file_rec/async -default-action=tabopen<cr>
+nnoremap <space>p :Unite -start-insert file_rec/async<cr>
 
 " Search from yank history.
 let g:unite_source_history_yank_enable = 1
