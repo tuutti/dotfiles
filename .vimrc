@@ -27,11 +27,11 @@ nmap <silent> <Left> :wincmd h<CR>
 nmap <silent> <Right> :wincmd l<CR>
 
 " Autocomplete braces and apostrophes and move cursor between them.
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
+""inoremap ( ()<Esc>i
+""inoremap [ []<Esc>i
 inoremap { {<CR>}<Esc>O
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
+""inoremap ' ''<Esc>i
+""inoremap " ""<Esc>i
 
 nnoremap j gj
 nnoremap k gk
@@ -99,6 +99,7 @@ Bundle 'mattn/gist-vim'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc.vim'
+Bundle 'Raimondi/delimitMate'
 
 filetype plugin indent on     " required!
 "
