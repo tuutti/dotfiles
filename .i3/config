@@ -50,6 +50,9 @@ bindsym Mod1+Tab exec ~/.i3/i3-toggle.py
 bindsym $mod+section workspace prev_on_output
 bindsym $mod+Tab workspace next_on_output
 
+# Auto toggle between last used workspaces.
+workspace_auto_back_and_forth yes
+
 # Toggle between fi/us keyboard layout
 bindsym Mod1+F12 exec ~/.i3/toggle-keyboard-layout.sh
 
@@ -163,14 +166,12 @@ bar {
     font xft:Ubuntu Mono Bold 10
   
     colors {
-      background #121212
-      statusline #d39250
-
-      # class            border   bg      text    indigator
-      focused_workspace  #2b8006 #87d7ff #000000 #ffffff
-      active_workspace   #121212 #121212 #ffffff #ffffff
-      inactive_workspace #121212 #121212 #ffffff #ffffff
-      urgent_workspace   #ffffff #900000
+        background #000000
+        separator #000000
+        statusline #666666
+        focused_workspace #000000 #000000 #DDDDDD
+        active_workspace #000000 #000000 #336699
+        inactive_workspace #000000 #000000 #777777
     }
 }
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +10%
@@ -185,17 +186,26 @@ for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_togg
 # Hide Synapse borders
 for_window [class="Synapse"] floating enable; border none;
 for_window [title="Calculator"] floating enable
+#for_window [class="URxvt"] border 1pixel
+
 # Ts3 custom volume and connection info windows
 #for_window [title="Volume - *"] floating enable
 #for_window [title="Connection Info - *"] floating enable
 
-# Hide edge borders
+
+default_orientation auto
+#new_window pixel 3
 hide_edge_borders both
+# Hide edge borders
+#hide_edge_borders both
 ## Colours
 ##---------
 #                         | border | backgrond | text | indigator
-client.focused              #121212   #121212    #87d7ff  #121212
-client.focused_inactive     #121212   #121212    #999999  #121212
-client.unfocused            #121212   #121212    #999999  #121212
-client.urgent               #121212   #121212    #FF0000  #121212
-client.background           #121212
+
+set $blue #005588
+set $gray1 #484848
+set $gray2 #333333
+ 
+client.focused            $gray1   $gray1   #FFFFFF   #333333
+client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
+client.unfocused          $gray2   $gray2   #FFFFFF   #000000
