@@ -65,7 +65,7 @@ if __name__ == '__main__':
         data = json.load(data_file)
     
       if not data['audio']['device']:
-        print("Couldn't find device or modifier from config.json")
+        print("Couldn't find device from config.json")
         sys.exit(1)
       
       set_mixer(data, args, cardindex)
