@@ -19,9 +19,15 @@ bindsym $mod+Return exec urxvt
 # kill focused window
 bindsym $mod+Shift+Q kill
 
+# Volume controls
+bindsym Control+$mod+Up exec ~/.i3/scripts/i3-volume.py -v=10 -f ~/.i3/scripts/config.json
+bindsym Control+$mod+Down exec ~/.i3/scripts/i3-volume.py -v=-10 -f ~/.i3/scripts/config.json
+bindsym Control+$mod+Left exec ~/.i3/scripts/i3-volume.py -m=mute -f ~/.i3/scripts/config.json
+bindsym Control+$mod+Right exec ~/.i3/scripts/i3-volume.py -m=unmute -f ~/.i3/scripts/config.json
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec i3-dmenu-desktop --dmenu="dmenu -nb '#181818' -nf '#f8f8f2' -sb '#aff32c' -sf '#181818' -p ' ~/  ' -l 15 -fn sq-12 -i"
-bindsym $mod+x exec ~/.i3/quickswitch.py --dmenu="dmenu -nb '#181818' -nf '#f8f8f2' -sb '#aff32c' -sf '#181818' -p ' ~/  ' -l 15 -fn sq-12 -i"
+bindsym $mod+x exec ~/.i3/scripts/quickswitch.py --dmenu="dmenu -nb '#181818' -nf '#f8f8f2' -sb '#aff32c' -sf '#181818' -p ' ~/  ' -l 15 -fn sq-12 -i"
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -40,13 +46,9 @@ bindsym $mod+Shift+J move down
 bindsym $mod+Shift+K move up
 bindsym $mod+Shift+Odiaeresis move right
 
-# move to another workspace on same screen.
-bindsym Control+$mod+Right workspace next_on_output
-bindsym Control+$mod+Left workspace prev_on_output
-
 # Toggle between 2 workspaces
 bindsym $mod+z workspace back_and_forth
-bindsym Mod1+Tab exec ~/.i3/i3-toggle.py
+bindsym Mod1+Tab exec ~/.i3/scripts/i3-toggle.py
 bindsym $mod+section workspace prev_on_output
 bindsym $mod+Tab workspace next_on_output
 
@@ -54,7 +56,7 @@ bindsym $mod+Tab workspace next_on_output
 workspace_auto_back_and_forth yes
 
 # Toggle between fi/us keyboard layout
-bindsym Mod1+F12 exec ~/.i3/toggle-keyboard-layout.sh
+bindsym Mod1+F12 exec ~/.i3/scripts/toggle-keyboard-layout.sh
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
