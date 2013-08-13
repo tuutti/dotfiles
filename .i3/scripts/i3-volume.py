@@ -42,8 +42,6 @@ def set_mixer(data, args, idx=0):
     mixer.setvolume(volume, channel)
 
 if __name__ == '__main__':
-
-
     cardindex = 0
     
     parser = argparse.ArgumentParser()
