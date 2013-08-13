@@ -203,7 +203,7 @@ nmap <F8> :TagbarToggle<CR><C-w>=
 " Resize tagbar to use 30 chars instead of 40
 let g:tagbar_width = 30
 
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 let g:powerline_config_path = $HOME.'/.config/powerline/config_files'
 "let g:airline_powerline_fonts = 1
 "let g:airline_theme='tuutti'
