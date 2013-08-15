@@ -25,4 +25,4 @@ fi
 setxkbmap -option caps:none
 
 # Set Background
-feh --bg-fill ~/Pictures/black-bg.png
+feh --bg-scale ~/Pictures/C8AD384C34CB-20.jpg

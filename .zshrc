@@ -54,7 +54,7 @@ function d-install() { drush pm-download "$@"; drush pm-enable "$@"; }
 function d-cc() { drush cc all; }
 function d-uninstall() { drush pm-disable "$@"; drush pm-uninstall "$@"; }
 
-export TERM='xterm-256color'
+#export TERM='xterm-256color'
 alias tmux='tmux -2'
 alias ls='ls --color=auto'
 alias tmuxd='tmux attach -d'

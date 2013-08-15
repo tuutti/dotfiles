@@ -17,7 +17,7 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt
 
 # kill focused window
-bindsym $mod+Shift+Q kill
+bindsym $mod+Q kill
 
 # Volume controls
 bindsym Control+$mod+Up exec ~/.i3/scripts/i3-volume.py -v=10 -f ~/.i3/scripts/config.json
@@ -187,6 +187,7 @@ for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_togg
 
 # Hide Synapse borders
 for_window [class="Synapse"] floating enable; border none;
+for_window [class="Kupfer"] floating enable; border none;
 for_window [title="Calculator"] floating enable
 #for_window [class="URxvt"] border 1pixel
 

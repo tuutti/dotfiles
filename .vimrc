@@ -1,6 +1,9 @@
 " <TAB>: completion.
 noremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
+" Disable scratchpad
+set completeopt-=preview
+
 imap <M-Space> <Esc>
 
 " Remove delay between modes.
