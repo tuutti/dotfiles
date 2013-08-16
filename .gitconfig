@@ -1,0 +1,7 @@
+[user]
+	email = tuutti@iki.fi
+	name = tuutti
+[github]
+	user = tuutti
+[core]
+	excludesfile = ~/.gitignore-global
