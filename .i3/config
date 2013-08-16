@@ -7,7 +7,7 @@ exec /opt/SteelSeriesMouse.sh
 set $mod Mod4
 
 # font7 for window titles. ISO 10646 = Unicode
-font xft:Ubuntu Mono Bold 10
+font xft:Ubuntu Mono Bold 9 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -165,7 +165,7 @@ bar {
     position bottom
     #tray_output primary 
     #font -misc-fixed-bold-r-normal--13-120-75-75-C-70-iso10646-1
-    font xft:Ubuntu Mono Bold 10
+    font xft:Ubuntu Mono Bold 9 
   
     colors {
         background #000000
