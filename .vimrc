@@ -103,6 +103,7 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Raimondi/delimitMate'
+Bundle 'mattn/emmet-vim'
 
 filetype plugin indent on     " required!
 "
