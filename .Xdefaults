@@ -25,9 +25,6 @@ URxvt.url-select.launcher: firefox
 ! Alt+escape = keyboard-select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 
-URxvt.urlLauncher: firefox
-URxvt.matcher.button: 1
-
 ! Fix ctrl + arrow keys for vim.
 URxvt.keysym.Control-Up:   \033[1;5A
 URxvt.keysym.Control-Down:    \033[1;5B
