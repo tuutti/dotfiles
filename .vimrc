@@ -104,6 +104,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'mattn/emmet-vim'
+Bundle 'gregsexton/MatchTag'
 
 filetype plugin indent on     " required!
 "
