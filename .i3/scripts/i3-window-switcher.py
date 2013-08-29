@@ -21,7 +21,7 @@ def get_last_window(pickle_file):
   return result
 
 def get_current_workspace():
-  current = [ws for ws in i3.get_workspaces() if ws['focused']][0]
+  current = get_first([ws for ws in i3.get_workspaces() if ws['focused']])
   return current
 
 def valid_window(node):
@@ -42,6 +42,12 @@ def get_window_ids(nodes, window_ids = []):
       
   return window_ids
 
+def get_first(iterable, default=None):
+    if iterable:
+        for item in iterable:
+            return item
+    return default
+
 if __name__ == '__main__':
   pickle_file = '/tmp/last_window.pickle'
 
@@ -59,10 +65,10 @@ if __name__ == '__main__':
   if not workspace:
     exit('Failed to get current workspace')
 
-  windows    = i3.filter(num=workspace['num'])[0]
+  windows    = get_first(i3.filter(num=workspace['num']))
   window_ids = get_window_ids(windows['nodes'])
   # Currently focused window
-  current    = i3.filter(nodes=[], focused=True)[0]['id']
+  current    = get_first(i3.filter(nodes=[], focused=True))['id']
   last       = get_last_window(pickle_file)
 
   if selected > len(window_ids):
