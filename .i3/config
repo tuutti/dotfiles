@@ -25,6 +25,13 @@ bindsym Control+$mod+Down exec ~/.i3/scripts/i3-volume.py -v=-10 -f ~/.i3/script
 bindsym Control+$mod+Left exec ~/.i3/scripts/i3-volume.py -m=mute -f ~/.i3/scripts/config.json
 bindsym Control+$mod+Right exec ~/.i3/scripts/i3-volume.py -m=unmute -f ~/.i3/scripts/config.json
 
+# switch windows on current workspace
+bindsym $mod+y exec ~/.i3/scripts/i3-window-switcher.py -n=0
+bindsym $mod+u exec ~/.i3/scripts/i3-window-switcher.py -n=1
+bindsym $mod+i exec ~/.i3/scripts/i3-window-switcher.py -n=2
+bindsym $mod+o exec ~/.i3/scripts/i3-window-switcher.py -n=3
+bindsym $mod+p exec ~/.i3/scripts/i3-window-switcher.py -n=4
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec i3-dmenu-desktop --dmenu="dmenu -nb '#181818' -nf '#f8f8f2' -sb '#aff32c' -sf '#181818' -p ' ~/  ' -l 15 -fn sq-12 -i"
 bindsym $mod+x exec ~/.i3/scripts/quickswitch.py --dmenu="dmenu -nb '#181818' -nf '#f8f8f2' -sb '#aff32c' -sf '#181818' -p ' ~/  ' -l 15 -fn sq-12 -i"
