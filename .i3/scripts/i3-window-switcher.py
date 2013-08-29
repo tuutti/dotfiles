@@ -8,10 +8,25 @@ from sys import exit
 
 def get_current_workspace():
   current = [ws for ws in i3.get_workspaces() if ws['focused']][0]
-
-  if not current:
-    return None
   return current
+
+def valid_window(node):
+  if node['id']:
+    if node['window'] == None:
+      return False
+  return True
+
+# Recursively get all window ids
+def get_window_ids(nodes, window_ids = []):
+
+  for node in nodes:
+    if node['nodes']:
+      get_window_ids(node['nodes'], window_ids)
+
+    if valid_window(node):
+      window_ids.append(node['id'])
+      
+  return window_ids
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
@@ -28,10 +43,11 @@ if __name__ == '__main__':
   if not current:
     exit('Failed to get current workspace')
 
-  windows = i3.filter(num=current['num'])[0]
+  windows    = i3.filter(num=current['num'])[0]
+  window_ids = get_window_ids(windows['nodes'])
 
-  if selected > len(windows['nodes']):
+  if selected > len(window_ids):
     exit('Index out of range')
   
-  if windows['nodes'][selected]:
-    i3.focus(con_id=windows['nodes'][selected]['id'])
+  if window_ids[selected]:
+    i3.focus(con_id=window_ids[selected])
