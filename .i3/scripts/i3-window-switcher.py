@@ -5,6 +5,7 @@ from pprint import pprint
 from sys import exit
 import os
 import cPickle as pickle
+from common.i3common import *
 
 # Requirements: https://github.com/ziberna/i3-py
 def set_last_window(pickle_file, window):
@@ -19,10 +20,6 @@ def get_last_window(pickle_file):
     result = int(pickle.load(handle))
   
   return result
-
-def get_current_workspace():
-  current = get_first([ws for ws in i3.get_workspaces() if ws['focused']])
-  return current
 
 def valid_window(node):
   if node['id']:
@@ -41,12 +38,6 @@ def get_window_ids(nodes, window_ids = []):
       window_ids.append(node['id'])
       
   return window_ids
-
-def get_first(iterable, default=None):
-    if iterable:
-        for item in iterable:
-            return item
-    return default
 
 if __name__ == '__main__':
   pickle_file = '/tmp/last_window.pickle'

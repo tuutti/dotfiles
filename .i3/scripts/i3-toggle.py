@@ -1,12 +1,28 @@
 #!/usr/bin/python
 
 import i3
+from sys import exit
+import argparse
+import sys
+from common.i3common import *
 
 # Requirements: https://github.com/ziberna/i3-py
 
-current = [ws for ws in i3.get_workspaces() if ws['focused']][0]
+if __name__ == '__main__':
+  parser = argparse.ArgumentParser()
+  parser.add_argument('-first')
+  parser.add_argument('-second')
 
-if current['num'] == 3:
-  i3.workspace1()
-else:
-  i3.workspace3()
+  args = parser.parse_args()
+
+  if not args.first or not args.second:
+    exit('Worspace 1 and worspace 2 are required (-first and -second)')
+
+  workspace = get_current_workspace()
+  
+  if workspace['name'] == args.first:
+    i3.workspace(args.second)
+  else:
+    i3.workspace(args.first)
+
+
