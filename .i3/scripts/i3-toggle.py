@@ -16,7 +16,7 @@ if __name__ == '__main__':
   args = parser.parse_args()
 
   if not args.first or not args.second:
-    exit('Worspace 1 and workspace 2 are required (-first and -second)')
+    exit('Workspace 1 and workspace 2 are required (-first and -second)')
 
   workspace = get_current_workspace()
   
