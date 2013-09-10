@@ -1,3 +1,4 @@
+let mapleader = "-"
 " <TAB>: completion.
 noremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
@@ -93,10 +94,8 @@ Bundle 'gmarik/vundle'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "honza/vim-snippets"
-"Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'majutsushi/tagbar'
-"Bundle 'bling/vim-airline'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -105,6 +104,7 @@ Bundle 'Shougo/vimproc.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'mattn/emmet-vim'
 Bundle 'gregsexton/MatchTag'
+Bundle 'scrooloose/nerdcommenter'
 
 filetype plugin indent on     " required!
 "
