@@ -1,4 +1,4 @@
-let mapleader = "-"
+let mapleader = ","
 " <TAB>: completion.
 noremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
