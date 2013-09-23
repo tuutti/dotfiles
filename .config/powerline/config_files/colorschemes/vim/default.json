@@ -36,9 +36,9 @@
 			"colors": {
 				"brightyellow": "darkorange",
 				"brightestred": "darkred",
-				"gray0": "gray0",
-				"gray1": "gray0",
-				"gray2": "gray0",
+				"gray0": "gray1",
+				"gray1": "gray1",
+				"gray2": "gray1",
 				"gray3": "gray1",
 				"gray4": "gray1",
 				"gray5": "gray1",
