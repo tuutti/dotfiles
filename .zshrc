@@ -61,3 +61,4 @@ alias tmuxd='tmux attach -d'
 alias ':q'='exit'
 
 setopt menu_complete
+bindkey -v
