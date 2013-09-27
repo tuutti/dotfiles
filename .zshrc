@@ -59,3 +59,5 @@ alias tmux='tmux -2'
 alias ls='ls --color=auto'
 alias tmuxd='tmux attach -d'
 alias ':q'='exit'
+
+setopt menu_complete
