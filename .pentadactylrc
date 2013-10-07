@@ -5,7 +5,6 @@ nnoremap <C-c> <C-v><C-c>
 nnoremap <C-v> <C-v><C-v>
 nnoremap <C-x> <C-v><C-x>
 nnoremap <C-a> <C-v><C-a>
-nnoremap <C-u> <C-v><C-u>
  
 " Insert Mode Mappings
 :imap -builtin <C-c> <C-v><C-c>
