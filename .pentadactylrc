@@ -5,6 +5,10 @@ nnoremap <C-c> <C-v><C-c>
 nnoremap <C-v> <C-v><C-v>
 nnoremap <C-x> <C-v><C-x>
 nnoremap <C-a> <C-v><C-a>
+nnoremap m 10j
+nnoremap , 10k
+nnoremap <C-Right> gt
+nnoremap <C-Left> gT
  
 " Insert Mode Mappings
 :imap -builtin <C-c> <C-v><C-c>
@@ -12,3 +16,6 @@ nnoremap <C-a> <C-v><C-a>
 :imap -builtin <C-x> <C-v><C-x>
 :imap -builtin <C-a> <C-v><C-a>
 ":set guioptions+=m
+
+set hintkeys=asdfghjklöä
+js editor.defaultRegister="+"
