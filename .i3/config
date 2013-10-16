@@ -19,12 +19,6 @@ bindsym $mod+Return exec urxvt
 # kill focused window
 bindsym $mod+Q kill
 
-# Volume controls
-bindsym Control+$mod+Up exec ~/.i3/scripts/i3-volume.py -v=10 -f ~/.i3/scripts/config.json
-bindsym Control+$mod+Down exec ~/.i3/scripts/i3-volume.py -v=-10 -f ~/.i3/scripts/config.json
-bindsym Control+$mod+Left exec ~/.i3/scripts/i3-volume.py -m=mute -f ~/.i3/scripts/config.json
-bindsym Control+$mod+Right exec ~/.i3/scripts/i3-volume.py -m=unmute -f ~/.i3/scripts/config.json
-
 # switch windows on current workspace
 bindsym $mod+y exec ~/.i3/scripts/i3-window-switcher.py -n=0
 bindsym $mod+u exec ~/.i3/scripts/i3-window-switcher.py -n=1
@@ -201,11 +195,12 @@ for_window [title="Calculator"] floating enable
 # Ts3 custom volume and connection info windows
 #for_window [title="Volume - *"] floating enable
 #for_window [title="Connection Info - *"] floating enable
+assign [class="Steam"] 4
 
 
 default_orientation auto
-#new_window pixel 3
-hide_edge_borders both
+new_window pixel 3
+#hide_edge_borders both
 # Hide edge borders
 #hide_edge_borders both
 ## Colours
