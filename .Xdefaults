@@ -88,5 +88,5 @@ Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
 ! -- Fonts -- !
-URxvt.font:xft:Ubuntu Mono derivative Powerline:medium:pixelsize=16
-URxvt.boldFont:xft:Ubuntu Mono derivative Powerline:bold:pixelsize=16
+URxvt.font:xft:Ubuntu Mono:medium:pixelsize=16
+URxvt.boldFont:xft:Ubuntu Mono:bold:pixelsize=16
