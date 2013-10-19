@@ -62,3 +62,5 @@ alias ':q'='exit'
 
 setopt menu_complete
 #bindkey -v
+alias steamwin='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe -no-dwrite >/dev/null 2>&1 &'
+alias mplayer=mpv
