@@ -64,5 +64,4 @@ setopt menu_complete
 #bindkey -v
 alias steamwin='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe -no-dwrite >/dev/null 2>&1 &'
 alias wow='WINEDEBUG=-all __GL_THREADED_OPTIMIZATIONS=1 wine /home/tuutti/.wine/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/World\ of\ Warcraft\ Launcher.exe -opengl $> /dev/null'
-alias mplayer=mpv
-alias mpv='mpv --cache=2048 --vo=opengl'
+alias mpv='__GL_SYNC_DISPLAY_DEVICE="DFP-1" __GL_SYNC_TO_VBLANK=1 mpv --cache=8096 --vo=opengl'
