@@ -1,0 +1,114 @@
+#appcontent,
+#appcontent > #content,
+#appcontent > #content > tabbox > tabpanels {
+  background: #232323 !important;
+}
+
+
+#main-window[stylish-url="about:blank"]:not([onclose^="PrintUtils"]):not([title^="Source Chart"]):not([chromehidden="menubar toolbar directories extrachrome "]) #content 
+browser:not([src]) {
+  opacity: 0 !important;
+}
+
+a:active {
+  outline: none !important;
+}
+
+.tabbrowser-arrowscrollbox > .scrollbutton-up,
+.tabbrowser-arrowscrollbox > .scrollbutton-down,
+toolbarbutton#appmenu-toolbar-button,
+toolbarbutton#alltabs-button,
+toolbarbutton#new-tab-button,
+.tab-icon-image,
+.tabs-closebutton-box,
+.tabs-border-bottom,
+.tab-close-button {
+  display: none !important;
+}
+.tab-icon-image {
+  width: 16px !important;
+  height: 16px !important;
+  max-height: 16px !important;
+  max-width: 16px !important;
+}
+
+tabs#tabbrowser-tabs, tabs#tabbrowser-tabs * {
+  -moz-appearance: none !important;
+  border-radius: 0px !important;
+  border: none !important;
+  border-bottom: 0px none !important;
+  background-image: none !important;
+  margin-top: 0 !important;
+  max-height: 24px !important;
+  min-height: 24px !important;      
+}
+
+tabs#tabbrowser-tabs {
+  background: #232323 !important;
+  padding-top: 0px !important;
+  margin-left: 0px !important;
+  padding-bottom: 1px !important;
+  border-bottom: 0px none !important;
+  text-align: center !important;
+}
+
+.tabbrowser-tab {
+  margin-left: 0px !important;
+  padding-top: 0px !important;
+  color: #969696 !important;
+  border-bottom: 0px none !important;
+  background: #232323 !important;
+}
+
+.tabbrowser-tab[selected=true] {
+  color: #dedede !important;
+  background: #37393d !important;
+  border-bottom: 0px none !important;
+  box-shadow: none !important;
+}
+
+.tabbrowser-tab .tab-text {
+  margin-left: 3px !important;
+  margin-right: 3px !important;
+  padding-top: 2px !important;
+  margin-bottom: 2px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+
+#urlbar dropmarker,
+#identity-box,
+#star-button,
+#go-button,
+.tab-throbber,
+.tabs-newtab-button,
+.tab-throbber[progress] {
+  display: none !important;
+}
+
+.titlebar-placeholder[type="caption-buttons"] {
+  margin-left: 10px !important;
+}
+
+.tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] {
+  min-width: 30px !important;
+  max-width: 130px !important;
+}
+
+notificationbox {
+  overflow-x: hidden;
+}
+
+/* hide vertical scrollbar */
+notificationbox {
+  overflow-x: hidden;
+}
+.searchbar-engine-image {
+  display: none !important;
+}
+.search-go-button {
+  display: none !important;
+}
+ 
+
+

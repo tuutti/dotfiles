@@ -220,7 +220,7 @@ let g:powerline_config_path = $HOME.'/.config/powerline/config_files'
 "inoremap  <Right>  <Esc><Right>
 
 " Leave mode handling for airline.vim
-set noshowmode
+"set noshowmode
 
 " Unimpaired: Move line up/down
 map <S-Up> [e
