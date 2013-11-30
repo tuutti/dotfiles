@@ -34,10 +34,10 @@ hi CompTitle>* color: #456E85; border-top: 1px solid gray; border: 0; padding: 0
 hi CompTitleSep background: none;
  
 " Hints!
-hi Hint color: white; background-color: #800; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding 0 1px;
+hi Hint color: white; font-weight:bold; background-color: #800; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding 4px;
 hi Hint::after content: attr(number);
-hi HintActive color: black; background: #480;
-hi HintElem color: black; background-color: #880;
+hi HintActive color: black; 
+hi HintElem color: black; 
 hi HintImage opacity: .5;
  
 " Used also in wrapping error messages as the background, simple speaking
