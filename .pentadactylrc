@@ -19,4 +19,5 @@ nnoremap <C-Left> gT
 
 set hintkeys=asdfghjklöä
 js editor.defaultRegister="+"
-set defsearch=duckduckgo
+"set defsearch=duckduckgo
+colorscheme dllu
