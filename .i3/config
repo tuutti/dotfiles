@@ -106,6 +106,21 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
+# alternative switch to workspace
+bindsym Mod1+q workspace 1
+bindsym Mod1+w workspace 2
+bindsym Mod1+e workspace 3
+bindsym Mod1+r workspace 4
+bindsym Mod1+a workspace 5
+bindsym Mod1+s workspace 6
+bindsym Mod1+d workspace 7
+bindsym Mod1+f workspace 8
+bindsym Mod1+greater workspace 9
+bindsym Mod1+z workspace 10
+bindsym Mod1+x workspace 11
+bindsym Mod1+c workspace 12
+bindsym Mod1+v workspace 13
+
 # move focused container
 bindsym $mod+Shift+x move workspace to output right
 bindsym $mod+Shift+z move workspace to output left
