@@ -106,21 +106,6 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-# alternative switch to workspace
-bindsym Mod1+q workspace 1
-bindsym Mod1+w workspace 2
-bindsym Mod1+e workspace 3
-bindsym Mod1+r workspace 4
-bindsym Mod1+a workspace 5
-bindsym Mod1+s workspace 6
-bindsym Mod1+d workspace 7
-bindsym Mod1+f workspace 8
-bindsym Mod1+greater workspace 9
-bindsym Mod1+z workspace 10
-bindsym Mod1+x workspace 11
-bindsym Mod1+c workspace 12
-bindsym Mod1+v workspace 13
-
 # move focused container
 bindsym $mod+Shift+x move workspace to output right
 bindsym $mod+Shift+z move workspace to output left
@@ -139,9 +124,34 @@ bindsym $mod+Shift+F4 move container to workspace 4
 bindsym $mod+Shift+F5 move container to workspace 5
 bindsym $mod+Shift+F6 move container to workspace 6
 bindsym $mod+Shift+F7 move container to workspace 7
+bindsym Mod3 mode "chwin"
 bindsym $mod+Shift+F8 move container to workspace 8
 bindsym $mod+Shift+F9 move container to workspace 9
 bindsym $mod+Shift+F10 move container to workspace 10
+
+bindsym Mod3+w mode "chwin"
+
+mode "chwin" {
+  bindsym section workspace prev_on_output
+  bindsym Tab workspace next_on_output
+  # switch to workspace
+  bindsym Mod5+1 workspace 1
+  bindsym Mod5+2 workspace 2
+  bindsym Mod5+3 workspace 3
+  bindsym Mod5+4 workspace 4
+  bindsym Mod5+q workspace 5
+  bindsym Mod5+w workspace 6
+  bindsym Mod5+e workspace 7
+  bindsym Mod5+r workspace 8
+  bindsym Mod5+a workspace 9
+  bindsym Mod5+s workspace 10
+  bindsym Mod5+d workspace 11
+  bindsym Mod5+f workspace 12 
+  
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym Mod3 mode "default"
+}
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
