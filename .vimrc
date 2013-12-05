@@ -98,7 +98,6 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'majutsushi/tagbar'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Raimondi/delimitMate'
@@ -207,17 +206,6 @@ nnoremap <silent> <C-u> <C-u>zz
 nmap <F8> :TagbarToggle<CR><C-w>=
 " Resize tagbar to use 30 chars instead of 40
 let g:tagbar_width = 30
-
-"let g:Powerline_symbols = 'fancy'
-let g:powerline_config_path = $HOME.'/.config/powerline/config_files'
-"let g:airline_powerline_fonts = 1
-"let g:airline_theme='tuutti'
-
-" Leave insert mode when pressing arrows.
-"inoremap  <Up>     <Esc><Up>
-"inoremap  <Down>   <Esc><Down>
-"inoremap  <Left>   <Esc><Left>
-"inoremap  <Right>  <Esc><Right>
 
 " Leave mode handling for airline.vim
 "set noshowmode
