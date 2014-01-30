@@ -26,10 +26,9 @@ toolbarbutton#new-tab-button,
   display: none !important;
 }
 .tab-icon-image {
-  width: 16px !important;
-  height: 16px !important;
-  max-height: 16px !important;
-  max-width: 16px !important;
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
 }
 
 tabs#tabbrowser-tabs, tabs#tabbrowser-tabs * {
@@ -65,6 +64,8 @@ tabs#tabbrowser-tabs {
   background: #37393d !important;
   border-bottom: 0px none !important;
   box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .tabbrowser-tab .tab-text {
@@ -74,6 +75,9 @@ tabs#tabbrowser-tabs {
   margin-bottom: 2px !important;
   font-size: 12px !important;
   font-weight: bold !important;
+}
+.tabbrowser-tab[selected=true] .tab-text {
+  padding-top: 1px !important;
 }
 
 #urlbar dropmarker,
@@ -109,6 +113,3 @@ notificationbox {
 .search-go-button {
   display: none !important;
 }
- 
-
-

@@ -11,16 +11,25 @@ export PATH=$PATH:/home/tuutti/bspwm
 export XDG_CONFIG_HOME="/home/tuutti/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 export EDITOR=vim
-env BROWSER=firefox
+export BROWSER=firefox
 
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
+xsetroot -cursor_name left_ptr
+
+xrdb ~/.Xresources
+
+pulseaudio --start
+
 # Automount
 udiskie &
 
+xset -dpms
+xset s off
+
 # http://askubuntu.com/questions/125245/how-do-i-stop-video-tearing-nvidia-prop-driver-non-compositing-window-manager#comment167226_140036
-__GL_SYNC_DISPLAY_DEVICE="DFP-1"
+export __GL_SYNC_DISPLAY_DEVICE="DFP-1"
 
 #sxhkd -c "/home/tuutti/.config/sxhkd/sxhkdrc" &
 
