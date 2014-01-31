@@ -162,6 +162,7 @@ autocmd BufEnter * lcd %:p:h
 au BufRead,BufNewFile *.install		set filetype=php
 au BufRead,BufNewFile *.module		set filetype=php
 au BufRead,BufNewFile *.inc 		set filetype=php
+au BufRead,BufNewFile *.test 		set filetype=php
 
 " Disable pastemode when leaving insert mode.
 au InsertLeave * set nopaste
