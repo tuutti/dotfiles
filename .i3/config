@@ -51,7 +51,7 @@ bindsym $mod+Shift+Odiaeresis move right
 
 # Toggle between 2 workspaces
 bindsym $mod+z workspace back_and_forth
-bindsym Mod1+Tab exec ~/.i3/scripts/i3-toggle.py -first=1 -second=3
+bindsym Mod1+Tab exec ~/.i3/scripts/i3-toggle.py -first=www -second=code
 bindsym $mod+section workspace prev_on_output
 bindsym $mod+Tab workspace next_on_output
 
@@ -95,15 +95,15 @@ bindsym $mod+a focus parent
 #bindcode $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
+bindsym $mod+1 workspace www
+bindsym $mod+2 workspace 2: irc
+bindsym $mod+3 workspace code
+bindsym $mod+4 workspace steam
+bindsym $mod+5 workspace music
 bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+7 workspace skype
+bindsym $mod+8 workspace torrent
+bindsym $mod+9 workspace mail
 bindsym $mod+0 workspace 10
 
 # move focused container
@@ -117,17 +117,17 @@ bindsym $mod+greater scratchpad show
 
 
 # move focused container to workspace
-bindsym $mod+Shift+F1 move container to workspace 1
-bindsym $mod+Shift+F2 move container to workspace 2
-bindsym $mod+Shift+F3 move container to workspace 3
-bindsym $mod+Shift+F4 move container to workspace 4
-bindsym $mod+Shift+F5 move container to workspace 5
-bindsym $mod+Shift+F6 move container to workspace 6
-bindsym $mod+Shift+F7 move container to workspace 7
+bindsym $mod+Shift+1 move container to workspace www
+bindsym $mod+Shift+2 move container to workspace 2: irc
+bindsym $mod+Shift+3 move container to workspace code
+bindsym $mod+Shift+4 move container to workspace steam
+bindsym $mod+Shift+5 move container to workspace music
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace skype
 bindsym Mod3 mode "chwin"
-bindsym $mod+Shift+F8 move container to workspace 8
-bindsym $mod+Shift+F9 move container to workspace 9
-bindsym $mod+Shift+F10 move container to workspace 10
+bindsym $mod+Shift+8 move container to workspace torrent
+bindsym $mod+Shift+9 move container to workspace mail
+bindsym $mod+Shift+10 move container to workspace 0
 
 bindsym Mod3+w mode "chwin"
 
@@ -205,8 +205,6 @@ bar {
         inactive_workspace #000000 #000000 #777777
     }
 }
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +10%
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -10%
 
 # Bind rename
 bindsym $mod+c exec i3-input -F 'rename workspace to %s' -P 'New name: '
@@ -214,16 +212,7 @@ bindsym $mod+c exec i3-input -F 'rename workspace to %s' -P 'New name: '
 # xfce notifies to float
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
 
-# Hide Synapse borders
-for_window [class="Synapse"] floating enable; border none;
-for_window [class="Kupfer"] floating enable; border none;
-for_window [title="Calculator"] floating enable
-#for_window [class="URxvt"] border 1pixel
-
-# Ts3 custom volume and connection info windows
-#for_window [title="Volume - *"] floating enable
-#for_window [title="Connection Info - *"] floating enable
-assign [class="Steam"] 4
+assign [class="Steam"] steam
 
 default_orientation auto
 new_window pixel 3
@@ -236,10 +225,10 @@ for_window[class="sxiv"] border normal;
 ##---------
 #                         | border | backgrond | text | indigator
 
-set $blue #415D6E
-set $gray1 #484848
-set $gray2 #333333
+set $color1 #95493f
+set $color2 #484848
+set $color3 #333333
  
-client.focused            $gray2   $blue    #FFFFFF   $blue 
-client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
-client.unfocused          $gray2   $gray2   #FFFFFF   #000000
+client.focused            $color1   $color1    #FFFFFF   $color1 
+client.focused_inactive   $color3   $color3   #FFFFFF   #000000
+client.unfocused          $color3   $color3   #FFFFFF   #000000
