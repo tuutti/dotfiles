@@ -191,7 +191,7 @@ bindsym $mod+r mode "resize"
 bar {
     status_command i3status
     #output DVI-I-2
-    position bottom
+    position top 
     #tray_output primary 
     #font -misc-fixed-bold-r-normal--13-120-75-75-C-70-iso10646-1
     font xft:Ubuntu Mono Bold 9 
