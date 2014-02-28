@@ -104,7 +104,7 @@ bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace skype
 bindsym $mod+8 workspace torrent
 bindsym $mod+9 workspace mail
-bindsym $mod+0 workspace 10
+bindsym $mod+0 workspace 0
 
 # move focused container
 bindsym $mod+Shift+x move workspace to output right
