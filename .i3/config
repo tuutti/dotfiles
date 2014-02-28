@@ -127,7 +127,7 @@ bindsym $mod+Shift+7 move container to workspace skype
 bindsym Mod3 mode "chwin"
 bindsym $mod+Shift+8 move container to workspace torrent
 bindsym $mod+Shift+9 move container to workspace mail
-bindsym $mod+Shift+10 move container to workspace 0
+bindsym $mod+Shift+0 move container to workspace 0
 
 bindsym Mod3+w mode "chwin"
 
