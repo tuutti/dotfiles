@@ -1,7 +1,12 @@
 [user]
 	email = tuutti@iki.fi
-	name = tuutti
+	name = "Lari Rauno"
 [github]
 	user = tuutti
 [core]
 	excludesfile = ~/.gitignore-global
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
