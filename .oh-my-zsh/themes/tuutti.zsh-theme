@@ -5,7 +5,7 @@ fi
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
-PROMPT='%{$FG[039]%}%m%{${fg_bold[magenta]}%} :: %{$reset_color%}%{${FG[208]}%}%c $(git_prompt_info)%{${fg_bold[$CARETCOLOR]}%}%#%{${reset_color}%} '
+PROMPT='%{$FG[039]%}%m%{${fg_bold[magenta]}%} :: %{$reset_color%}%{${FG[208]}%}%3~ $(git_prompt_info)%{${fg_bold[$CARETCOLOR]}%}%#%{${reset_color}%} '
 
 RPS1='${return_code}'
 
