@@ -88,5 +88,10 @@ Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
 ! -- Fonts -- !
-URxvt.font:xft:Ubuntu Mono:medium:pixelsize=16
-URxvt.boldFont:xft:Ubuntu Mono:bold:pixelsize=16
+!URxvt.font:xft:Ubuntu Mono:medium:pixelsize=16
+!URxvt.boldFont:xft:Ubuntu Mono:bold:pixelsize=16
+URxvt.font:xft:Terminus:pixelsize=16
+URxvt.boldFont:xft:Terminus:pixelsize=16
+
+Xcursor.theme: Adwaita
+Xcursor.size:  16       !  32, 48 or 64 may also be good values
