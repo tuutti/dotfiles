@@ -73,3 +73,10 @@ alias mpv='__GL_SYNC_DISPLAY_DEVICE="DFP-1" __GL_SYNC_TO_VBLANK=1 mpv --cache=80
 alias gll="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 [ -s "/home/tuutti/.scm_breeze/scm_breeze.sh" ] && source "/home/tuutti/.scm_breeze/scm_breeze.sh"
+
+eval `dircolors .dircolors.256dark`
+
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+autoload -Uz compinit
+compinit
+
