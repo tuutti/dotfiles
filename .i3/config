@@ -95,16 +95,16 @@ bindsym $mod+a focus parent
 #bindcode $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace www
-bindsym $mod+2 workspace 2: irc
-bindsym $mod+3 workspace code
-bindsym $mod+4 workspace steam
-bindsym $mod+5 workspace music
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace skype
-bindsym $mod+8 workspace torrent
-bindsym $mod+9 workspace mail
-bindsym $mod+0 workspace 0
+bindsym $mod+1 workspace 1 • www
+bindsym $mod+2 workspace 2 • irc
+bindsym $mod+3 workspace 3 • code
+bindsym $mod+4 workspace 4 • steam
+bindsym $mod+5 workspace 5 • music
+bindsym $mod+6 workspace 6 • random 
+bindsym $mod+7 workspace 7 • skype
+bindsym $mod+8 workspace 8 • torrent
+bindsym $mod+9 workspace 9 • mail
+bindsym $mod+0 workspace 10 • random
 
 # move focused container
 bindsym $mod+Shift+x move workspace to output right
@@ -117,17 +117,17 @@ bindsym $mod+greater scratchpad show
 
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace www
-bindsym $mod+Shift+2 move container to workspace 2: irc
-bindsym $mod+Shift+3 move container to workspace code
-bindsym $mod+Shift+4 move container to workspace steam
-bindsym $mod+Shift+5 move container to workspace music
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace skype
+bindsym $mod+Shift+1 move container to workspace 1 • www
+bindsym $mod+Shift+2 move container to workspace 2 • irc
+bindsym $mod+Shift+3 move container to workspace 3 • code
+bindsym $mod+Shift+4 move container to workspace 4 • steam
+bindsym $mod+Shift+5 move container to workspace 5 • music
+bindsym $mod+Shift+6 move container to workspace 6 • random
+bindsym $mod+Shift+7 move container to workspace 7 • skype
 bindsym Mod3 mode "chwin"
-bindsym $mod+Shift+8 move container to workspace torrent
-bindsym $mod+Shift+9 move container to workspace mail
-bindsym $mod+Shift+0 move container to workspace 0
+bindsym $mod+Shift+8 move container to workspace 8 • torrent
+bindsym $mod+Shift+9 move container to workspace 9 • mail
+bindsym $mod+Shift+0 move container to workspace 10 • random
 
 bindsym Mod3+w mode "chwin"
 
