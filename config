@@ -1,0 +1,235 @@
+# i3 config file (v4)
+#
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+exec /opt/SteelSeriesMouse.sh
+
+set $mod Mod4
+
+# font7 for window titles. ISO 10646 = Unicode
+font xft:Ubuntu Mono Bold 9 
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt
+
+# kill focused window
+bindsym $mod+Q kill
+
+# switch windows on current workspace
+bindsym $mod+y exec ~/.i3/scripts/i3-window-switcher.py -n=0
+bindsym $mod+u exec ~/.i3/scripts/i3-window-switcher.py -n=1
+bindsym $mod+i exec ~/.i3/scripts/i3-window-switcher.py -n=2
+bindsym $mod+o exec ~/.i3/scripts/i3-window-switcher.py -n=3
+bindsym $mod+p exec ~/.i3/scripts/i3-window-switcher.py -n=4
+
+# ranger
+bindsym $mod+d exec urxvt -e ranger
+# start dmenu (a program launcher)
+bindsym Mod1+space exec i3-dmenu-desktop --dmenu="dmenu -nb '#181818' -nf '#f8f8f2' -sb '#aff32c' -sf '#181818' -p ' ~/  ' -l 15 -fn sq-12 -i"
+bindsym $mod+x exec ~/.i3/scripts/quickswitch.py --dmenu="dmenu -nb '#181818' -nf '#f8f8f2' -sb '#aff32c' -sf '#181818' -p ' ~/  ' -l 15 -fn sq-12 -i"
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+H move left
+bindsym $mod+Shift+J move down
+bindsym $mod+Shift+K move up
+bindsym $mod+Shift+Odiaeresis move right
+
+# Toggle between 2 workspaces
+bindsym $mod+z workspace back_and_forth
+bindsym Mod1+Tab exec ~/.i3/scripts/i3-toggle.py -first=www -second=code
+bindsym $mod+section workspace prev_on_output
+bindsym $mod+Tab workspace next_on_output
+
+# Auto toggle between last used workspaces.
+workspace_auto_back_and_forth yes
+
+# Toggle between fi/us keyboard layout
+bindsym Mod1+F12 exec ~/.i3/scripts/toggle-keyboard-layout.sh
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym Mod1+Shift+H split horizontal
+
+# split in vertical orientation
+bindsym Mod1+Shift+V split vertical
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, default)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout default
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+floating_modifier Mod1
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindcode $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace 1 • www
+bindsym $mod+2 workspace 2 • irc
+bindsym $mod+3 workspace 3 • code
+bindsym $mod+4 workspace 4 • steam
+bindsym $mod+5 workspace 5 • music
+bindsym $mod+6 workspace 6 • random 
+bindsym $mod+7 workspace 7 • skype
+bindsym $mod+8 workspace 8 • torrent
+bindsym $mod+9 workspace 9 • mail
+bindsym $mod+0 workspace 10 • random
+
+# move focused container
+bindsym $mod+Shift+x move workspace to output right
+bindsym $mod+Shift+z move workspace to output left
+
+# Move current window to scratchpad
+bindsym $mod+Shift+greater move scratchpad
+# Show first scratchpad window
+bindsym $mod+greater scratchpad show
+
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1 • www
+bindsym $mod+Shift+2 move container to workspace 2 • irc
+bindsym $mod+Shift+3 move container to workspace 3 • code
+bindsym $mod+Shift+4 move container to workspace 4 • steam
+bindsym $mod+Shift+5 move container to workspace 5 • music
+bindsym $mod+Shift+6 move container to workspace 6 • random
+bindsym $mod+Shift+7 move container to workspace 7 • skype
+bindsym Mod3 mode "chwin"
+bindsym $mod+Shift+8 move container to workspace 8 • torrent
+bindsym $mod+Shift+9 move container to workspace 9 • mail
+bindsym $mod+Shift+0 move container to workspace 10 • random
+
+bindsym Mod3+w mode "chwin"
+
+mode "chwin" {
+  bindsym section workspace prev_on_output
+  bindsym Tab workspace next_on_output
+  # switch to workspace
+  bindsym Mod5+1 workspace 1
+  bindsym Mod5+2 workspace 2
+  bindsym Mod5+3 workspace 3
+  bindsym Mod5+4 workspace 4
+  bindsym Mod5+q workspace 5
+  bindsym Mod5+w workspace 6
+  bindsym Mod5+e workspace 7
+  bindsym Mod5+r workspace 8
+  bindsym Mod5+a workspace 9
+  bindsym Mod5+s workspace 10
+  bindsym Mod5+d workspace 11
+  bindsym Mod5+f workspace 12 
+  
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym Mod3 mode "default"
+}
+
+# reload the configuration file
+bindsym $mod+Shift+C reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+R restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+E exit
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+  # These bindings trigger as soon as you enter the resize mode
+
+  # Pressing left will shrink the window’s width.
+  # Pressing right will grow the window’s width.
+  # Pressing up will shrink the window’s height.
+  # Pressing down will grow the window’s height.
+  bindsym l resize shrink width 10 px or 10 ppt
+  bindsym k resize grow height 10 px or 10 ppt
+  bindsym j resize shrink height 10 px or 10 ppt
+  bindsym h resize grow width 10 px or 10 ppt
+
+  # same bindings, but for the arrow keys
+  bindsym 113 resize shrink width 10 px or 10 ppt
+  bindsym 116 resize grow height 10 px or 10 ppt
+  bindsym 111 resize shrink height 10 px or 10 ppt
+  bindsym 114 resize grow width 10 px or 10 ppt
+
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+    #status_command i3status
+    status_command $HOME/.i3/scripts/conky
+    #output DVI-I-2
+    position top 
+    #tray_output primary 
+    #font -misc-fixed-bold-r-normal--13-120-75-75-C-70-iso10646-1
+    font xft:Ubuntu Mono Bold 9 
+  
+    colors {
+        background #000000
+        separator #000000
+        statusline #666666
+        focused_workspace #000000 #000000 #DDDDDD
+        active_workspace #000000 #000000 #336699
+        inactive_workspace #000000 #000000 #777777
+    }
+}
+
+# Bind rename
+bindsym $mod+c exec i3-input -F 'rename workspace to %s' -P 'New name: '
+
+# xfce notifies to float
+for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
+
+assign [class="Steam"] steam
+
+default_orientation auto
+new_window pixel 3
+for_window[class="sxiv"] border normal;
+
+#hide_edge_borders both
+# Hide edge borders
+#hide_edge_borders both
+## Colours
+##---------
+#                         | border | backgrond | text | indigator
+
+set $color1 #95493f
+set $color2 #484848
+set $color3 #333333
+ 
+client.focused            $color1   $color1    #FFFFFF   $color1 
+client.focused_inactive   $color3   $color3   #FFFFFF   #000000
+client.unfocused          $color3   $color3   #FFFFFF   #000000
