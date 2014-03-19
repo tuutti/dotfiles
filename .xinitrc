@@ -7,7 +7,7 @@ if [-d /etc/X11/xinit/xinitrc.d ]; then
 fi
 # Disable caps lock effect
 setxkbmap -option caps:none
-export PATH=$PATH:/home/tuutti/bspwm
+export PATH=$PATH:/home/tuutti/bspwm:/home/tuutti/bin
 export XDG_CONFIG_HOME="/home/tuutti/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 export EDITOR=vim
