@@ -231,5 +231,5 @@ set $color2 #484848
 set $color3 #333333
  
 client.focused            $color1   $color1    #FFFFFF   $color1 
-client.focused_inactive   $color3   $color3   #FFFFFF   #000000
-client.unfocused          $color3   $color3   #FFFFFF   #000000
+client.focused_inactive   $color3   $color3   #FFFFFF   $color3
+client.unfocused          $color3   $color3   #FFFFFF   $color3
