@@ -74,7 +74,8 @@ tabs#tabbrowser-tabs {
   padding-top: 2px !important;
   margin-bottom: 2px !important;
   font-size: 12px !important;
-  font-weight: bold !important;
+  font-family: Ubuntu;
+  font-weight: 600 !important;
 }
 .tabbrowser-tab[selected=true] .tab-text {
   padding-top: 1px !important;
