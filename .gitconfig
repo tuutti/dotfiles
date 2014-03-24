@@ -5,6 +5,7 @@
 	user = tuutti
 [core]
 	excludesfile = ~/.gitignore-global
+  editor = vim
 
 [color]
   diff = auto
