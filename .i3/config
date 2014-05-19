@@ -47,7 +47,7 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+H move left
 bindsym $mod+Shift+J move down
 bindsym $mod+Shift+K move up
-bindsym $mod+Shift+Odiaeresis move right
+bindsym $mod+Shift+L move right
 
 # Toggle between 2 workspaces
 bindsym $mod+z workspace back_and_forth
