@@ -21,7 +21,7 @@ nnoremap <A-l> :forward<CR>
 :imap -builtin <C-a> <C-v><C-a>
 :set guioptions=Cs
 
-set hintkeys=asdfghjklöä
+set hintkeys=asdfghjkl
 js editor.defaultRegister="+"
 "set defsearch=duckduckgo
 colorscheme dllu
