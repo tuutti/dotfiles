@@ -53,6 +53,7 @@ bindsym $mod+Shift+L move right
 bindsym $mod+z workspace back_and_forth
 bindsym Mod1+Tab exec ~/.i3/scripts/i3-toggle.py -first="1 • www" -second="3 • code"
 bindsym $mod+section workspace prev_on_output
+bindsym $mod+Escape workspace prev_on_output
 bindsym $mod+Tab workspace next_on_output
 
 # Auto toggle between last used workspaces.
