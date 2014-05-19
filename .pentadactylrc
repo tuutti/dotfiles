@@ -9,6 +9,8 @@ nnoremap m 10j
 nnoremap , 10k
 nnoremap <C-Right> gt
 nnoremap <C-Left> gT
+nnoremap <C-h> gT
+nnoremap <C-l> gt
  
 " Insert Mode Mappings
 :imap -builtin <C-c> <C-v><C-c>
