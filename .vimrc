@@ -104,6 +104,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'gregsexton/MatchTag'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplcache.vim'
+Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -167,6 +168,7 @@ au BufRead,BufNewFile *.install		set filetype=php
 au BufRead,BufNewFile *.module		set filetype=php
 au BufRead,BufNewFile *.inc 		set filetype=php
 au BufRead,BufNewFile *.test 		set filetype=php
+au BufRead,BufNewFile *.twig 		set filetype=html
 
 " Disable pastemode when leaving insert mode.
 au InsertLeave * set nopaste
