@@ -1,116 +1,81 @@
-#appcontent,
-#appcontent > #content,
-#appcontent > #content > tabbox > tabpanels {
-  background: #232323 !important;
-}
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
+/* This is based on https://raw.githubusercontent.com/arawde/dotfiles/master/firefox/nani_bspwm_neue.css */
 
-#main-window[stylish-url="about:blank"]:not([onclose^="PrintUtils"]):not([title^="Source Chart"]):not([chromehidden="menubar toolbar directories extrachrome "]) #content 
-browser:not([src]) {
-  opacity: 0 !important;
+/* Stupid ass border at bottom*/
+#TabsToolbar::after{
+  display: none;
 }
-
-a:active {
-  outline: none !important;
+#tabbrowser-tabs{ /* Tab container*/
+  background-color: #191919;
+  color: #fff;
+  padding: 0 !important; 
+  margin-left:-10px; /* Flush with the side of the window */
+  margin-right: -15px; /* You need like 5-7 tabs open for this to come into effect */
 }
-
-.tabbrowser-arrowscrollbox > .scrollbutton-up,
-.tabbrowser-arrowscrollbox > .scrollbutton-down,
-toolbarbutton#appmenu-toolbar-button,
-toolbarbutton#alltabs-button,
-toolbarbutton#new-tab-button,
-.tab-icon-image,
-.tabs-closebutton-box,
-.tabs-border-bottom,
-.tab-close-button {
-  display: none !important;
-}
-.tab-icon-image {
-  width: 0 !important;
-  height: 0 !important;
-  display: none !important;
-}
-
-tabs#tabbrowser-tabs, tabs#tabbrowser-tabs * {
-  -moz-appearance: none !important;
-  border-radius: 0px !important;
-  border: none !important;
-  border-bottom: 0px none !important;
-  background-image: none !important;
-  margin-top: 0 !important;
-  max-height: 18px !important;
-  min-height: 18px !important;
-}
-
-tabs#tabbrowser-tabs {
-  background: #232323 !important;
-  padding-top: 0px !important;
-  margin-left: 0px !important;
-  padding-bottom: 1px !important;
-  border-bottom: 0px none !important;
-  text-align: center !important;
-}
-
-.tabbrowser-tab {
-  margin-left: 0px !important;
-  padding-top: 0px !important;
-  color: #969696 !important;
-  border-bottom: 0px none !important;
-  background: #232323 !important;
-}
-
-.tabbrowser-tab[selected=true] {
-  color: #dedede !important;
-  background: #913133 !important;
-  border-bottom: 0px none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
+.tabbrowser-tab{ /* Actual tabs */
+  max-height: 20px;
+  padding: 0;
   margin: 0 !important;
+  border: 0 !important;
+  background: none !important;
+}
+.tabbrowser-tab:not([pinned]) { 
+  /* Defining a max/min width inside tabs breaks the ability 
+  of the tab to shrink/move on close of another tab*/
+min-width: 50px;
+}
+.tab-text.tab-label{ /* Tab text */
+  text-align: center;
+  font-size: 11px;
+}
+/* Deal with rounded tabs in Australis */
+.tab-background-start, .tab-background-end{ 
+  display: none;
+}
+.tab-background-middle{
+  background-image: none!important;
+}
+/* Tab hovering */
+.tabbrowser-tab:hover .tab-background-middle{
+
+}
+/* favicon */
+.tab-icon-image {
+  width: 0;
+  height: 0;
+}
+/* Selected tab */
+.tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{ 
+  background-color: #913133;
+  color: #ffffff !important;
+  text-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+.tabbrowser-tab:hover .tab-label, .tabbrowser-tab[selected="true"] .tab-label{
+  color: #bebeb4;
 }
 
-.tabbrowser-tab .tab-text {
-  margin-left: 3px !important;
-  margin-right: 3px !important;
-  padding-top: 0px !important;
-  margin-bottom: 0px !important;
-  font-size: 11px !important;
-  font-family: 'Verdana';
-  font-weight: 400 !important;
-}
-.tabbrowser-tab[selected=true] .tab-text {
-  padding-top: 0px !important;
-}
-
-#urlbar dropmarker,
-#identity-box,
-#star-button,
-#go-button,
-.tab-throbber,
+/* Clean up miscellaneous shit that can't be done in customize */
+#main-window #tabbrowser-tabs .tab-close-button,
+#tabbrowser-tabs toolbarbutton.scrollbutton-up,
+#tabbrowser-tabs toolbarbutton.scrollbutton-down,
+#appmenu-button, #appmenu-toolbar-button, #alltabs-button,
+.tabbrowser-tab .tab-icon-image,
 .tabs-newtab-button,
-.tab-throbber[progress] {
+.tab-throbber,
+.tab-throbber[progress],
+#identity-box,
+#go-button
+{
   display: none !important;
 }
 
-.titlebar-placeholder[type="caption-buttons"] {
-  margin-left: 10px !important;
+/* Tab separators */
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  background-image: none!important;
 }
 
-.tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] {
-  min-width: 30px !important;
-  max-width: 200px !important;
-}
-
-notificationbox {
-  overflow-x: hidden;
-}
-
-/* hide vertical scrollbar */
-notificationbox {
-  overflow-x: hidden;
-}
-.searchbar-engine-image {
-  display: none !important;
-}
-.search-go-button {
-  display: none !important;
-}
