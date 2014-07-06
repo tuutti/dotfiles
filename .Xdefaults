@@ -63,7 +63,8 @@ URxvt.colorIT: #686868
 
 ! green
 *.color2: #a6e22e
-*.color10: #383830
+!*.color10: #383830
+*.color10: #759b2b
 
 ! yellow
 *.color3: #f4bf75
