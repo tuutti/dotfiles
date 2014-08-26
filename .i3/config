@@ -78,7 +78,7 @@ bindsym Mod1+Shift+V split vertical
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, default)
-bindsym $mod+e exec ~/.i3/scripts/i3-toggle-layout.sh 
+bindsym Mod+Shift+s exec ~/.i3/scripts/i3-toggle-layout.sh 
 #bindsym $mod+w layout tabbed
 #bindsym $mod+e layout default
 
@@ -106,6 +106,9 @@ bindsym $mod+7 workspace 7 • skype
 bindsym $mod+8 workspace 8 • torrent
 bindsym $mod+9 workspace 9 • mail
 bindsym $mod+0 workspace 10 • random
+bindsym $mod+w workspace 11 • random
+bindsym $mod+e workspace 12 • random
+bindsym $mod+s workspace 13 • random
 
 # move focused container
 bindsym $mod+Shift+x move workspace to output right
@@ -129,6 +132,9 @@ bindsym Mod3 mode "chwin"
 bindsym $mod+Shift+8 move container to workspace 8 • torrent
 bindsym $mod+Shift+9 move container to workspace 9 • mail
 bindsym $mod+Shift+0 move container to workspace 10 • random
+bindsym $mod+Shift+W move container to workspace 11 • random
+bindsym $mod+Shift+E move container to workspace 12 • random
+bindsym $mod+Shift+S move container to workspace 13 • random
 
 bindsym Mod3+w mode "chwin"
 
@@ -159,7 +165,7 @@ bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+E exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes' 'i3-msg exit'"
+bindsym $mod+Shift+Q exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
