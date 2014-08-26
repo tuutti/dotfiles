@@ -78,7 +78,7 @@ bindsym Mod1+Shift+V split vertical
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, default)
-bindsym Mod+Shift+s exec ~/.i3/scripts/i3-toggle-layout.sh 
+bindsym Mod1+Shift+S exec ~/.i3/scripts/i3-toggle-layout.sh 
 #bindsym $mod+w layout tabbed
 #bindsym $mod+e layout default
 
