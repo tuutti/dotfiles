@@ -78,9 +78,9 @@ bindsym Mod1+Shift+V split vertical
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, default)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout default
+bindsym $mod+e exec ~/.i3/scripts/i3-toggle-layout.sh 
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout default
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -101,7 +101,7 @@ bindsym $mod+2 workspace 2 • irc
 bindsym $mod+3 workspace 3 • code
 bindsym $mod+4 workspace 4 • steam
 bindsym $mod+5 workspace 5 • music
-bindsym $mod+6 workspace 6 • random 
+bindsym $mod+6 workspace 6 • random
 bindsym $mod+7 workspace 7 • skype
 bindsym $mod+8 workspace 8 • torrent
 bindsym $mod+9 workspace 9 • mail
