@@ -11,10 +11,6 @@ imap <M-Space> <Esc>
 set timeoutlen=1000 ttimeoutlen=0
 
 set encoding=utf-8
-
-" Smart case search
-set smartcase
-
 " Use smartcase.
 let g:neocomplcache_enable_smart_case = 1 
 let g:neocomplcache_enable_at_startup = 1
@@ -228,3 +224,7 @@ command! -bang -complete=file -nargs=* QA qa<bang>
 command! -bang -range=% -complete=file -nargs=* Wq <line1>,<line2>wq<bang> <args>
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>w<bang> <args>
 command! -bang Q quit<bang>
+
+" Smart case search
+set smartcase
+
