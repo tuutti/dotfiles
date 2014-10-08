@@ -41,7 +41,7 @@ hi StatusLine guifg=#f0f0f0 guibg=#101010 guisp=#101010 gui=italic ctermfg=255 c
 hi Normal guifg=#b2b2b2 guibg=none guisp=none gui=none ctermfg=249 ctermbg=none cterm=none
 hi Label guifg=#ffb964 guibg=none guisp=none gui=none ctermfg=215 ctermbg=none cterm=none
 "hi CTagsImport -- no settings --
-hi PMenuSel guifg=#101010 guibg=#eeeeee guisp=#eeeeee gui=none ctermfg=234 ctermbg=255 cterm=none
+hi PMenuSel guifg=#101010 guibg=#eeeeee guisp=#eeeeee gui=none ctermfg=233 ctermbg=255 cterm=none
 hi Search guifg=#f0a0c0 guibg=#302028 guisp=#302028 gui=underline ctermfg=218 ctermbg=236 cterm=underline
 "hi CTagsGlobalVariable -- no settings --
 hi Delimiter guifg=#668799 guibg=none guisp=none gui=none ctermfg=66 ctermbg=none cterm=none
@@ -53,8 +53,8 @@ hi Character guifg=#cf6a4c guibg=none guisp=none gui=none ctermfg=173 ctermbg=no
 "hi Float -- no settings --
 hi Number guifg=#cf6a4c guibg=none guisp=none gui=none ctermfg=173 ctermbg=none cterm=none
 hi Boolean guifg=#8197bf guibg=none guisp=none gui=none ctermfg=103 ctermbg=none cterm=none
-hi Operator guifg=#e8e8d3 guibg=#151515 guisp=#151515 gui=none ctermfg=187 ctermbg=234 cterm=none
-hi CursorLine guifg=none guibg=#1c1c1c guisp=#1c1c1c gui=none ctermfg=none ctermbg=234 cterm=none
+hi Operator guifg=#e8e8d3 guibg=#151515 guisp=#151515 gui=none ctermfg=187 ctermbg=233 cterm=none
+hi CursorLine guifg=none guibg=#1c1c1c guisp=#1c1c1c gui=none ctermfg=none ctermbg=233 cterm=none
 "hi Union -- no settings --
 hi TabLineFill guifg=#9098a0 guibg=none guisp=none gui=none ctermfg=247 ctermbg=none cterm=none
 "hi Question -- no settings --
@@ -62,7 +62,7 @@ hi TabLineFill guifg=#9098a0 guibg=none guisp=none gui=none ctermfg=247 ctermbg=
 "hi VisualNOS -- no settings --
 hi DiffDelete guifg=#220000 guibg=#220000 guisp=#220000 gui=none ctermfg=52 ctermbg=52 cterm=none
 "hi ModeMsg -- no settings --
-hi CursorColumn guifg=none guibg=#1c1c1c guisp=#1c1c1c gui=none ctermfg=none ctermbg=234 cterm=none
+hi CursorColumn guifg=none guibg=#1c1c1c guisp=#1c1c1c gui=none ctermfg=none ctermbg=233 cterm=none
 hi Define guifg=#8fbfdc guibg=none guisp=none gui=none ctermfg=110 ctermbg=none cterm=none
 hi Function guifg=#fad07a guibg=none guisp=none gui=none ctermfg=222 ctermbg=none cterm=none
 hi FoldColumn guifg=#a0a8b0 guibg=#384048 guisp=#384048 gui=none ctermfg=103 ctermbg=238 cterm=none
@@ -75,7 +75,7 @@ hi VertSplit guifg=#181818 guibg=#181818 guisp=#181818 gui=italic ctermfg=233 ct
 hi Exception guifg=#ffb964 guibg=none guisp=none gui=none ctermfg=215 ctermbg=none cterm=none
 hi Keyword guifg=#ffb964 guibg=none guisp=none gui=none ctermfg=215 ctermbg=none cterm=none
 hi Type guifg=#ffb964 guibg=none guisp=none gui=none ctermfg=215 ctermbg=none cterm=none
-hi DiffChange guifg=none guibg=#100920 guisp=#100920 gui=none ctermfg=none ctermbg=234 cterm=none
+hi DiffChange guifg=none guibg=#100920 guisp=#100920 gui=none ctermfg=none ctermbg=233 cterm=none
 hi Cursor guifg=none guibg=#b0d0f0 guisp=#b0d0f0 gui=none ctermfg=none ctermbg=153 cterm=none
 "hi SpellLocal -- no settings --
 hi Error guifg=none guibg=#902020 guisp=#902020 gui=none ctermfg=none ctermbg=88 cterm=none
