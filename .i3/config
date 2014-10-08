@@ -17,7 +17,7 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt
 
 # kill focused window
-bindsym Control+Q kill
+bindsym Control+Mod1+q kill
 
 # switch windows on current workspace
 bindsym $mod+y exec ~/.i3/scripts/i3-window-switcher.py -n=0
@@ -234,7 +234,8 @@ for_window[class="sxiv"] border normal;
 ##---------
 #                         | border | backgrond | text | indigator
 
-set $color1 #95493f
+#set $color1 #95493f
+set $color1 #6a9fb5
 set $color2 #484848
 set $color3 #333333
  
