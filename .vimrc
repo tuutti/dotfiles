@@ -40,7 +40,6 @@ nnoremap k gk
 cmap w!! %!sudo tee > /dev/null %
 
 " Create new / change buffer
-map <C-t> :tabnew<CR>
 map <C-Left> :tabp<CR>
 map <C-Right> :tabn<CR>
 
@@ -101,6 +100,8 @@ Plugin 'gregsexton/MatchTag'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -123,6 +124,10 @@ set t_Co=256
 colorscheme tuutti 
 " use filetype plugins, e.g. for PHP
 " filetype plugin on
+
+let g:syntastic_phpcs_conf=" --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
+let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_php_phpcs_args=" --standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 
 " old vim thingies continue
 syntax on
@@ -207,6 +212,7 @@ nnoremap <silent> <C-u> <C-u>zz
 " Toggle tagbar and auto resize existing spit windows to use exactly same
 " amount of space
 nmap <F8> :TagbarToggle<CR><C-w>=
+map <C-t> :NERDTreeToggle<CR>
 " Resize tagbar to use 30 chars instead of 40
 let g:tagbar_width = 30
 
