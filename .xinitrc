@@ -5,6 +5,8 @@ if [-d /etc/X11/xinit/xinitrc.d ]; then
   done
   unset f
 fi
+
+#compton -CGb
 # Disable caps lock effect
 setxkbmap -option caps:none
 export PATH=$PATH:/home/tuutti/bspwm:/home/tuutti/bin
@@ -20,7 +22,7 @@ xsetroot -cursor_name left_ptr
 
 xrdb ~/.Xresources
 
-pulseaudio --start
+#pulseaudio --start
 
 # Automount
 udiskie &
@@ -28,13 +30,19 @@ udiskie &
 xset -dpms
 xset s off
 
+nvidia-settings --load-config-only
+
 # http://askubuntu.com/questions/125245/how-do-i-stop-video-tearing-nvidia-prop-driver-non-compositing-window-manager#comment167226_140036
 export __GL_SYNC_DISPLAY_DEVICE="DFP-1"
 
 #sxhkd -c "/home/tuutti/.config/sxhkd/sxhkdrc" &
+#sxhkd &
 
 #[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 #mkfifo "$PANEL_FIFO"
 #exec bspwm -s "$PANEL_FIFO" -p W
+#exec bspwm
 #exec bspwm -c "/home/tuutti/.config/bspwm/"
-exec i3
+#exec i3
+exec startxfce4
+feh --bg-max ~/dotfiles/bg2.jpg --bg-max ~/dotfiles/bg.jpg
