@@ -45,4 +45,7 @@ export __GL_SYNC_DISPLAY_DEVICE="DFP-1"
 #exec bspwm -c "/home/tuutti/.config/bspwm/"
 #exec i3
 exec startxfce4
+# Set backgrounds.
 feh --bg-max ~/dotfiles/bg2.jpg --bg-max ~/dotfiles/bg.jpg
+# Hide mouse.
+unclutter -idle 1 &
