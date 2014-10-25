@@ -199,7 +199,7 @@ bindsym $mod+r mode "resize"
 bar {
     #status_command i3status
     status_command $HOME/.i3/scripts/conky
-    #output DVI-I-2
+    output DVI-D-0
     position top 
     #tray_output primary 
     #font -misc-fixed-bold-r-normal--13-120-75-75-C-70-iso10646-1
@@ -237,7 +237,7 @@ for_window[class="sxiv"] border normal;
 #set $color1 #95493f
 set $color1 #6a9fb5
 set $color2 #484848
-set $color3 #333333
+set $color3 #121212
  
 client.focused            $color1   $color1    #FFFFFF   $color1 
 client.focused_inactive   $color3   $color3   #FFFFFF   $color3
