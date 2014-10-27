@@ -175,8 +175,7 @@ au BufRead,BufNewFile *.twig 		set filetype=html
 au InsertLeave * set nopaste
 
 " Search files with unite.vim
-nnoremap <C-p> :Unite -start-insert file_rec/async -default-action=tabopen<cr>
-nnoremap <space>p :Unite -start-insert file_rec/async<cr>
+nnoremap <space>p :Unite -start-insert file_rec/async:!<cr>
 
 " Search from yank history.
 let g:unite_source_history_yank_enable = 1
@@ -188,7 +187,7 @@ nnoremap <space>c :Unite grep:.<cr>
 " Search buffer with unite.vim
 nnoremap <space>b :Unite -quick-match buffer<cr>
 
-nmap ; :CtrlPBuffer<CR>
+"nmap ; :CtrlPBuffer<CR>
 " Autocenter on ggG
 nmap <silent> ggG ggGzz
 
