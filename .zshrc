@@ -57,6 +57,9 @@ function d-uninstall() { drush pm-disable "$@"; drush pm-uninstall "$@"; }
 function unixt() {
   date -d @$1;
 }
+function sconsole() {
+  $(git rev-parse --show-toplevel)/app/console @$1;
+}
 
 #export TERM='xterm-256color'
 alias tmux='tmux -2'
@@ -77,7 +80,6 @@ alias d3="WINEDEBUG=-all setarch i386 -3 -L -B -R wine ~/.wine/drive_c/Program\ 
 alias dvim='vim "+Sauce drupal"'
 # load symfony specific vim settings
 alias svim='vim "+Sauce symfony"'
-alias sconsole="$(git rev-parse --show-toplevel)/app/console"
 
 [ -s "/home/tuutti/.scm_breeze/scm_breeze.sh" ] && source "/home/tuutti/.scm_breeze/scm_breeze.sh"
 
