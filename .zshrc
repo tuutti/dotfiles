@@ -77,6 +77,7 @@ alias d3="WINEDEBUG=-all setarch i386 -3 -L -B -R wine ~/.wine/drive_c/Program\ 
 alias dvim='vim "+Sauce drupal"'
 # load symfony specific vim settings
 alias svim='vim "+Sauce symfony"'
+alias sconsole="$(git rev-parse --show-toplevel)/app/console"
 
 [ -s "/home/tuutti/.scm_breeze/scm_breeze.sh" ] && source "/home/tuutti/.scm_breeze/scm_breeze.sh"
 
