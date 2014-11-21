@@ -45,7 +45,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/tuutti/.gem/ruby/2.1.0/bin
 
 function xrdbload() {
   xrdb -load ~/.Xdefaults && xrdb -load ~/.Xresources
@@ -65,12 +65,18 @@ alias tmuxd='tmux attach -d'
 alias ':q'='exit'
 
 setopt menu_complete
-#bindkey -v
-alias steamwin='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe -no-dwrite >/dev/null 2>&1 &'
+bindkey -e
+alias steamwin='WINEDEBUG=-all wine ~/.wine-steam/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe -no-dwrite >/dev/null 2>&1 &'
 alias wow='WINEDEBUG=-all __GL_THREADED_OPTIMIZATIONS=1 wine /home/tuutti/.wine/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/World\ of\ Warcraft\ Launcher.exe -opengl $> /dev/null'
 alias battlenet='WINEDEBUG=-all __GL_THREADED_OPTIMIZATIONS=1 wine /home/tuutti/.wine/drive_c/Program\ Files\ \(x86\)/Battle.net/Battle.net\ Launcher.exe -opengl $> /dev/null'
 alias mpv='__GL_SYNC_DISPLAY_DEVICE="DFP-1" __GL_SYNC_TO_VBLANK=1 mpv --cache=8096 --vo=opengl'
 alias gll="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+#alias d3="WINEDEBUG=-all setarch i386 -3 wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Diablo\ III/Diablo\ III.exe -opengl $> /dev/null"
+alias d3="WINEDEBUG=-all setarch i386 -3 -L -B -R wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Diablo\ III/Diablo\ III.exe -launch -opengl $> /dev/null"
+# Load drupal specific vim settings
+alias dvim='vim "+Sauce drupal"'
+# load symfony specific vim settings
+alias svim='vim "+Sauce symfony"'
 
 [ -s "/home/tuutti/.scm_breeze/scm_breeze.sh" ] && source "/home/tuutti/.scm_breeze/scm_breeze.sh"
 
