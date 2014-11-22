@@ -58,7 +58,7 @@ function unixt() {
   date -d @$1;
 }
 function sconsole() {
-  $(git rev-parse --show-toplevel)/app/console @$1;
+  $(git rev-parse --show-toplevel)/app/console "$@";
 }
 
 #export TERM='xterm-256color'
