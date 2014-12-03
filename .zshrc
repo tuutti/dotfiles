@@ -60,6 +60,8 @@ function unixt() {
 function sconsole() {
   $(git rev-parse --show-toplevel)/app/console "$@";
 }
+alias grep="/usr/bin/grep $GREP_OPTIONS"
+unset GREP_OPTIONS
 
 #export TERM='xterm-256color'
 alias tmux='tmux -2'
