@@ -15,6 +15,23 @@ set encoding=utf-8
 let g:neocomplcache_enable_smart_case = 1 
 let g:neocomplcache_enable_at_startup = 1
 
+" To open a new empty buffer
+" This replaces :tabnew which I used to bind to this mapping
+nmap <leader>n :enew<cr>
+
+" Move to the next buffer
+nmap <leader>l :bnext<CR>
+
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>bq :bp <BAR> bd #<CR>
+
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
+
 " Disable arrows for navigating
 map <Left> <Nop>
 map <Right> <Nop>
@@ -100,9 +117,12 @@ Plugin 'gregsexton/MatchTag'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'joonty/vim-sauce.git'
+Plugin 'evidens/vim-twig'
+Plugin 'fholgado/minibufexpl.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
