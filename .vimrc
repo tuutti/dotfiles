@@ -122,7 +122,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'joonty/vim-sauce.git'
 Plugin 'evidens/vim-twig'
-Plugin 'fholgado/minibufexpl.vim'
+"Plugin 'fholgado/minibufexpl.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -193,6 +193,7 @@ au InsertLeave * set nopaste
 
 " Search files with unite.vim
 nnoremap <space>p :Unite -start-insert file_rec/async:!<cr>
+nnoremap <leader>s :Unite -start-insert buffer<cr>
 
 " Search from yank history.
 let g:unite_source_history_yank_enable = 1
