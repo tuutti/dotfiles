@@ -20,6 +20,8 @@ xset fp rehash
 
 xsetroot -cursor_name left_ptr
 
+setxkbmap -layout fi
+
 xrdb ~/.Xresources
 
 #pulseaudio --start
