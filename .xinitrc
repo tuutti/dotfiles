@@ -46,6 +46,7 @@ export __GL_SYNC_DISPLAY_DEVICE="DFP-1"
 #exec bspwm
 #exec bspwm -c "/home/tuutti/.config/bspwm/"
 #exec i3
+compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config ~/.compton.conf -b &
 exec startxfce4
 # Set backgrounds.
 feh --bg-max ~/dotfiles/bg2.jpg --bg-max ~/dotfiles/bg.jpg
