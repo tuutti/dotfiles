@@ -17,7 +17,7 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt
 
 # kill focused window
-bindsym Control+Mod1+q kill
+bindsym Control+Mod1+p kill
 
 # switch windows on current workspace
 bindsym $mod+y exec ~/.i3/scripts/i3-window-switcher.py -n=0
@@ -200,7 +200,7 @@ bar {
     #status_command i3status
     status_command $HOME/.i3/scripts/conky
     output DVI-D-0
-    position top 
+    position bottom 
     #tray_output primary 
     #font -misc-fixed-bold-r-normal--13-120-75-75-C-70-iso10646-1
     font xft:Ubuntu Mono Bold 9 
@@ -220,8 +220,10 @@ bindsym $mod+c exec i3-input -F 'rename workspace to %s' -P 'New name: '
 
 # xfce notifies to float
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
+for_window [class="key-mon"] floating enable; focus mode_toggle 
 
 assign [class="Steam"] "4 • steam"
+assign [class="Skype"] "7 • skype"
 
 default_orientation auto
 new_window pixel 1
