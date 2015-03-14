@@ -334,22 +334,22 @@ set ebind     = @mode_bind global,-insert
 @cbind  zS  = event REQ_NEW_WINDOW \@(echo "$UZBL_URI" | sed -e 's/^http:/https:/')\@
 
 # Yanking & pasting binds
-@cbind  yu  = sh 'echo -n "$UZBL_URI" | xclip'
-@cbind  yU  = sh 'echo -n "$1" | xclip' '\@SELECTED_URI'
-@cbind  yy  = sh 'echo -n "$UZBL_TITLE" | xclip'
+@cbind  yu  = sh 'echo -n "$UZBL_URI" | xclip -i -selection clipboard'
+@cbind  yU  = sh 'echo -n "$1" | xclip -i -selection clipboard' '\@SELECTED_URI'
+@cbind  yy  = sh 'echo -n "$UZBL_TITLE" | xclip -i -selection clipboard'
 @cbind  ys  = spawn @scripts_dir/follow.sh \@< uzbl.follow.followSelection('returnuri') >\@ clipboard
 
 # Clone current window
 @cbind  c   = event REQ_NEW_WINDOW \@uri
 # Go the page from primary selection
-@cbind  p   = sh 'echo "uri $(xclip -o | sed s/\\\@/%40/g)" > "$UZBL_FIFO"'
-@cbind  gp  = sh 'echo "uri http://www.google.com/search?q=$(xclip selection clipboard -o | sed s/\\\@/%40/g)" > "$UZBL_FIFO"'
+@cbind  p   = sh 'echo "uri $(xclip -o -selection clipboard | sed s/\\\@/%40/g)" > "$UZBL_FIFO"'
+@cbind  gp  = sh 'echo "uri http://www.google.com/search?q=$(xclip -selection clipboard -o | sed s/\\\@/%40/g)" > "$UZBL_FIFO"'
 # Go to the page in clipboard
-@cbind  P   = sh 'echo "uri $(xclip -selection clipboard -o | sed s/\\\@/%40/g)" > "$UZBL_FIFO"'
+@cbind  P   = sh 'echo "event NEW_TAB $(xclip -selection clipboard -o | sed s/\\\@/%40/g)" > "$UZBL_FIFO"'
 # Start a new uzbl instance from the page in primary selection
-@cbind  'p  = sh 'echo "event REQ_NEW_WINDOW $(xclip -o)" > "$UZBL_FIFO"'
+#@cbind  'p  = sh 'echo "event REQ_NEW_WINDOW $(xclip -o)" > "$UZBL_FIFO"'
 # paste primary selection into keycmd at the cursor position
-@bind <Shift><Insert> = sh 'echo "event INJECT_KEYCMD $(xclip -o | sed s/\\\@/%40/g)" > "$UZBL_FIFO"'
+@bind <Shift><Insert> = sh 'echo "event INJECT_KEYCMD $(xclip -o -selection clipboard | sed s/\\\@/%40/g)" > "$UZBL_FIFO"'
 
 # Bookmark inserting binds
 @cbind <Ctrl>m<tags:>_  = sh 'echo "$UZBL_URI $1" >> "$XDG_DATA_HOME"/uzbl/bookmarks' '%s'
