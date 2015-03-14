@@ -124,6 +124,8 @@ set status_format_right = <span font_family="monospace"><span foreground="#666">
 
 set title_format_long = \@keycmd_prompt \@raw_modcmd \@raw_keycmd \@TITLE - Uzbl browser <\@NAME> \@SELECTED_URI
 
+set max_title_len     = 30 
+
 # Progress bar config
 # %d = done, %p = pending %c = percent done, %i = int done, %s = spinner,
 # %t = percent pending, %o = int pending, %r = sprite scroll
@@ -264,7 +266,9 @@ set ebind     = @mode_bind global,-insert
 
 # Navigation binds
 @cbind  H   = back
+@cbind <Mod1><Left> = back
 @cbind  L   = forward
+@cbind <Mod1><Right> = forward 
 @cbind  S   = stop
 @cbind  r   = reload
 @cbind  R   = reload_ign_cache
@@ -311,7 +315,7 @@ set ebind     = @mode_bind global,-insert
 #@cbind  <Ctrl><Mod1>t  = sh 'urxvt -e socat unix-connect:"$UZBL_SOCKET" -'
 
 # Uri opening prompts
-@cbind  o<uri:>_       = uri %s
+@bind o = sh 'uri=`$XDG_CONFIG_HOME/uzbl/scripts/load_url_from_surfraw.sh` && echo "uri $uri" > "$UZBL_FIFO"'
 # Or have it load the current uri into the keycmd for editing
 @cbind  O<uri:\@uri>_  = uri %s
 
@@ -339,6 +343,7 @@ set ebind     = @mode_bind global,-insert
 @cbind  c   = event REQ_NEW_WINDOW \@uri
 # Go the page from primary selection
 @cbind  p   = sh 'echo "uri $(xclip -o | sed s/\\\@/%40/g)" > "$UZBL_FIFO"'
+@cbind  gp  = sh 'echo "uri http://www.google.com/search?q=$(xclip selection clipboard -o | sed s/\\\@/%40/g)" > "$UZBL_FIFO"'
 # Go to the page in clipboard
 @cbind  P   = sh 'echo "uri $(xclip -selection clipboard -o | sed s/\\\@/%40/g)" > "$UZBL_FIFO"'
 # Start a new uzbl instance from the page in primary selection
@@ -397,7 +402,8 @@ set formfiller = spawn @scripts_dir/formfiller.sh
 # --- Uzbl tabbed binds ------------------------------------------------------
 
 # Tab opening
-@cbind  t              = event NEW_TAB
+#@cbind  t              = event NEW_TAB
+@cbind  t               = sh 'echo "event NEW_TAB `$XDG_CONFIG_HOME/uzbl/scripts/load_url_from_surfraw.sh`" > "$UZBL_FIFO"'
 @cbind  tN              = event NEW_TAB_NEXT
 @cbind  go<uri:>_       = event NEW_TAB %s
 @cbind  gO<uri:>_       = event NEW_TAB_NEXT %s
