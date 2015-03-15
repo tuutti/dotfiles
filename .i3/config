@@ -30,7 +30,7 @@ bindsym $mod+p exec ~/.i3/scripts/i3-window-switcher.py -n=4
 bindsym $mod+d exec urxvt -e ranger
 # Dmenu
 # (resolution/2)-(dmenu-width/2) = center
-bindsym Mod1+space exec dmenu_run -nb '#181818' -nf '#f8f8f8' -sb '#aff32c' -sf '#181818' -i -fn 'Ubuntu Mono-10:normal' -p 'Run ' -l 5 -w 500 -x 1030 -h 25
+bindsym Mod1+space exec i3-dmenu-desktop --dmenu="dmenu -nb '#181818' -nf '#f8f8f8' -sb '#aff32c' -sf '#181818' -i -fn 'Ubuntu Mono-10:normal' -p 'Run ' -l 2 -w 500 -x 1030 -h 25"
 bindsym $mod+x exec ~/.i3/scripts/quickswitch.py --dmenu="dmenu -nb '#181818' -nf '#f8f8f2' -sb '#aff32c' -sf '#181818' -p ' ~/  ' -l 15 -fn sq-12 -i"
 # change focus
 bindsym $mod+h focus left
