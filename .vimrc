@@ -182,8 +182,10 @@ set number
 set incsearch
 " Search hilighting
 set hlsearch
-" Clear search hilight on esc.
-nnoremap <esc> :noh<return><esc>
+" Clear search hilight on hjkl.
+for key in ['h', 'j', 'k', 'l']
+  exe 'nnoremap <silent>' key ':noh<CR>'.key
+endfor
 
 autocmd BufEnter * lcd %:p:h
 au BufRead,BufNewFile *.install		set filetype=php
