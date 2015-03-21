@@ -27,7 +27,7 @@ bindsym $mod+o exec ~/.i3/scripts/i3-window-switcher.py -n=3
 bindsym $mod+p exec ~/.i3/scripts/i3-window-switcher.py -n=4
 
 # ranger
-bindsym $mod+d exec urxvt -e ranger
+bindsym $mod+d exec termite -e ranger
 # Dmenu
 # (resolution/2)-(dmenu-width/2) = center
 bindsym Mod1+space exec i3-dmenu-desktop --dmenu="dmenu -nb '#181818' -nf '#f8f8f8' -sb '#aff32c' -sf '#181818' -i -fn 'Ubuntu Mono-10:normal' -p 'Run ' -l 2 -w 500 -x 1030 -h 25"
