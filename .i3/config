@@ -237,7 +237,8 @@ for_window[class="sxiv"] border normal;
 #                         | border | backgrond | text | indigator
 
 #set $color1 #6a9fb5
-set $color1 #d25e8b
+#set $color1 #d25e8b
+set $color1 #90a959
 set $color2 #484848
 set $color3 #121212
  
