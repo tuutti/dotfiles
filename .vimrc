@@ -180,6 +180,10 @@ set number
 
 " use incremental searching
 set incsearch
+" Search hilighting
+set hlsearch
+" Clear search hilight on esc.
+nnoremap <esc> :noh<return><esc>
 
 autocmd BufEnter * lcd %:p:h
 au BufRead,BufNewFile *.install		set filetype=php
