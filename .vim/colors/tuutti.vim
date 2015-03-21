@@ -11,8 +11,6 @@ endif
 set t_Co=256
 let g:colors_name = "tuutti"
 
-"hi IncSearch -- no settings --
-"hi WildMenu -- no settings --
 hi SignColumn ctermfg=103 ctermbg=238 cterm=none
 hi SpecialComment ctermfg=65 ctermbg=none cterm=none
 hi Typedef ctermfg=215 ctermbg=none cterm=none
@@ -46,7 +44,7 @@ hi Character ctermfg=173 ctermbg=none cterm=none
 hi Number ctermfg=173 ctermbg=none cterm=none
 hi Boolean ctermfg=103 ctermbg=none cterm=none
 hi Operator ctermfg=187 ctermbg=none cterm=none
-hi CursorLine ctermfg=none ctermbg=233 cterm=none
+hi CursorLine ctermfg=none ctermbg=none cterm=none
 hi TabLineFill ctermfg=247 ctermbg=none cterm=none
 hi DiffDelete ctermfg=52 ctermbg=52 cterm=none
 hi CursorColumn ctermfg=none ctermbg=233 cterm=none
@@ -68,7 +66,7 @@ hi Constant ctermfg=173 ctermbg=none cterm=none
 hi Tag ctermfg=65 ctermbg=none cterm=none
 hi String ctermfg=107 ctermbg=none cterm=none
 hi PMenuThumb ctermfg=none ctermbg=248 cterm=none
-hi MatchParen ctermfg=15 ctermbg=108 cterm=bold
+hi MatchParen ctermfg=71 ctermbg=none cterm=bold
 hi Repeat ctermfg=215 ctermbg=none cterm=none
 hi Directory ctermfg=186 ctermbg=none cterm=none
 hi Structure ctermfg=110 ctermbg=none cterm=none

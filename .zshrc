@@ -77,7 +77,7 @@ alias tmux='tmux -2'
 alias ls='ls --color=auto'
 alias ':q'='exit'
 alias ':Q'='exit'
-alias ta='tmux attach -t'
+alias 'tl'='tmux ls'
 
 setopt menu_complete
 bindkey -e
