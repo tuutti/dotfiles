@@ -226,7 +226,7 @@ assign [class="Steam"] "4 • steam"
 assign [class="Skype"] "7 • skype"
 
 default_orientation auto
-new_window pixel 1
+new_window pixel 2
 for_window[class="sxiv"] border normal;
 
 #hide_edge_borders both
@@ -236,11 +236,9 @@ for_window[class="sxiv"] border normal;
 ##---------
 #                         | border | backgrond | text | indigator
 
-#set $color1 #6a9fb5
-#set $color1 #d25e8b
 set $color1 #90a959
 set $color2 #484848
-set $color3 #121212
+set $color3 #6a9fb5
  
 client.focused            $color1   $color1    #FFFFFF   $color1 
 client.focused_inactive   $color3   $color3   #FFFFFF   $color3
