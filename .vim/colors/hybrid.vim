@@ -439,3 +439,9 @@ hi! link diffAdded Special
 " THE SOFTWARE.
 
 " }}}
+
+" My tweaks (scwood)
+hi CursorLine   cterm=NONE ctermbg=236 ctermfg=NONE
+hi ColorColumn  cterm=NONE ctermbg=233 ctermfg=NONE
+hi StatusLine   cterm=none ctermbg=235 ctermfg=015
+hi StatusLineNC   cterm=none ctermbg=235 ctermfg=NONE
