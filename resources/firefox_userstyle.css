@@ -1,40 +1,39 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-
 /* This is based on https://raw.githubusercontent.com/arawde/dotfiles/master/firefox/nani_bspwm_neue.css */
 
 /* Stupid ass border at bottom*/
 #TabsToolbar::after{
-  display: none;
+    display: none;
 }
 #tabbrowser-tabs{ /* Tab container*/
-  background-color: #191919;
-  color: #fff;
-  padding: 0 !important; 
-  margin-left:-10px; /* Flush with the side of the window */
-  margin-right: -15px; /* You need like 5-7 tabs open for this to come into effect */
+    background-color: #191919;
+    color: #fff;
+    padding: 0 !important; 
+    margin-left:-10px; /* Flush with the side of the window */
+    margin-right: -15px; /* You need like 5-7 tabs open for this to come into effect */
 }
 .tabbrowser-tab{ /* Actual tabs */
-  max-height: 20px;
-  padding: 0;
-  margin: 0 !important;
-  border: 0 !important;
-  background: none !important;
+    max-height: 20px;
+    padding: 0;
+    margin: 0 !important;
+    border: 0 !important;
+    background: none !important;
 }
 .tabbrowser-tab:not([pinned]) { 
-  /* Defining a max/min width inside tabs breaks the ability 
-  of the tab to shrink/move on close of another tab*/
-min-width: 50px;
+    /* Defining a max/min width inside tabs breaks the ability 
+    of the tab to shrink/move on close of another tab*/
+    min-width: 50px;
 }
 .tab-text.tab-label{ /* Tab text */
-  text-align: center;
-  font-size: 11px;
+    text-align: center;
+    font-size: 11px;
 }
 /* Deal with rounded tabs in Australis */
 .tab-background-start, .tab-background-end{ 
-  display: none;
+    display: none;
 }
 .tab-background-middle{
-  background-image: none!important;
+    background-image: none!important;
 }
 /* Tab hovering */
 .tabbrowser-tab:hover .tab-background-middle{
@@ -42,20 +41,21 @@ min-width: 50px;
 }
 /* favicon */
 .tab-icon-image {
-  width: 0;
-  height: 0;
+    width: 0;
+    height: 0;
 }
 /* Selected tab */
 .tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{ 
-  background-color: #913133;
-  color: #ffffff !important;
-  text-shadow: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
+    background-color: #913133;
+    color: #ffffff !important;
+    text-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-weight: normal;
 }
 .tabbrowser-tab:hover .tab-label, .tabbrowser-tab[selected="true"] .tab-label{
-  color: #bebeb4;
+    color: #bebeb4;
 }
 
 /* Clean up miscellaneous shit that can't be done in customize */
@@ -70,7 +70,7 @@ min-width: 50px;
 #identity-box,
 #go-button
 {
-  display: none !important;
+    display: none !important;
 }
 
 /* Tab separators */
@@ -78,4 +78,3 @@ min-width: 50px;
 .tabbrowser-tab::before {
   background-image: none!important;
 }
-

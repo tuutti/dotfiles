@@ -5,8 +5,6 @@ if [-d /etc/X11/xinit/xinitrc.d ]; then
   done
   unset f
 fi
-
-#compton -CGb
 # Disable caps lock effect
 setxkbmap -option caps:none
 export PATH=$PATH:/home/tuutti/bspwm:/home/tuutti/bin
@@ -46,9 +44,11 @@ export __GL_SYNC_DISPLAY_DEVICE="DFP-1"
 #exec bspwm
 #exec bspwm -c "/home/tuutti/.config/bspwm/"
 #exec i3
+# Hide mouse.
+unclutter -idle 3 -grab &
+
+# Set backgrounds.
+feh --bg-max ~/dotfiles/resources/bg2.jpg --bg-max ~/dotfiles/resources/bg.jpg
+
 compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config ~/.compton.conf -b &
 exec startxfce4
-# Set backgrounds.
-feh --bg-max ~/dotfiles/bg2.jpg --bg-max ~/dotfiles/bg.jpg
-# Hide mouse.
-unclutter -idle 1 &
