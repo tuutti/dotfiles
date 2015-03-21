@@ -44,6 +44,11 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+# Global spotify keybinds
+bindsym $mod+Mod1+l exec playerctl next
+bindsym $mod+Mod1+h exec playerctl previous 
+bindsym $mod+Mod1+p exec playerctl play-pause
+
 # move focused window
 bindsym $mod+Shift+H move left
 bindsym $mod+Shift+J move down
