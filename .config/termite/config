@@ -29,13 +29,13 @@ cursor_shape = ibeam
 #modify_other_keys = false
 
 [colors]
-cursor = #FFA7DA
+#cursor = #FFA7DA
 foreground = #C5C8C6
 foreground_bold = #ffffff
-background = #1D1F21
+#background = #1D1F21
 
 # 20% background transparency (requires a compositor)
-#background = rgba(63, 63, 63, 0.8)
+background = rgba(29, 31, 33, 0.96)
 
 # if unset, will reverse foreground and background
 highlight = #435D75
