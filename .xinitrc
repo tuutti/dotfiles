@@ -7,7 +7,7 @@ if [-d /etc/X11/xinit/xinitrc.d ]; then
 fi
 # Disable caps lock effect
 setxkbmap -option caps:none
-export PATH=$PATH:/home/tuutti/bspwm:/home/tuutti/bin
+export PATH=$PATH:/home/tuutti/bspwm:/home/tuutti/bin:/home/tuutti/scripts
 export XDG_CONFIG_HOME="/home/tuutti/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 export EDITOR=vim
@@ -34,15 +34,18 @@ export __GL_SYNC_DISPLAY_DEVICE="DFP-1"
 # Hide mouse.
 unclutter -idle 3 -grab &
 
-# Set backgrounds.
-feh --bg-max ~/dotfiles/resources/bg2.jpg --bg-max ~/dotfiles/resources/bg.jpg
-
 compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config ~/.compton.conf -b &
 
 if [ "$(hostname)" = "kulli" ] || [ "$(hostname)" = "järkäle" ]; then
   exec ~/scripts/touchpad.sh
+  # Set backgrounds.
+  feh -bg-max ~/dotfiles/resources/bg.jpg
+
   exec i3
 else
   exec ~/scripts/update-public-ip.sh 1>&- 2>&- &
+
+  # Set backgrounds.
+  feh --bg-max ~/dotfiles/resources/bg2.jpg --bg-max ~/dotfiles/resources/bg.jpg
   exec startxfce4
 fi
