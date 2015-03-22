@@ -2,3 +2,7 @@
 *~
 *.sw?
 *.pyc
+Vagrantfile
+tags
+tags.lock
+tags.temp
