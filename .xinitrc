@@ -40,8 +40,9 @@ feh --bg-max ~/dotfiles/resources/bg2.jpg --bg-max ~/dotfiles/resources/bg.jpg
 compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config ~/.compton.conf -b &
 
 if [ "$(hostname)" = "kulli" ] || [ "$(hostname)" = "järkäle" ]; then
-  ~/scripts/touchpad.sh
+  exec ~/scripts/touchpad.sh
   exec i3
 else
+  exec ~/scripts/update-public-ip.sh 1>&- 2>&- &
   exec startxfce4
 fi
