@@ -12,7 +12,7 @@ set timeoutlen=1000 ttimeoutlen=0
 
 set encoding=utf-8
 " Use smartcase.
-let g:neocomplcache_enable_smart_case = 1 
+let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_at_startup = 1
 
 " To open a new empty buffer
@@ -43,6 +43,8 @@ nmap <silent> <Down> :wincmd j<CR>
 nmap <silent> <Left> :wincmd h<CR>
 nmap <silent> <Right> :wincmd l<CR>
 
+
+nnoremap <C-n> <C-]>
 " Autocomplete braces and apostrophes and move cursor between them.
 ""inoremap ( ()<Esc>i
 ""inoremap [ []<Esc>i
@@ -86,7 +88,7 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle
-" required! 
+" required!
 Plugin 'gmarik/Vundle.vim'
 
 " My Plugins here:
@@ -118,11 +120,12 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplcache.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'stephpy/vim-php-cs-fixer'
-Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'joonty/vim-sauce.git'
 Plugin 'evidens/vim-twig'
-"Plugin 'fholgado/minibufexpl.vim'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -142,7 +145,7 @@ filetype plugin indent on    " required
 set background=dark
 " Color settings
 set t_Co=256
-colorscheme tuutti 
+colorscheme tuutti
 " use filetype plugins, e.g. for PHP
 " filetype plugin on
 
@@ -158,7 +161,7 @@ set backspace=start,eol,indent
 " toggle paste
 set pastetoggle=§
 
-set wrap 
+set wrap
 
 " show nice info in ruler
 set ruler
@@ -216,11 +219,11 @@ nnoremap <space>b :Unite -quick-match buffer<cr>
 nmap <silent> ggG ggGzz
 
 
-" Reselect visual block after indent/outdent 
+" Reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
 
-" Keep search pattern at the center of the screen. 
+" Keep search pattern at the center of the screen.
 nnoremap <silent> n nzz
 nnoremap <silent> N Nzz
 nnoremap <silent> * *zz
@@ -235,12 +238,17 @@ nnoremap <silent> <C-u> <C-u>zz
 " Toggle tagbar and auto resize existing spit windows to use exactly same
 " amount of space
 nmap <F8> :TagbarToggle<CR><C-w>=
-map <C-t> :NERDTreeToggle<CR>
 " Resize tagbar to use 30 chars instead of 40
 let g:tagbar_width = 30
 
 " Leave mode handling for airline.vim
 "set noshowmode
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_theme = 'wombat'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline#extensions#whitespace#trailing_format = '[%s]'
 
 " Unimpaired: Move line up/down
 map <S-Up> [e
@@ -257,3 +265,14 @@ command! -bang Q quit<bang>
 " Smart case search
 set smartcase
 
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+
+autocmd FileWritePre    * :call TrimWhiteSpace()
+autocmd FileAppendPre   * :call TrimWhiteSpace()
+autocmd FilterWritePre  * :call TrimWhiteSpace()
+autocmd BufWritePre     * :call TrimWhiteSpace()
+
+" Disable ex mode.
+nnoremap Q <nop>
