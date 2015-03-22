@@ -10,4 +10,9 @@ echo '['
 echo '[],'
 
 # Now send blocks with information forever:
-exec conky -c $HOME/.conkyrc
+if [ "$(hostname)" = "kulli" ] || [ "$(hostname)" = "järkäle" ]; then
+  exec conky -c $HOME/.conkyrc.laptop
+else
+  exec conky -c $HOME/.conkyrc
+fi
+echo $(hostname)

@@ -7,7 +7,7 @@ exec /opt/SteelSeriesMouse.sh
 set $mod Mod4
 
 # font7 for window titles. ISO 10646 = Unicode
-font xft:Ubuntu Mono Bold 9 
+font xft:Ubuntu Mono Bold 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -46,7 +46,7 @@ bindsym $mod+Right focus right
 
 # Global spotify keybinds
 bindsym $mod+Mod1+l exec playerctl next
-bindsym $mod+Mod1+h exec playerctl previous 
+bindsym $mod+Mod1+h exec playerctl previous
 bindsym $mod+Mod1+p exec playerctl play-pause
 
 # move focused window
@@ -84,7 +84,7 @@ bindsym Mod1+Shift+V split vertical
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, default)
-bindsym Mod1+Shift+S exec ~/.i3/scripts/i3-toggle-layout.sh 
+bindsym Mod1+Shift+S exec ~/.i3/scripts/i3-toggle-layout.sh
 #bindsym $mod+w layout tabbed
 #bindsym $mod+e layout default
 
@@ -159,8 +159,8 @@ mode "chwin" {
   bindsym Mod5+a workspace 9
   bindsym Mod5+s workspace 10
   bindsym Mod5+d workspace 11
-  bindsym Mod5+f workspace 12 
-  
+  bindsym Mod5+f workspace 12
+
   bindsym Return mode "default"
   bindsym Escape mode "default"
   bindsym Mod3 mode "default"
@@ -204,12 +204,12 @@ bindsym $mod+r mode "resize"
 bar {
     #status_command i3status
     status_command $HOME/.i3/scripts/conky
-    output DVI-D-0
-    position bottom 
-    #tray_output primary 
+    #output DVI-D-0
+    position bottom
+    #tray_output primary
     #font -misc-fixed-bold-r-normal--13-120-75-75-C-70-iso10646-1
-    font xft:Ubuntu Mono Bold 9 
-  
+    font xft:Ubuntu Mono Bold 11
+
     colors {
         background #000000
         separator #000000
@@ -225,7 +225,7 @@ bindsym $mod+c exec i3-input -F 'rename workspace to %s' -P 'New name: '
 
 # xfce notifies to float
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
-for_window [class="key-mon"] floating enable; focus mode_toggle 
+for_window [class="key-mon"] floating enable; focus mode_toggle
 
 assign [class="Steam"] "4 • steam"
 assign [class="Skype"] "7 • skype"
@@ -244,7 +244,7 @@ for_window[class="sxiv"] border normal;
 set $color1 #90a959
 set $color2 #484848
 set $color3 #6a9fb5
- 
-client.focused            $color1   $color1    #FFFFFF   $color1 
+
+client.focused            $color1   $color1    #FFFFFF   $color1
 client.focused_inactive   $color3   $color3   #FFFFFF   $color3
 client.unfocused          $color3   $color3   #FFFFFF   $color3
