@@ -40,7 +40,7 @@ ZSH_THEME="tuutti"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search)
+plugins=(git history-substring-search tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,18 +61,6 @@ function sconsole() {
   $(git rev-parse --show-toplevel)/app/console "$@";
 }
 
-function ta() {
-  tmux attach -t "$@"
-}
-
-function ts() {
-  tmux new-session -s "$@"
-}
-
-function s() {
-  sudo -E "$@"
-}
-
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
 
@@ -82,6 +70,7 @@ alias ls='ls --color=auto'
 alias ':q'='exit'
 alias ':Q'='exit'
 alias 'tl'='tmux ls'
+alias 's'='sudo -E'
 
 setopt menu_complete
 bindkey -e
