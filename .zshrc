@@ -75,9 +75,6 @@ alias 's'='sudo -E'
 setopt menu_complete
 bindkey -e
 
-alias wow='WINEDEBUG=-all __GL_THREADED_OPTIMIZATIONS=1 wine /home/tuutti/.wine/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/World\ of\ Warcraft\ Launcher.exe -opengl $> /dev/null'
-alias mpv='__GL_SYNC_DISPLAY_DEVICE="DFP-1" __GL_SYNC_TO_VBLANK=1 mpv --cache=8096 --vo=opengl'
-alias d3="WINEDEBUG=-all setarch i386 -3 -L -B -R wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Diablo\ III/Diablo\ III.exe -launch -opengl $> /dev/null"
 # Load drupal specific vim settings
 alias dvim='vim "+Sauce drupal"'
 # load symfony specific vim settings
