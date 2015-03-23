@@ -69,6 +69,10 @@ function ts() {
   tmux new-session -s "$@"
 }
 
+function s() {
+  sudo -E "$@"
+}
+
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
 
