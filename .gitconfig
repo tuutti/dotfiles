@@ -1,10 +1,10 @@
 [user]
-	email = tuutti@iki.fi
-	name = "Lari Rauno"
+  email = tuutti@iki.fi
+  name = "Lari Rauno"
 [github]
-	user = tuutti
+  user = tuutti
 [core]
-	excludesfile = ~/.gitignore-global
+  excludesfile = ~/.gitignore-global
   editor = vim
 
 [color]
