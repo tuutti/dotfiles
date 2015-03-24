@@ -122,7 +122,6 @@ bindsym $mod+Shift+4 move container to workspace 4 • steam
 bindsym $mod+Shift+5 move container to workspace 5 • music
 bindsym $mod+Shift+6 move container to workspace 6 • random
 bindsym $mod+Shift+7 move container to workspace 7 • skype
-bindsym Mod3 mode "chwin"
 bindsym $mod+Shift+8 move container to workspace 8 • torrent
 bindsym $mod+Shift+9 move container to workspace 9 • mail
 bindsym $mod+Shift+0 move container to workspace 10 • random
@@ -191,9 +190,6 @@ bar {
     }
 }
 
-# Bind rename
-bindsym $mod+c exec i3-input -F 'rename workspace to %s' -P 'New name: '
-
 # xfce notifies to float
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
 for_window [class="key-mon"] floating enable; focus mode_toggle
@@ -205,14 +201,16 @@ default_orientation auto
 new_window pixel 2
 for_window[class="sxiv"] border normal;
 
+# Requires i3-gaps
+gaps inner 6
+gaps outer 0
+
 #hide_edge_borders both
 # Hide edge borders
 #hide_edge_borders both
 ## Colours
 ##---------
 #                         | border | backgrond | text | indigator
-
-
 client.focused            $color1   $color1    #FFFFFF   $color1
 client.focused_inactive   $color3   $color3   #FFFFFF   $color3
 client.unfocused          $color3   $color3   #FFFFFF   $color3
