@@ -47,5 +47,5 @@ else
 
   # Set backgrounds.
   feh --bg-max ~/dotfiles/resources/bg2.jpg --bg-max ~/dotfiles/resources/bg.jpg
-  exec startxfce4
+    exec i3
 fi
