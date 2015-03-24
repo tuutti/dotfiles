@@ -1,9 +1,6 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
-exec /opt/SteelSeriesMouse.sh
-
 set $mod Mod4
 
 # font7 for window titles. ISO 10646 = Unicode
@@ -243,7 +240,7 @@ for_window[class="sxiv"] border normal;
 
 set $color1 #90a959
 set $color2 #484848
-set $color3 #6a9fb5
+set $color3 #087851
 
 client.focused            $color1   $color1    #FFFFFF   $color1
 client.focused_inactive   $color3   $color3   #FFFFFF   $color3
