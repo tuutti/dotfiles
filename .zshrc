@@ -42,10 +42,9 @@ ZSH_THEME="tuutti"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git history-substring-search tmux)
 
-source $ZSH/oh-my-zsh.sh
+export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/2.1.0/bin:/home/tuutti/.gem/ruby/2.2.0/bin
 
-# Customize to your needs...
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/tuutti/.gem/ruby/2.1.0/bin:/home/tuutti/.gem/ruby/2.2.0/bin:/home/tuutti/bin
+source $ZSH/oh-my-zsh.sh
 
 function xrdbload() {
   xrdb -load ~/.Xdefaults && xrdb -load ~/.Xresources

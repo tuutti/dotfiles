@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Vim
+Exec=/usr/bin/termite -e "/usr/bin/vim %u"
+Terminal=false
+Type=Application

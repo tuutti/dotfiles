@@ -7,9 +7,8 @@ if [-d /etc/X11/xinit/xinitrc.d ]; then
 fi
 # Disable caps lock effect
 setxkbmap -option caps:none
-export PATH=$PATH:/home/tuutti/bspwm:/home/tuutti/bin:/home/tuutti/scripts
+export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/2.1.0/bin:/home/tuutti/.gem/ruby/2.2.0/bin
 export XDG_CONFIG_HOME="/home/tuutti/.config"
-export BSPWM_SOCKET="/tmp/bspwm-socket"
 export EDITOR=vim
 export BROWSER=firefox
 
@@ -47,5 +46,5 @@ else
 
   # Set backgrounds.
   feh --bg-max ~/dotfiles/resources/bg2.jpg --bg-max ~/dotfiles/resources/bg.jpg
-    exec i3
+  exec i3
 fi
