@@ -43,6 +43,7 @@ nmap <silent> <Down> :wincmd j<CR>
 nmap <silent> <Left> :wincmd h<CR>
 nmap <silent> <Right> :wincmd l<CR>
 
+nnoremap K <Nop>
 
 nnoremap <C-n> <C-]>
 " Autocomplete braces and apostrophes and move cursor between them.
@@ -266,7 +267,11 @@ command! -bang Q quit<bang>
 set smartcase
 
 function! TrimWhiteSpace()
-    %s/\s\+$//e
+  %s/\s\+$//e
+endfunction
+
+function RemoveHtml()
+  %s#<[^>]\+>##g
 endfunction
 
 autocmd FileWritePre    * :call TrimWhiteSpace()
@@ -276,3 +281,5 @@ autocmd BufWritePre     * :call TrimWhiteSpace()
 
 " Disable ex mode.
 nnoremap Q <nop>
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
