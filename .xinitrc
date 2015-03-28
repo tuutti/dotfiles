@@ -33,7 +33,7 @@ export __GL_SYNC_DISPLAY_DEVICE="DFP-1"
 # Hide mouse.
 unclutter -idle 3 -grab &
 
-compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config ~/.compton.conf -b &
+compton --config ~/.compton.conf -b --xrender-sync --xrender-sync-fence &
 
 if [ "$(hostname)" = "kulli" ] || [ "$(hostname)" = "järkäle" ]; then
   exec ~/scripts/touchpad.sh
