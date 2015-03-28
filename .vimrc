@@ -43,6 +43,9 @@ nmap <silent> <Down> :wincmd j<CR>
 nmap <silent> <Left> :wincmd h<CR>
 nmap <silent> <Right> :wincmd l<CR>
 
+" bind - to /
+nmap - /
+
 nnoremap K <Nop>
 
 nnoremap <C-n> <C-]>
@@ -283,3 +286,11 @@ autocmd BufWritePre     * :call TrimWhiteSpace()
 nnoremap Q <nop>
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+
+if has('nvim')
+  tnoremap <C-j> <c-\><c-n><c-w>j
+  tnoremap <C-k> <c-\><c-n><c-w>k
+  tnoremap <C-h> <c-\><c-n><c-w>h
+  tnoremap <C-l> <c-\><c-n><c-w>l
+  au WinEnter *pid:* call feedkeys('i')
+endif
