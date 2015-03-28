@@ -7,3 +7,5 @@ image/jpeg=sxiv.desktop
 image/gif=sxiv.desktop
 image/svg+xml=firefox.desktop
 text/plain=vim.desktop
+text/srt=vim.desktop
+text/sub=vim.desktop
