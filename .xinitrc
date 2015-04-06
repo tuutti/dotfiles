@@ -36,7 +36,7 @@ unclutter -idle 3 -grab &
 compton --config ~/.compton.conf -b --xrender-sync --xrender-sync-fence &
 
 if [ "$(hostname)" = "kulli" ] || [ "$(hostname)" = "järkäle" ]; then
-  exec ~/scripts/touchpad.sh
+  exec ~/scripts/touchpad.sh &
   # Set backgrounds.
   feh -bg-max ~/dotfiles/resources/bg.jpg
 
