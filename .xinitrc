@@ -12,33 +12,16 @@ export XDG_CONFIG_HOME="/home/tuutti/.config"
 export EDITOR=vim
 export BROWSER=firefox
 
-xset +fp /usr/share/fonts/local
-xset fp rehash
-
-xsetroot -cursor_name left_ptr
-
 setxkbmap -layout fi
 
 xrdb ~/.Xresources
 
-# Automount
-udiskie &
-
-xset -dpms
-xset s off
-
-# http://askubuntu.com/questions/125245/how-do-i-stop-video-tearing-nvidia-prop-driver-non-compositing-window-manager#comment167226_140036
-export __GL_SYNC_DISPLAY_DEVICE="DFP-1"
-
-# Hide mouse.
-unclutter -idle 3 -grab &
-
-compton --config ~/.compton.conf -b --xrender-sync --xrender-sync-fence &
+#compton --config ~/.compton.conf -b --xrender-sync --xrender-sync-fence &
 
 if [ "$(hostname)" = "kulli" ] || [ "$(hostname)" = "järkäle" ]; then
   exec ~/scripts/touchpad.sh &
   # Set backgrounds.
-  feh -bg-max ~/dotfiles/resources/bg.jpg
+  feh -bg-max ~/dotfiles/resources/singlecolorbg.png
 
   exec i3
 else
