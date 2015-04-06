@@ -63,7 +63,7 @@ function sconsole() {
 alias grep="/usr/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
 
-#export TERM='xterm-256color'
+alias ssh='TERM=xterm ssh'
 alias tmux='tmux -2'
 alias ls='ls --color=auto'
 alias ':q'='exit'

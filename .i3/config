@@ -178,7 +178,7 @@ bar {
     position bottom
     #tray_output primary
     #font -misc-fixed-bold-r-normal--13-120-75-75-C-70-iso10646-1
-    font xft:Ubuntu Mono Bold 11
+    font xft:Ubuntu Mono 10
 
     colors {
         background $color4
@@ -192,7 +192,8 @@ bar {
 
 # xfce notifies to float
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
-for_window [class="key-mon"] floating enable; focus mode_toggle
+
+assign [class="Screenkey"] "2 • irc"
 
 assign [class="Steam"] "4 • steam"
 assign [class="Skype"] "7 • skype"
@@ -204,6 +205,9 @@ for_window[class="sxiv"] border normal;
 # Requires i3-gaps (https://aur.archlinux.org/packages/i3-gaps-git/)
 gaps inner 6
 gaps outer 0
+
+workspace "3 • code" gaps inner 0
+workspace "3 • code" gaps outer 0
 
 #hide_edge_borders both
 # Hide edge borders
