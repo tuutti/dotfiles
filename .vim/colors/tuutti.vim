@@ -11,7 +11,7 @@ endif
 set t_Co=256
 let g:colors_name = "tuutti"
 
-hi SignColumn ctermfg=103 ctermbg=238 cterm=none
+hi SignColumn ctermfg=103 ctermbg=none cterm=none
 hi SpecialComment ctermfg=65 ctermbg=none cterm=none
 hi Typedef ctermfg=215 ctermbg=none cterm=none
 hi Title ctermfg=107 ctermbg=none cterm=bold
