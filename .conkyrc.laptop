@@ -18,8 +18,6 @@ TEXT
 # Storage:
 {"full_text":"SSD","color":"\#444444","separator":false,"separator_block_width":6},\
 {"full_text":"${fs_used /} /${fs_size /}","color":"\#888888","separator":false,"separator_block_width":6},\
-{"full_text":"HDD ","color":"\#444444","separator":false,"separator_block_width":0},\
-{"full_text":"${fs_used /media/raid} / ${fs_size /media/raid}","color":"\#888888","separator":false,"separator_block_width":6},\
 
 # Date:
 {"full_text":"DATE","color":"\#444444","separator":false,"separator_block_width":6},\
