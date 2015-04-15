@@ -1,11 +1,21 @@
 [user]
   email = tuutti@iki.fi
   name = "Lari Rauno"
+
 [github]
   user = tuutti
+
 [core]
   excludesfile = ~/.gitignore-global
   editor = vim
+
+[merge]
+  tool = diffconflicts
+
+[mergetool "diffconflicts"]
+  cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
+  trustExitCode = true
+  keepBackup = false
 
 [color]
   diff = auto
