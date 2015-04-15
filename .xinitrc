@@ -18,10 +18,10 @@ xrdb ~/.Xresources
 
 #compton --config ~/.compton.conf -b --xrender-sync --xrender-sync-fence &
 
-if [ "$(hostname)" = "kulli" ] || [ "$(hostname)" = "järkäle" ]; then
+if [ "$(hostname)" = "pad" ] || [ "$(hostname)" = "järkäle" ]; then
   exec ~/scripts/touchpad.sh &
   # Set backgrounds.
-  feh -bg-max ~/dotfiles/resources/singlecolorbg.png
+  #feh -bg-max ~/dotfiles/resources/singlecolorbg.png
 
   exec i3
 else
