@@ -10,13 +10,13 @@ font xft:Ubuntu Mono Bold 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym Control+Mod1+p kill
 
 # ranger
-bindsym $mod+d exec termite -e ranger
+bindsym $mod+d exec urxvt -e ranger
 # Dmenu
 # (resolution/2)-(dmenu-width/2) = center
 bindsym Mod1+space exec i3-dmenu-desktop --dmenu="dmenu -nb '#181818' -nf '#f8f8f8' -sb '#aff32c' -sf '#181818' -i -fn 'Ubuntu Mono-10:normal' -p 'Run ' -l 2 -w 500 -x 1030 -h 25"
