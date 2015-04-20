@@ -2,6 +2,8 @@
 nnoremap x "_x
 nnoremap d "_d
 vnoremap d "_d
+" Paste without updating the default register.
+vnoremap p "_dP
 
 let mapleader = ","
 " <TAB>: completion.
