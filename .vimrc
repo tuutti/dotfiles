@@ -1,3 +1,8 @@
+" Prevent d / x from overriding yank buffer.
+nnoremap x "_x
+nnoremap d "_d
+vnoremap d "_d
+
 let mapleader = ","
 " <TAB>: completion.
 noremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -196,6 +201,7 @@ endfor
 
 autocmd BufEnter * lcd %:p:h
 au BufRead,BufNewFile *.install		set filetype=php
+au BufRead,BufNewFile *.theme		set filetype=php
 au BufRead,BufNewFile *.module		set filetype=php
 au BufRead,BufNewFile *.inc 		set filetype=php
 au BufRead,BufNewFile *.test 		set filetype=php
