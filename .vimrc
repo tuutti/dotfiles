@@ -15,7 +15,7 @@ set completeopt-=preview
 imap <M-Space> <Esc>
 
 " Remove delay between modes.
-set timeoutlen=1000 ttimeoutlen=0
+set timeoutlen=500 ttimeoutlen=0
 
 set encoding=utf-8
 " Use smartcase.
@@ -196,8 +196,8 @@ set number
 set incsearch
 " Search hilighting
 set hlsearch
-" Clear search hilight on hjkl.
-for key in ['h', 'j', 'k', 'l']
+" Clear hlsearch on insert mode
+for key in ['i','I','o','O','a','A']
   exe 'nnoremap <silent>' key ':noh<CR>'.key
 endfor
 

@@ -67,7 +67,8 @@ URxvt.colorIT: #686868
 ! special
 *.cursorColor:  #d0d0d0
 *.foreground:   #C5C8C6
-*.background:   #1b2024
+*.background:   [96]#1b2024
+URxvt.depth: 32
 
 URxvt.scrollBar: false
 
