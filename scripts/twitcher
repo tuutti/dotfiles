@@ -24,7 +24,7 @@ def create_arg_parser():
     parser = argparse.ArgumentParser(description=
              'Open twitch stream through dmenu.')
     parser.add_argument(
-        '-c', '--count', required=False, default=10, type=int,
+        '-c', '--count', required=False, default=50, type=int,
         help='How many (default: 10) streams should be displayed?')
     parser.add_argument(
         '-g', '--game', required=False, default=False, type=str,
@@ -63,7 +63,7 @@ def main():
 
     # twitch theme: twitcher.py -nf '#ccc' -nb '#301F4F' -sf '#fff' -sb '#6441a5'
     dmenu_command = ['dmenu',
-        '-l', str(count),
+        '-l', str(count / 5),
         '-nf', args['dmenu_nf'],
         '-nb', args['dmenu_nb'],
         '-sb', args['dmenu_sb'],
