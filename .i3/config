@@ -15,6 +15,9 @@ bindsym $mod+Return exec urxvt
 # kill focused window
 bindsym Control+Mod1+p kill
 
+# Twitcher
+bindsym $mod+Mod1+space exec twitcher | xargs livestreamer
+
 # ranger
 bindsym $mod+d exec urxvt -e ranger
 # Dmenu
