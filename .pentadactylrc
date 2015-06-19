@@ -13,6 +13,7 @@ nnoremap <C-h> gT
 nnoremap <C-l> gt
 nnoremap <A-h> :back<CR>
 nnoremap <A-l> :forward<CR>
+" Change tab groups
 nnoremap <A-n> <C-`>
 nnoremap <A-p> <C-S-`>
 
