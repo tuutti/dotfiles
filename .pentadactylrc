@@ -13,7 +13,9 @@ nnoremap <C-h> gT
 nnoremap <C-l> gt
 nnoremap <A-h> :back<CR>
 nnoremap <A-l> :forward<CR>
- 
+nnoremap <A-n> <C-`>
+nnoremap <A-p> <C-S-`>
+
 " Insert Mode Mappings
 :imap -builtin <C-c> <C-v><C-c>
 :imap -builtin <C-v> <C-v><C-v>
