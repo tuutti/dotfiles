@@ -29,5 +29,6 @@ else
 
   # Set backgrounds.
   feh --bg-max ~/dotfiles/resources/bg2.jpg --bg-max ~/dotfiles/resources/bg.jpg
+  xcalib -d :0 ~/dotfiles/resources/asus_mg279q.icc
   exec i3
 fi
