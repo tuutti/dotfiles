@@ -15,6 +15,8 @@ export BROWSER=firefox
 setxkbmap -layout fi
 
 xrdb ~/.Xresources
+# Disable screen blanking until X crash bug is fixed.
+xset -dpms; xset s off
 
 #compton --config ~/.compton.conf -b --xrender-sync --xrender-sync-fence &
 
