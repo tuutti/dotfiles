@@ -60,9 +60,6 @@ function sconsole() {
   $(git rev-parse --show-toplevel)/app/console "$@";
 }
 
-alias grep="/usr/bin/grep $GREP_OPTIONS"
-unset GREP_OPTIONS
-
 alias ssh='TERM=xterm ssh'
 alias tmux='tmux -2'
 alias ls='ls --color=auto'
@@ -72,10 +69,11 @@ alias 'tl'='tmux ls'
 alias 's'='sudo -E'
 
 setopt menu_complete
-bindkey -e
+#export KEYTIMEOUT=1
 
 # Load drupal specific vim settings
 alias dvim='vim "+Sauce drupal"'
+alias dnvim='nvim "+Sauce drupal"'
 # load symfony specific vim settings
 alias svim='vim "+Sauce symfony"'
 
@@ -111,3 +109,5 @@ EOF
 }
 
 __git_alias "$git_last_branches" "_scmb_git_last_branches"
+
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"

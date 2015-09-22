@@ -1,7 +1,6 @@
 " Prevent d / x from overriding yank buffer.
 nnoremap x "_x
 nnoremap d "_d
-vnoremap d "_d
 " Paste without updating the default register.
 vnoremap p "_dP
 
@@ -63,8 +62,8 @@ inoremap { {<CR>}<Esc>O
 ""inoremap ' ''<Esc>i
 ""inoremap " ""<Esc>i
 
-nnoremap j gj
-nnoremap k gk
+"nnoremap j gj
+"nnoremap k gk
 
 " w!! will save file as sudo.
 cmap w!! %!sudo tee > /dev/null %
@@ -137,6 +136,7 @@ Plugin 'evidens/vim-twig'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -156,7 +156,10 @@ filetype plugin indent on    " required
 set background=dark
 " Color settings
 set t_Co=256
-colorscheme tuutti
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark='soft'
+colorscheme gruvbox
+
 " use filetype plugins, e.g. for PHP
 " filetype plugin on
 
@@ -189,8 +192,8 @@ set expandtab
 set autoindent
 set smartindent
 
-" show line numbers by default
-set number
+" show (relative) line numbers by default
+set relativenumber
 
 " use incremental searching
 set incsearch
@@ -257,7 +260,7 @@ let g:tagbar_width = 30
 "set noshowmode
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme = 'tuutti'
+"let g:airline_theme = 'tuutti'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#whitespace#trailing_format = '[%s]'
@@ -281,7 +284,7 @@ function! TrimWhiteSpace()
   %s/\s\+$//e
 endfunction
 
-function RemoveHtml()
+function! RemoveHtml()
   %s#<[^>]\+>##g
 endfunction
 
@@ -302,3 +305,13 @@ if has('nvim')
   tnoremap <C-l> <c-\><c-n><c-w>l
   au WinEnter *pid:* call feedkeys('i')
 endif
+
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <F2> :call NumberToggle()<CR>
