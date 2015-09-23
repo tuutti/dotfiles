@@ -216,7 +216,11 @@ au BufRead,BufNewFile *.twig 		set filetype=html
 au InsertLeave * set nopaste
 
 " Search files with unite.vim
-nnoremap <space>p :Unite -start-insert file_rec/async:!<cr>
+if has('nvim')
+  nnoremap <space>p :Unite -start-insert file_rec/neovim:!<cr>
+else
+  nnoremap <space>p :Unite -start-insert file_rec/async:!<cr>
+endif
 nnoremap <leader>s :Unite -start-insert buffer<cr>
 
 " Search from yank history.
