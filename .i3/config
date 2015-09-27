@@ -139,6 +139,13 @@ bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
 bindsym Control+Shift+Q exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes' 'i3-msg exit'"
 
+# Laptop specific keybinds.
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 "-10%"
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 "+10%"
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute 1 toggle
 # resize window (you can also use the mouse for that)
 mode "resize" {
   # These bindings trigger as soon as you enter the resize mode
