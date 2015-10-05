@@ -58,7 +58,7 @@ nnoremap <C-n> <C-]>
 " Autocomplete braces and apostrophes and move cursor between them.
 ""inoremap ( ()<Esc>i
 ""inoremap [ []<Esc>i
-""inoremap { {<CR>}<Esc>O
+inoremap { {<CR>}
 ""inoremap ' ''<Esc>i
 ""inoremap " ""<Esc>i
 
