@@ -1,0 +1,40 @@
+#!/usr/bin/python
+from subprocess import Popen, PIPE, STDOUT
+import argparse
+import re
+
+def find_sink(binary_name):
+    p = Popen(['pactl', 'list', 'sink-inputs'], stdout=PIPE, stdin=PIPE, stderr=STDOUT)
+    out = p.communicate()[0].decode('utf-8')
+
+    for item in out.split("\l\l"):
+        for sink in item.split('Sink Input #'):
+            id = re.search(r'(\d+)', sink)
+
+            if not id:
+                continue
+
+            if (sink.find('application.process.binary = "%s"' % (binary_name)) != -1):
+                return id.group()
+    raise Exception('Sink not found')
+
+def create_arg_parser():
+    parser = argparse.ArgumentParser(description='Set sink volume for given binary.')
+    parser.add_argument( '-v', '--volume', required=True, type=str, help='Relative / absolute volume, like +-5% or 50%')
+    parser.add_argument( '-n', '--name', required=True, type=str, help='Binary name')
+    return vars(parser.parse_args());
+
+def main():
+    arguments = create_arg_parser()
+
+    try:
+        id = find_sink(arguments['name'])
+    except Exception:
+        print('Sink not found')
+
+    Popen(['pactl', 'set-sink-input-volume', id, arguments['volume']])
+
+
+if __name__ == "__main__":
+    main()
+
