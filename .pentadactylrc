@@ -16,6 +16,8 @@ nnoremap <A-l> :forward<CR>
 " Change tab groups
 nnoremap <A-n> <C-`>
 nnoremap <A-p> <C-S-`>
+" Stop loading current web page
+nnoremap <C-x> :stop<CR>
 
 " Insert Mode Mappings
 :imap -builtin <C-c> <C-v><C-c>
