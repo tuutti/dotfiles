@@ -104,7 +104,7 @@ Comment[vi]=Truy cập Internet
 Comment[zh_CN]=访问互联网
 Comment[zh_HK]=連線到網際網路
 Comment[zh_TW]=連線到網際網路
-Exec=chromium %U --high-dpi-support=1 --force-device-scale-factor=1
+Exec=firejail chromium %U --high-dpi-support=1 --force-device-scale-factor=1
 Terminal=false
 Icon=chromium
 Type=Application
