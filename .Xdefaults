@@ -47,7 +47,7 @@ URxvt.colorBD: #CFCFCF
 URxvt.colorUL: #A0A0A0
 URxvt.colorIT: #686868
 
-*background: #32302f
+*background: #2a3035
 *foreground: #ebdbb2
 ! Black + DarkGrey
 *color0:  #282828
