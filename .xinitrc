@@ -22,15 +22,12 @@ xset -dpms; xset s off
 
 if [ "$(hostname)" = "pad" ] || [ "$(hostname)" = "järkäle" ]; then
   exec ~/scripts/touchpad.sh &
-  # Set backgrounds.
-  #feh -bg-max ~/dotfiles/resources/singlecolorbg.png
-
   exec i3
 else
   exec ~/scripts/update-public-ip.sh 1>&- 2>&- &
 
   # Set backgrounds.
-  feh --bg-max ~/dotfiles/resources/bg2.jpg --bg-max ~/dotfiles/resources/bg.jpg
+  feh --bg-fill ~/dotfiles/resources/bg.jpg
   xcalib -d :0 ~/dotfiles/resources/asus_mg279q.icc
   exec i3
 fi
