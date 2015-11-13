@@ -6,9 +6,9 @@
     display: none;
 }
 #tabbrowser-tabs{ /* Tab container*/
-    background-color: #191919;
+    background-color: #2a3035;
     color: #fff;
-    padding: 0 !important; 
+    padding: 0 !important;
     margin-left:-10px; /* Flush with the side of the window */
     margin-right: -15px; /* You need like 5-7 tabs open for this to come into effect */
 }
@@ -19,8 +19,8 @@
     border: 0 !important;
     background: none !important;
 }
-.tabbrowser-tab:not([pinned]) { 
-    /* Defining a max/min width inside tabs breaks the ability 
+.tabbrowser-tab:not([pinned]) {
+    /* Defining a max/min width inside tabs breaks the ability
     of the tab to shrink/move on close of another tab*/
     min-width: 50px;
 }
@@ -29,7 +29,7 @@
     font-size: 11px;
 }
 /* Deal with rounded tabs in Australis */
-.tab-background-start, .tab-background-end{ 
+.tab-background-start, .tab-background-end{
     display: none;
 }
 .tab-background-middle{
@@ -45,8 +45,8 @@
     height: 0;
 }
 /* Selected tab */
-.tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{ 
-    background-color: #913133;
+.tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{
+    background-color: #57636e;
     color: #ffffff !important;
     text-shadow: none !important;
     margin: 0 !important;
@@ -56,6 +56,7 @@
 }
 .tabbrowser-tab:hover .tab-label, .tabbrowser-tab[selected="true"] .tab-label{
     color: #bebeb4;
+    text-shadow: none !important;
 }
 
 /* Clean up miscellaneous shit that can't be done in customize */
