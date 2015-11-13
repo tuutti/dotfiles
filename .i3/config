@@ -186,7 +186,7 @@ bindsym $mod+x mode "diablo3"
 set $color1 #57636e
 set $color2 #484848
 set $color3 #2a3035
-set $color4 #1b2024
+set $color4 #2a3035
 set $color5 #586c7c
 set $color6 #3c4852
 
