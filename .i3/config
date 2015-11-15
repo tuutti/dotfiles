@@ -106,8 +106,8 @@ bindsym $mod+7 workspace 7 • skype
 bindsym $mod+8 workspace 8 • torrent
 bindsym $mod+9 workspace 9 • mail
 bindsym $mod+0 workspace 10 • random
-bindsym $mod+q workspace 11
-bindsym $mod+w workspace 12
+bindsym $mod+q workspace 11 • wow
+bindsym $mod+w workspace 12 • phps
 bindsym $mod+e workspace 13
 
 # move focused container
@@ -130,8 +130,8 @@ bindsym $mod+Shift+7 move container to workspace 7 • skype
 bindsym $mod+Shift+8 move container to workspace 8 • torrent
 bindsym $mod+Shift+9 move container to workspace 9 • mail
 bindsym $mod+Shift+0 move container to workspace 10 • random
-bindsym $mod+Shift+Q move container to workspace 11
-bindsym $mod+Shift+W move container to workspace 12
+bindsym $mod+Shift+Q move container to workspace 11 • wow
+bindsym $mod+Shift+W move container to workspace 12 • phps
 bindsym $mod+Shift+E move container to workspace 13
 
 # reload the configuration file
