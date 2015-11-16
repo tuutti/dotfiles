@@ -6,9 +6,9 @@ URxvt.clipboard.copycmd:  xclip -i -selection clipboard
 URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 
 ! Ctrl+shift+c = copy
-URxvt.keysym.C-C: perl:clipboard:copy
-! Ctrl+shift+v = paste
-URxvt.keysym.C-V: perl:clipboard:paste
+URxvt.keysym.M-c: perl:clipboard:copy
+! Ctrl+v = paste
+URxvt.keysym.M-v: perl:clipboard:paste
 ! Alt+u = select url
 ! j/k:      Select next downward/upward URL (also with arrow keys)
 ! g/G:      Select first/last URL (also with home/end key)
