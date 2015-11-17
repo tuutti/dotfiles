@@ -25,6 +25,7 @@ if [ "$(hostname)" = "pad" ] || [ "$(hostname)" = "järkäle" ]; then
   exec i3
 else
   exec ~/scripts/update-public-ip.sh 1>&- 2>&- &
+  xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/hhkb.xkb $DISPLAY
 
   # Set backgrounds.
   feh --bg-fill ~/dotfiles/resources/bg.jpg
