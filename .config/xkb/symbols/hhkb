@@ -1,0 +1,14 @@
+xkb_symbols "fi-complete" {
+  key <AD11> { [ apostrophe, asterisk ] };
+  key <AD12> { [ asciicircum, dead_diaeresis, asciitilde ] };
+
+  key <AC10> { [ odiaeresis, Odiaeresis ] };
+  key <AC11> { [ adiaeresis, Adiaeresis ] };
+
+  key <AE12> { [ grave, acute ] };
+  key <BKSL> { [ less, greater, bar ] };
+
+  key <AB08> { [ comma, semicolon, less ] };
+  key <AB09> { [ period, colon, greater ] };
+  key <AB10> { [ minus, underscore, bar ] };
+};
