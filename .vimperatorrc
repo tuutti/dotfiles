@@ -1,0 +1,19 @@
+set gui=none,tabs,addons
+inoremap <C-a> <C-Home><C-S-End>
+" Hide close buttons
+set! browser.tabs.closeButtons=2
+
+nnoremap m 10j
+nnoremap , 10k
+nnoremap <C-Right> gt
+nnoremap <C-Left> gT
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+nnoremap <A-h> :back<CR>
+nnoremap <A-l> :forward<CR>
+" Change tab groups
+nnoremap <A-n> <C-`>
+nnoremap <A-p> <C-S-`>
+" Stop loading current web page
+nnoremap <C-x> :stop<CR>
+colorscheme dllu
