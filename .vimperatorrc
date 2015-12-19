@@ -17,3 +17,4 @@ nnoremap <A-p> <C-S-`>
 " Stop loading current web page
 nnoremap <C-x> :stop<CR>
 colorscheme dllu
+set focuscontent
