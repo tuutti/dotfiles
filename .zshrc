@@ -64,6 +64,7 @@ alias ssh='TERM=xterm ssh'
 alias tmux='tmux -2'
 alias ls='ls --color=auto'
 alias ':q'='exit'
+alias vim=nvim
 alias ':Q'='exit'
 alias 'tl'='tmux ls'
 alias 's'='sudo -E'
