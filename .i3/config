@@ -50,6 +50,9 @@ bindsym $mod+Mod1+p exec playerctl play-pause
 bindsym $mod+Mod1+k exec sink-volume -v="+5%" -n="spotify"
 bindsym $mod+Mod1+j exec sink-volume -v="-5%" -n="spotify"
 
+# Lock screen
+bindsym $mod+Mod1+Escape exec ~/scripts/lock.sh
+
 # move focused window
 bindsym $mod+Shift+H move left
 bindsym $mod+Shift+J move down
