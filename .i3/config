@@ -174,15 +174,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-mode "diablo3" {
-  bindsym $mod+2 exec ~/scripts/key.py -k 2 &
-  bindsym $mod+1 exec ~/scripts/key.py -k 1 &
-  bindsym $mod+x mode "default"
-  bindsym Escape mode "default"
-}
-
-bindsym $mod+x mode "diablo3"
-
 set $color1 #57636e
 set $color2 #484848
 set $color3 #2a3035
@@ -196,7 +187,7 @@ bar {
     #status_command i3status
     status_command $HOME/.i3/scripts/conky
     #output DVI-D-0
-    position bottom
+    position top
     #tray_output primary
     #font -misc-fixed-bold-r-normal--13-120-75-75-C-70-iso10646-1
     font xft:Ubuntu Mono 10
@@ -210,12 +201,7 @@ bar {
         inactive_workspace $color4 $color4 $color6
     }
 }
-
-# xfce notifies to float
-for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
-
 assign [class="Screenkey"] "2 • irc"
-
 assign [class="Steam"] "4 • steam"
 assign [class="Skype"] "7 • skype"
 
