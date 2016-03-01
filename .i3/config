@@ -9,6 +9,7 @@ set $color3 #2a3035
 set $color4 #2a3035
 set $color5 #586c7c
 set $color6 #3c4852
+set $color7 #648fa6
 
 # font7 for window titles. ISO 10646 = Unicode
 font xft:Ubuntu Mono Bold 9
@@ -186,9 +187,12 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+
+set $bar_bg #2a303500
+
 bar {
-    #status_command i3status
     status_command $HOME/.i3/scripts/conky
+    i3bar_command i3bar -t
     #output DVI-D-0
     position top
     #tray_output primary
@@ -196,12 +200,12 @@ bar {
     font xft:Ubuntu Mono 10
 
     colors {
-        background $color4
+        background $bar_bg
         separator $color4
         statusline $color4
-        focused_workspace $color4 $color4 $color5
-        active_workspace $color4 $color4 $color6
-        inactive_workspace $color4 $color4 $color6
+        focused_workspace $bar_bg $bar_bg $color7
+        active_workspace $bar_bg $bar_bg $color5
+        inactive_workspace $bar_bg $bar_bg $color5
     }
 }
 assign [class="Screenkey"] "2 • irc"
