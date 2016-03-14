@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Firefox
-Exec=env GTK2_RC_FILES="/usr/share/themes/Adwaita/gtk-2.0/gtkrc" GTK_THEME=numix firejail /usr/lib/firefox/firefox %u -no-remote
+Name=Firefox (Work)
+Exec=env GTK2_RC_FILES="/usr/share/themes/Adwaita/gtk-2.0/gtkrc" GTK_THEME=numix firejail /usr/lib/firefox/firefox %u -p Work -no-remote
 Icon=firefox
 Terminal=false
 Type=Application
