@@ -9,6 +9,9 @@
   excludesfile = ~/.gitignore-global
   editor = vim
 
+[push]
+  default = simple
+
 [merge]
   tool = diffconflicts
 
