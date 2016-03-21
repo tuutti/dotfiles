@@ -11,4 +11,4 @@ nnoremap <silent> g* g*zz
 nnoremap <silent> g# g#zz
 imap <C-e> <Esc>A;<CR>
 
-nnoremap ss :%s/\s\+$//e :w<CR>
+nnoremap <C-s> :%s/\s\+$//<CR>
