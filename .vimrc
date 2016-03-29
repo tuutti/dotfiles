@@ -58,7 +58,7 @@ nnoremap <C-n> <C-]>
 " Autocomplete braces and apostrophes and move cursor between them.
 ""inoremap ( ()<Esc>i
 ""inoremap [ []<Esc>i
-inoremap { {<CR>}
+""inoremap { {<CR>}
 ""inoremap ' ''<Esc>i
 ""inoremap " ""<Esc>i
 
@@ -159,6 +159,8 @@ set t_Co=256
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='soft'
 colorscheme gruvbox
+hi Normal ctermbg=none guibg=none gui=none term=none
+hi NonText ctermbg=none guibg=none gui=none term=none
 
 " use filetype plugins, e.g. for PHP
 " filetype plugin on
