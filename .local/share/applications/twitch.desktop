@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Twitch
+Exec=twitch-stream %u
+Terminal=false
+Type=Application
