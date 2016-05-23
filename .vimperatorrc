@@ -3,6 +3,10 @@ inoremap <C-a> <C-Home><C-S-End>
 " Hide close buttons
 set! browser.tabs.closeButtons=2
 
+" Fix 'Zoom Text only'
+map + <C-+>
+map \- <C-->
+
 nnoremap m 10j
 nnoremap , 10k
 nnoremap <C-Right> gt
