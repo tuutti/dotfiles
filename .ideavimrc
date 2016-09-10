@@ -12,3 +12,4 @@ nnoremap <silent> g# g#zz
 imap <C-e> <Esc>A;<CR>
 
 nnoremap <C-s> :%s/\s\+$//<CR>
+inoremap <C-s> <esc>:%s/\s\+$//<CR>
