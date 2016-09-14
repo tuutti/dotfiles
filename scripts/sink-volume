@@ -14,7 +14,7 @@ def find_sink(binary_name):
             if not id:
                 continue
 
-            if (sink.find('application.process.binary = "%s"' % (binary_name)) != -1):
+            if (sink.find('application.name = "%s"' % (binary_name)) != -1):
                 return id.group()
     raise Exception('Sink not found')
 
