@@ -40,7 +40,7 @@ ZSH_THEME="tuutti"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search tmux)
+plugins=(git history-substring-search tmux pass)
 
 export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/2.1.0/bin:/home/tuutti/.gem/ruby/2.2.0/bin
 
@@ -64,10 +64,10 @@ alias ssh='TERM=xterm ssh'
 alias tmux='tmux -2'
 alias ls='ls --color=auto'
 alias ':q'='exit'
-alias vim=nvim
 alias ':Q'='exit'
 alias 'tl'='tmux ls'
 alias 's'='sudo -E'
+alias less='LESSOPEN="| source-highlight-esc.sh %s" less -M'
 
 setopt menu_complete
 #export KEYTIMEOUT=1
