@@ -1,0 +1,238 @@
+diff --git a/src/main/resources/com/chrisrm/idea/mt.darker.properties b/src/main/resources/com/chrisrm/idea/mt.darker.properties
+index e40b3de..342bfc9 100644
+--- a/src/main/resources/com/chrisrm/idea/mt.darker.properties
++++ b/src/main/resources/com/chrisrm/idea/mt.darker.properties
+@@ -1,16 +1,16 @@
+ # suppress inspection "UnusedProperty" for whole file
+-mt.darker.background=212121
+-mt.darker.textBackground=212121
++mt.darker.background=282828
++mt.darker.textBackground=282828
+ mt.darker.foreground=AFBDC4
+ mt.darker.textForeground=AFBDC4
+ mt.darker.caretForeground=FFCC00
+-mt.darker.inactiveBackground=212121
++mt.darker.inactiveBackground=282828
+ mt.darker.selectionForeground=FFFFFF
+-mt.darker.selectionBackgroundInactive=353535
+-mt.darker.selectionInactiveBackground=353535
++mt.darker.selectionBackgroundInactive=0D293E
++mt.darker.selectionInactiveBackground=0D293E
+ mt.darker.selectionForegroundInactive=AFBDC4
+ mt.darker.selectionInactiveForeground=AFBDC4
+-window=212121
++window=282828
+ 
+ text=AFBDC4
+ textText=AFBDC4
+@@ -20,19 +20,20 @@ OptionPane.messageForeground=AFBDC4
+ Menu.maxGutterIconWidth=18
+ MenuItem.maxGutterIconWidth=18
+ MenuItem.acceleratorDelimiter=-
++MenuItem.disabledForeground=808080
+ MenuItem.border=com.intellij.ide.ui.laf.darcula.ui.DarculaMenuItemBorder
+ Menu.border=com.intellij.ide.ui.laf.darcula.ui.DarculaMenuItemBorder
+ 
+-EditorPane.inactiveBackground=212121
+-EditorPane.inactiveForeground=AFBDC4
++EditorPane.inactiveBackground=282828
++EditorPane.inactiveForeground=EC6B3D
+ EditorPaneUI=com.intellij.ide.ui.laf.darcula.ui.DarculaEditorPaneUI
+ 
+-control=212121
+-link.foreground=D3D3D3
++control=304349
++link.foreground=80CBC4
+ ScrollBarUI=com.intellij.ide.ui.laf.darcula.ui.DarculaScrollBarUI
+ 
+ TableHeaderUI=com.intellij.ide.ui.laf.darcula.DarculaTableHeaderUI
+-Table.gridColor=212121
++Table.gridColor=2A373E
+ Table.ascendingSortIcon=AllIcons.General.SplitUp
+ Table.descendingSortIcon=AllIcons.General.SplitDown
+ Table.cellNoFocusBorder=0,4,0,4
+@@ -44,35 +45,35 @@ TableHeader.cellBorder=com.intellij.ide.ui.laf.darcula.DarculaTableHeaderBorder
+ 
+ TitledBorder.titleColor=AFBDC4
+ 
+-MenuBar.disabledBackground=212121
+-MenuBar.shadow=212121
+-MenuBar.darcula.borderColor=2C2C2C
+-MenuBar.darcula.borderShadowColor=2C2C2C
++MenuBar.disabledBackground=282828
++MenuBar.shadow=282828
++MenuBar.darcula.borderColor=2A373E
++MenuBar.darcula.borderShadowColor=2A373E
+ 
+ TabbedPaneUI=com.intellij.ide.ui.laf.darcula.ui.DarculaTabbedPaneUI
+ TabbedPane.tabInsets=5,10,5,10
+-TabbedPane.highlight=2c2c2c
+-TabbedPane.light=444444
+-TabbedPane.selected=2c2c2c
+-TabbedPane.selectHighlight=2c2c2c
++TabbedPane.highlight=282828
++TabbedPane.light=282828
++TabbedPane.selected=282828
++TabbedPane.selectHighlight=282828
+ TabbedPane.contentBorderInsets=3,1,1,1
+-TabbedPane.darkShadow=212121
+-TabbedPane.shadow=212121
+-TabbedPane.borderColor=212121
++TabbedPane.darkShadow=282828
++TabbedPane.shadow=282828
++TabbedPane.borderColor=282828
+ 
+-Separator.foreground=212121
++Separator.foreground=282828
+ 
+-Focus.color=3F3F3F
++Focus.color=425B67
+ 
+-TextField.background=212121
++TextField.background=282828
+ TextFieldUI=com.intellij.ide.ui.laf.darcula.ui.DarculaTextFieldUI
+ TextField.border=com.intellij.ide.ui.laf.darcula.ui.DarculaTextBorder
+ TextField.darcula.search.icon=/com/intellij/ide/ui/laf/darcula/icons/search.png
+ TextField.darcula.searchWithHistory.icon=/com/intellij/ide/ui/laf/darcula/icons/searchWithHistory.png
+ TextField.darcula.clear.icon=/com/intellij/ide/ui/laf/darcula/icons/clear.png
+ 
+-TextArea.selectionForeground=323232
+-PasswordField.background=212121
++TextArea.selectionForeground=304349
++PasswordField.background=282828
+ PasswordFieldUI=com.intellij.ide.ui.laf.darcula.ui.DarculaPasswordFieldUI
+ PasswordField.border=com.intellij.ide.ui.laf.darcula.ui.DarculaTextBorder
+ 
+@@ -80,84 +81,84 @@ ProgressBarUI=com.intellij.ide.ui.laf.darcula.ui.DarculaProgressBarUI
+ ProgressBar.border=com.intellij.ide.ui.laf.darcula.ui.DarculaProgressBarBorder
+ ProgressBar.foreground=80CBC4
+ 
+-FormattedTextField.background=212121
++FormattedTextField.background=282828
+ 
+-TextArea.background=212121
++TextArea.background=282828
+ 
+ CheckBoxUI=com.intellij.ide.ui.laf.darcula.ui.DarculaCheckBoxUI
+ CheckBox.border=com.intellij.ide.ui.laf.darcula.ui.DarculaCheckBoxBorder
+-CheckBox.darcula.inactiveFillColor=414141
+-CheckBox.darcula.borderColor1=414141
+-CheckBox.darcula.borderColor2=414141
+-CheckBox.darcula.disabledBorderColor1=2C2C2C
+-CheckBox.darcula.disabledBorderColor2=2C2C2C
+-CheckBox.darcula.backgroundColor1=212121
+-CheckBox.darcula.backgroundColor2=212121
+-CheckBox.darcula.checkSignColor=D3D3D3
+-CheckBox.darcula.checkSignColorDisabled=767676
+-CheckBox.darcula.shadowColor=212121
+-CheckBox.darcula.shadowColorDisabled=212121
+-CheckBox.darcula.focusedArmed.backgroundColor1=212121
+-CheckBox.darcula.focusedArmed.backgroundColor2=212121
+-CheckBox.darcula.focused.backgroundColor1=212121
+-CheckBox.darcula.focused.backgroundColor2=212121
++CheckBox.darcula.inactiveFillColor=425B67
++CheckBox.darcula.borderColor1=425B67
++CheckBox.darcula.borderColor2=425B67
++CheckBox.darcula.disabledBorderColor1=2A373E
++CheckBox.darcula.disabledBorderColor2=2A373E
++CheckBox.darcula.backgroundColor1=282828
++CheckBox.darcula.backgroundColor2=282828
++CheckBox.darcula.checkSignColor=80CBC4
++CheckBox.darcula.checkSignColorDisabled=787878
++CheckBox.darcula.shadowColor=282828
++CheckBox.darcula.shadowColorDisabled=282828
++CheckBox.darcula.focusedArmed.backgroundColor1=282828
++CheckBox.darcula.focusedArmed.backgroundColor2=282828
++CheckBox.darcula.focused.backgroundColor1=282828
++CheckBox.darcula.focused.backgroundColor2=282828
+ 
+ CheckBoxMenuItemUI=com.intellij.ide.ui.laf.darcula.ui.DarculaCheckBoxMenuItemUI
+ CheckBoxMenuItem.borderPainted=false
+ 
+ ComboBoxUI=com.intellij.ide.ui.laf.darcula.ui.DarculaComboBoxUI
+-ComboBox.disabledBackground=212121
++ComboBox.disabledBackground=282828
+ ComboBox.disabledForeground=585858
+ ComboBox.squareButton=true
+ 
+ RadioButtonUI=com.intellij.ide.ui.laf.darcula.ui.DarculaRadioButtonUI
+-RadioButton.darcula.selectionEnabledColor=D3D3D3
+-RadioButton.darcula.selectionDisabledColor=212121
+-RadioButton.darcula.selectionEnabledShadowColor=D3D3D3
+-RadioButton.darcula.selectionDisabledShadowColor=D3D3D3
++RadioButton.darcula.selectionEnabledColor=80CBC4
++RadioButton.darcula.selectionDisabledColor=282828
++RadioButton.darcula.selectionEnabledShadowColor=80CBC4
++RadioButton.darcula.selectionDisabledShadowColor=80CBC4
+ 
+ RadioButtonMenuItemUI=com.intellij.ide.ui.laf.darcula.ui.DarculaRadioButtonMenuItemUI
+ RadioButtonMenuItem.borderPainted=false
+ 
+-StatusBar.topColor=212121
+-StatusBar.top2Color=212121
+-StatusBar.bottomColor=212121
++StatusBar.topColor=282828
++StatusBar.top2Color=282828
++StatusBar.bottomColor=282828
+ 
+ Button.border=com.intellij.ide.ui.laf.darcula.ui.DarculaButtonPainter
+ ButtonUI=com.intellij.ide.ui.laf.darcula.ui.DarculaButtonUI
+ Button.disabledText=818F95
+-Button.darcula.color1=212121
+-Button.darcula.color2=212121
+-Button.darcula.selection.color1=323232
+-Button.darcula.selection.color2=323232
++Button.darcula.color1=282828
++Button.darcula.color2=282828
++Button.darcula.selection.color1=314549
++Button.darcula.selection.color2=314549
+ Button.darcula.selectedButtonForeground=A0B0B8
+-Button.darcula.disabledText.shadow=212121
++Button.darcula.disabledText.shadow=282828
+ 
+ ToggleButton.border=com.intellij.ide.ui.laf.darcula.ui.DarculaButtonPainter
+ ToggleButtonUI=com.intellij.ide.ui.laf.darcula.ui.DarculaButtonUI
+ 
+ MenuItem.acceleratorForeground=AFBDC4
+-PopupMenu.translucentBackground=212121
++PopupMenu.translucentBackground=282828
+ 
+-ToolTip.background=212121
++ToolTip.background=282828
+ 
+ SpinnerUI=com.intellij.ide.ui.laf.darcula.ui.DarculaSpinnerUI
+ Spinner.border=com.intellij.ide.ui.laf.darcula.ui.DarculaSpinnerBorder
+-Spinner.background=212121
++Spinner.background=282828
+ Spinner.arrowButtonInsets=1,1,1,1
+ Spinner.editorBorderPainted=false
+ 
+-SplitPane.highlight=212121
++SplitPane.highlight=282828
+ 
+ TreeUI=com.intellij.ide.ui.laf.darcula.ui.DarculaTreeUI
+ 
+-Hyperlink.linkColor=D3D3D3
++Hyperlink.linkColor=80CBC4
+ 
+-Panel.background=212121
+-SidePanel.background=212121
++Panel.background=282828
++SidePanel.background=282828
+ 
+-List.background=212121
+-Table.background=212121
++List.background=32424A
++Table.background=32424A
+ 
+ Tree.collapsedIcon=AllIcons.Mac.Tree_white_right_arrow
+ Tree.expandedIcon=AllIcons.Mac.Tree_white_down_arrow
+@@ -167,5 +168,6 @@ FileView.fileIcon=AllIcons.FileTypes.Unknown
+ ####
+ # Custom Material Theme properties
+ ####
+-material.tab.backgroundColor=212121
+-material.tab.borderColor=80CBC4
++material.tab.backgroundColor=282828
++material.tab.borderColor=212121
++
