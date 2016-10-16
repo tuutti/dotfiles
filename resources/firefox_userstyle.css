@@ -1,81 +1,74 @@
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-/* This is based on https://raw.githubusercontent.com/arawde/dotfiles/master/firefox/nani_bspwm_neue.css */
+:root {
+    --tab-height: 26px;
+  }
 
-/* Stupid ass border at bottom*/
-#TabsToolbar::after{
-    display: none;
-}
-#tabbrowser-tabs{ /* Tab container*/
-    background-color: #2a3035;
-    color: #fff;
-    padding: 0 !important;
-    margin-left:-10px; /* Flush with the side of the window */
-    margin-right: -15px; /* You need like 5-7 tabs open for this to come into effect */
-}
-.tabbrowser-tab{ /* Actual tabs */
-    max-height: 20px;
-    padding: 0;
-    margin: 0 !important;
-    border: 0 !important;
-    background: none !important;
-}
-.tabbrowser-tab:not([pinned]) {
-    /* Defining a max/min width inside tabs breaks the ability
-    of the tab to shrink/move on close of another tab*/
-    min-width: 50px;
-}
-.tab-text.tab-label{ /* Tab text */
-    text-align: center;
-    font-size: 11px;
-}
-/* Deal with rounded tabs in Australis */
-.tab-background-start, .tab-background-end{
-    display: none;
-}
-.tab-background-middle{
-    background-image: none!important;
-}
-/* Tab hovering */
-.tabbrowser-tab:hover .tab-background-middle{
-
-}
-/* favicon */
-.tab-icon-image {
-    width: 0;
-    height: 0;
-}
-/* Selected tab */
-.tabbrowser-tab[selected="true"] .tab-background-middle, .tabbrowser-tab[selected="true"] .tab-content{
-    background-color: #57636e;
-    color: #ffffff !important;
-    text-shadow: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-    font-weight: normal;
-}
-.tabbrowser-tab:hover .tab-label, .tabbrowser-tab[selected="true"] .tab-label{
-    color: #bebeb4;
-    text-shadow: none !important;
-}
-
-/* Clean up miscellaneous shit that can't be done in customize */
-#main-window #tabbrowser-tabs .tab-close-button,
-#tabbrowser-tabs toolbarbutton.scrollbutton-up,
-#tabbrowser-tabs toolbarbutton.scrollbutton-down,
-#appmenu-button, #appmenu-toolbar-button, #alltabs-button,
-.tabbrowser-tab .tab-icon-image,
-.tabs-newtab-button,
-.tab-throbber,
-.tab-throbber[progress],
-#identity-box,
-#go-button
-{
+  .tabbrowser-arrowscrollbox > .scrollbutton-up,
+  .tabbrowser-arrowscrollbox > .scrollbutton-down,
+  toolbarbutton#appmenu-toolbar-button,
+  toolbarbutton#alltabs-button,
+  toolbarbutton#new-tab-button,
+  .tab-icon-image,
+  .tabs-closebutton-box,
+  .tabs-border-bottom,
+  .tab-throbber,
+  .tab-close-button {
     display: none !important;
-}
+  }
 
-/* Tab separators */
-.tabbrowser-tab::after,
-.tabbrowser-tab::before {
-  background-image: none!important;
-}
+  /* Fix for tiletabs */
+  .tabbrowser-tab[tiletabs-assigned]:not([pinned]) .tab-throbber:not([busy]) + .tab-icon-image {
+    display: none !important;
+  }
+
+  tabs#tabbrowser-tabs * {
+    -moz-appearance: none !important;
+    border-radius: 0 !important;
+    border-bottom: 0 none !important;
+    background-image: none !important;
+    margin-top: 0 !important;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  tabs#tabbrowser-tabs {
+    background: #282828;
+  }
+
+  .tabbrowser-tab {
+    max-height: 20px !important;
+    padding: 0 5px !important;
+    margin: 0 !important;
+    color: #ebdbb2 !important;
+  }
+
+  .tabbrowser-tab [selected=true] {
+    background: #458588 !important;
+    margin: 0 -5px 0 -5px;
+    color: #ebdbb2 !important;
+  }
+
+  #toolbar-menubar, #TabsToolbar {
+    max-height: 15px !important;
+    padding: 0 !important;
+  }
+  tab {
+    height: var(--tab-height) !important;
+    min-height: var(--tab-height) !important;
+  }
+  #tabbrowser-tabs .tabbrowser-arrowscrollbox,
+  #tabbrowser-tabs .tabbrowser-arrowscrollbox .box-inherit.scrollbox-innerbox {
+    max-height: var(--tab-height) !important;
+  }
+  #TabsToolbar, #tabbrowser-tabs {
+    -moz-appearance: none !important;
+    height: var(--tab-height) !important;
+    min-height: var(--tab-height)!important;
+    margin-top: -5px !important;
+  }
+  toolbar {
+    background: #282828 !important;
+  }
+  /* Lastpass toolbar fixes */
+  .chromeclass-toolbar-additional {
+    margin-top: 5px !important;
+  }
