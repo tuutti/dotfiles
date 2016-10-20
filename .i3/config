@@ -5,7 +5,7 @@ set $mod Mod4
 
 set $text #ebdbb4
 set $text_invert #282828
-set $color1 #83a598
+set $color1 #458588
 set $color2 #484850
 set $color3 #282828
 set $color4 #2a3035
@@ -189,8 +189,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 set $bar_bg #282828
-set $statusline #83a598
-set $separator #83a598
+set $statusline #458588
+set $separator #458588
 
 bar {
   status_command $HOME/.i3/scripts/conky
@@ -225,9 +225,9 @@ bar {
     inactive_workspace $bar_bg $bar_bg $text
   }
 }
-assign [class="Screenkey"] "2 • irc"
-assign [class="Steam"] "4 • steam"
-assign [class="Skype"] "7 • skype"
+assign [class="Screenkey"] "2"
+assign [class="Steam"] "4"
+assign [class="Skype"] "7"
 
 default_orientation auto
 new_window pixel 2
