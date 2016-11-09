@@ -137,6 +137,7 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'morhetz/gruvbox'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -157,10 +158,8 @@ set background=dark
 " Color settings
 set t_Co=256
 let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='soft'
+let g:gruvbox_contrast_dark='medium'
 colorscheme gruvbox
-hi Normal ctermbg=none guibg=none gui=none term=none
-hi NonText ctermbg=none guibg=none gui=none term=none
 
 " use filetype plugins, e.g. for PHP
 " filetype plugin on
