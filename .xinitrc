@@ -10,7 +10,7 @@ setxkbmap -option caps:none
 export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/2.1.0/bin:/home/tuutti/.gem/ruby/2.2.0/bin
 export XDG_CONFIG_HOME="/home/tuutti/.config"
 export EDITOR=vim
-export BROWSER=firefox
+export BROWSER=qutebrowser
 
 setxkbmap -layout fi
 
