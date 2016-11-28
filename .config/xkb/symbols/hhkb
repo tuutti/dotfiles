@@ -5,7 +5,7 @@ xkb_symbols "fi-complete" {
 
   key <AC10> { [ odiaeresis, Odiaeresis ] };
   key <AC11> { [ adiaeresis, Adiaeresis ] };
-  replace key <CAPS> { [ Control_R ]};
+  //replace key <CAPS> { [ Control_R ]};
 
   key <AE12> { [ grave, acute ] };
   key <BKSL> { [ less, greater, bar ] };
@@ -13,4 +13,6 @@ xkb_symbols "fi-complete" {
   key <AB08> { [ comma, semicolon, less ] };
   key <AB09> { [ period, colon, greater ] };
   key <AB10> { [ minus, underscore, bar ] };
+  # Disable non-breaking space.
+  key <SPCE> { [ space, space, space ] };
 };
