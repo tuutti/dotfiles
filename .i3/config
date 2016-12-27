@@ -48,8 +48,8 @@ bindsym $mod+Right focus right
 bindsym $mod+Mod1+l exec playerctl next
 bindsym $mod+Mod1+h exec playerctl previous
 bindsym $mod+Mod1+p exec playerctl play-pause
-bindsym $mod+Mod1+k exec sink-volume -v="+5%" -n="spotify"
-bindsym $mod+Mod1+j exec sink-volume -v="-5%" -n="spotify"
+bindsym $mod+Mod1+k exec sink-volume -v="+3%" -n="spotify"
+bindsym $mod+Mod1+j exec sink-volume -v="-3%" -n="spotify"
 
 # Lock screen
 bindsym $mod+Mod1+Escape exec ~/scripts/lock.sh
