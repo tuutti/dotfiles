@@ -197,7 +197,7 @@ bar {
   i3bar_command i3bar -t
   output DP-0
   position top
-  tray_output none
+  tray_output primary
   font xft:Ubuntu Mono 10
 
   colors {
