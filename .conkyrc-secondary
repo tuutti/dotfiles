@@ -9,7 +9,7 @@ TEXT
 
 [\
 {
-  "full_text":"${exec playerctl metadata artist} - ${exec playerctl metadata title}",
+  "full_text":"${exec echo $(playerctl metadata artist | sed 's/\"//g')} - ${exec echo $(playerctl metadata title | sed 's/\"//g')}",
   "color":"\#ebdbb2",
   "min_width": 1000,
   "align": "center",
