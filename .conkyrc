@@ -1,13 +1,22 @@
 out_to_x no
 out_to_console yes
 short_units yes
-update_interval 5
+update_interval 0.5
 use_spacer left
 pad_percents 2
 
 TEXT
 
 [\
+# Title:
+{
+  "full_text":"${execpi 0.5 xtitle -i -t 250}",
+  "color":"\#a89984",
+  "separator":false,
+  "min_width": 700,
+  "align": "center",
+  "separator_block_width": 400
+},\
 # Memory:
 {"full_text":"MEM ","color":"\#a89984","separator":false,"separator_block_width":0},\
 {"full_text":"$mem / $memmax","color":"\#ebdbb2","separator":false,"separator_block_width":6},\
