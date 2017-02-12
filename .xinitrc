@@ -29,7 +29,8 @@ else
   xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/hhkb.xkb $DISPLAY
 
   # Set backgrounds.
-  feh --bg-fill ~/dotfiles/resources/bg.jpg
+  #feh --bg-fill ~/dotfiles/resources/bg.jpg
+  xsetroot -solid "#504945"
   xcalib -d :0 ~/dotfiles/resources/asus_mg279q.icc
   #exec ~/.screenlayout/default.sh
   exec i3
