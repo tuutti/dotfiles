@@ -10,7 +10,7 @@ TEXT
 [\
 {
   "full_text":"${exec playerctl metadata artist} - ${exec playerctl metadata title}",
-  "color":"\#a89984",
+  "color":"\#ebdbb2",
   "min_width": 1000,
   "align": "center",
   "separator":false

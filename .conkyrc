@@ -11,7 +11,7 @@ TEXT
 # Title:
 {
   "full_text":"${execpi 0.5 xtitle -i -t 250}",
-  "color":"\#a89984",
+  "color":"\#ebdbb2",
   "separator":false,
   "min_width": 700,
   "align": "center",
