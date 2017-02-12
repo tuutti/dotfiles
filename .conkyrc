@@ -10,7 +10,7 @@ TEXT
 [\
 # Title:
 {
-  "full_text":"${execpi 0.5 xtitle -i -t 250}",
+  "full_text":"${execpi 0.5 echo $(xtitle -i -t 250)}",
   "color":"\#ebdbb2",
   "separator":false,
   "min_width": 700,
