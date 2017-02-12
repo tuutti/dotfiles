@@ -1,0 +1,55 @@
+#!/bin/php
+<?php
+
+if (!$home = getenv('HOME')) {
+  die('$HOME env variable not set.');
+}
+$history_file = sprintf('%s/.local/share/qutebrowser/history', $home);
+// Backup history file.
+exec(sprintf('cp %s %s.bak', $history_file, $history_file));
+$file = new SplFileObject($history_file);
+
+$remove = [
+  'google.',
+  'out.reddit.com',
+  'i.reddituploads.com',
+  'i.imgur.com',
+  'duckduckgo.',
+  # Reddit next links
+  '&after=t',
+];
+$items = [];
+foreach ($file as $line) {
+  $string = explode(' ', $line);
+
+  foreach ($remove as $item) {
+    // Skip files that are marked as to be removed.
+    if (strpos($line, $item) !== FALSE) {
+      continue 2;
+    }
+  }
+  // Skip very long lines in history (base64 encoded view-source items for example).
+  if (mb_strlen($line) > 255) {
+    continue;
+  }
+  // Copy url as unique value.
+  $items[$file->key()] = $string[1];
+}
+if (empty($items)) {
+  die('No items found.');
+}
+$all = array_unique($items);
+
+$file2 = new SplFileObject($history_file . '.tmp', 'w');
+
+foreach ($all as $line => $value) {
+  if (!$line > 0) {
+    continue;
+  }
+  // Read marked lines from the qutebrowser history file
+  // and write to a new history file.
+  $file->seek($line - 1);
+  $file2->fwrite($file->fgets());
+}
+// Override original history file.
+exec(sprintf('cp %s.tmp %s', $history_file, $history_file));
