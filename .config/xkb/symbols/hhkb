@@ -1,7 +1,7 @@
 xkb_symbols "fi-complete" {
   key <AD11> { [ apostrophe, asterisk ] };
   key <AD12> { [ asciicircum, dead_diaeresis, asciitilde ] };
-  key <TLDE> { [ Escape ] };
+  key <TLDE> { [ Delete ] };
 
   key <AC10> { [ odiaeresis, Odiaeresis ] };
   key <AC11> { [ adiaeresis, Adiaeresis ] };
