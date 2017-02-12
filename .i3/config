@@ -236,8 +236,8 @@ new_window pixel 3
 for_window[class="sxiv"] border normal;
 
 # Requires i3-gaps (https://aur.archlinux.org/packages/i3-gaps-git/)
-gaps inner 10
-gaps outer 3
+gaps inner 4
+gaps outer 0
 
 #workspace "3 • code" gaps inner 0
 #workspace "4 • code" gaps outer 0
