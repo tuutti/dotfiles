@@ -1,0 +1,19 @@
+out_to_x no
+out_to_console yes
+short_units yes
+update_interval 5
+use_spacer left
+pad_percents 2
+
+TEXT
+
+[\
+{
+  "full_text":"${exec playerctl metadata artist} - ${exec playerctl metadata title}",
+  "color":"\#a89984",
+  "min_width": 1000,
+  "align": "center",
+  "separator":false
+}\
+],
+

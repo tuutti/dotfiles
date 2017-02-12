@@ -18,20 +18,67 @@ TEXT
   "separator_block_width": 400
 },\
 # Memory:
-{"full_text":"MEM ","color":"\#a89984","separator":false,"separator_block_width":0},\
-{"full_text":"$mem / $memmax","color":"\#ebdbb2","separator":false,"separator_block_width":6},\
-
+{
+  "full_text":"MEM ",
+  "color":"\#a89984",
+  "separator":false,
+  "separator_block_width":0
+},\
+{
+  "full_text":"$mem / $memmax",
+  "color":"\#ebdbb2",
+  "separator":false,
+  "separator_block_width":6
+},\
 # Storage:
-{"full_text":"SSD","color":"\#a89984","separator":false,"separator_block_width":0},\
-{"full_text":"${fs_used /} /${fs_size /}","color":"\#ebdbb2","separator":false,"separator_block_width":6},\
-{"full_text":"HDD ","color":"\#a89984","separator":false,"separator_block_width":0},\
-{"full_text":"${fs_used /media/nfs} / ${fs_size /media/nfs}","color":"\#ebdbb2","separator":false,"separator_block_width":6},\
-
+{
+  "full_text":"SSD",
+  "color":"\#a89984",
+  "separator":false,
+  "separator_block_width":0
+},\
+{
+  "full_text":"${fs_used /} /${fs_size /}",
+  "color":"\#ebdbb2",
+  "separator":false,
+  "separator_block_width":6
+},\
+{
+  "full_text":"HDD ",
+  "color":"\#a89984",
+  "separator":false,
+  "separator_block_width":0
+},\
+{
+  "full_text":"${fs_used /media/nfs} / ${fs_size /media/nfs}",
+  "color":"\#ebdbb2",
+  "separator":false,
+  "separator_block_width":6
+},\
 # Date:
-{"full_text":"DATE","color":"\#a89984","separator":false,"separator_block_width":6},\
-{"full_text":"${time %d.%m.%Y}","color":"\#ebdbb2","separator":false,"separator_block_width":6},\
+{
+  "full_text":"DATE",
+  "color":"\#a89984",
+  "separator":false,
+  "separator_block_width":6
+},\
+{
+  "full_text":"${time %d.%m.%Y}",
+  "color":"\#ebdbb2",
+  "separator":false,
+  "separator_block_width":6
+},\
 # Time:
-{"full_text":"|","color":"\#a89984","separator":false,"separator_block_width":6},\
-{"full_text":"${time %R}","color":"\#ebdbb2","separator":false}\
+{
+  "full_text":"|",
+  "color":"\#a89984",
+  "separator":false,
+  "separator_block_width":6
+},\
+{
+  "full_text":"${time %R}",
+  "color":"\#ebdbb2",
+  "separator":false
+}\
 ],
 
