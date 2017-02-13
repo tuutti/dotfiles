@@ -10,7 +10,7 @@ TEXT
 [\
 # Title:
 {
-  "full_text":"${execpi 0.5 echo $(xtitle -i -t 250 | sed 's/\"//g')}",
+  "full_text":"${execpi 0.5 echo $(xtitle -i -t 250 | sed -e 's/\"//g' | sed 's/\\//g')}",
   "color":"\#ebdbb2",
   "separator":false,
   "min_width": 700,
