@@ -42,7 +42,7 @@ ZSH_THEME="tuutti"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git history-substring-search tmux pass)
 
-export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/2.1.0/bin:/home/tuutti/.gem/ruby/2.2.0/bin
+export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/2.1.0/bin:/home/tuutti/.gem/ruby/2.2.0/bin:$HOME/.composer/vendor/bin
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,6 +60,7 @@ function sconsole() {
   $(git rev-parse --show-toplevel)/app/console "$@";
 }
 
+alias grep='grep -n --color=auto'
 alias ssh='TERM=xterm ssh'
 alias tmux='tmux -2'
 alias ls='ls --color=auto'
@@ -68,6 +69,7 @@ alias ':Q'='exit'
 alias 'tl'='tmux ls'
 alias 's'='sudo -E'
 alias less='LESSOPEN="| source-highlight-esc.sh %s" less -M'
+alias phantomjstest='phantomjs --ssl-protocol=any --ignore-ssl-errors=true vendor/jcalderonzumba/gastonjs/src/Client/main.js 8510 1024 768'
 
 setopt menu_complete
 #export KEYTIMEOUT=1
