@@ -20,6 +20,9 @@ xrdb ~/.Xresources
 
 #compton --config ~/.compton.conf -b --xrender-sync --xrender-sync-fence &
 
+xsetroot -solid "#504945"
+xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/hhkb.xkb $DISPLAY
+
 # Laptop specific configs.
 if [ "$(hostname)" = "pad" ]; then
   exec ~/scripts/touchpad.sh &
@@ -30,7 +33,6 @@ else
 
   # Set backgrounds.
   #feh --bg-fill ~/dotfiles/resources/bg.jpg
-  xsetroot -solid "#504945"
   xcalib -d :0 ~/dotfiles/resources/asus_mg279q.icc
   #exec ~/.screenlayout/default.sh
   exec i3
