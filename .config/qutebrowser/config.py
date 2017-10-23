@@ -1,5 +1,6 @@
 # Bindings
 config.bind('t', 'set-cmd-text -s :open -t')
+config.bind('O', 'set-cmd-text :open {url}')
 config.bind('J', 'tab-focus')
 config.bind('gt', 'tab-focus')
 config.bind('<Ctrl+l>', 'tab-next')
