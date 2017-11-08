@@ -11,6 +11,7 @@ export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/2
 export XDG_CONFIG_HOME="/home/tuutti/.config"
 export EDITOR=vim
 export BROWSER=qutebrowser
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 setxkbmap -layout fi
 
@@ -19,9 +20,6 @@ xrdb ~/.Xresources
 #xset -dpms; xset s off
 
 #compton --config ~/.compton.conf -b --xrender-sync --xrender-sync-fence &
-
-xsetroot -solid "#504945"
-xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/hhkb.xkb $DISPLAY
 
 # Laptop specific configs.
 if [ "$(hostname)" = "pad" ]; then
@@ -33,6 +31,7 @@ else
 
   # Set backgrounds.
   #feh --bg-fill ~/dotfiles/resources/bg.jpg
+  xsetroot -solid "#675839"
   xcalib -d :0 ~/dotfiles/resources/asus_mg279q.icc
   #exec ~/.screenlayout/default.sh
   exec i3

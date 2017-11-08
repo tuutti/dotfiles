@@ -30,7 +30,7 @@ bindsym Control+Mod1+p kill
 bindsym $mod+d exec urxvt -e ranger
 # Dmenu
 # (resolution/2)-(dmenu-width/2) = center
-bindsym Ctrl+space exec i3-dmenu-desktop --dmenu="dmenu -nb '$color3' -nf '$text' -sb '$color1' -sf '$color3' -i -fn 'Ubuntu Mono-10:normal' -p 'Run ' -l 5 -w 500 -x 0 -y 0 -h 25"
+bindsym Mod1+space exec i3-dmenu-desktop --dmenu="dmenu -nb '$color3' -nf '$text' -sb '$color1' -sf '$color3' -i -fn 'Ubuntu Mono-10:normal' -p 'Run ' -l 5 -w 500 -x 0 -y 0 -h 25"
 bindsym $mod+a exec ~/scripts/lpassdmenu.sh
 # change focus
 bindsym $mod+h focus left
@@ -195,7 +195,7 @@ set $separator #458588
 bar {
   status_command $HOME/.i3/scripts/conky
   i3bar_command i3bar -t
-  output DP-0
+  output DP-2
   position bottom
   tray_output none
   font xft:Ubuntu Mono 10

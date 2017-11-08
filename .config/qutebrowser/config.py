@@ -40,7 +40,7 @@ config.set('url.searchengines', {
 c.colors.completion.fg = '#ebdbb2'
 c.colors.completion.odd.bg = '#282828'
 c.colors.completion.category.fg = '#ebdbb2'
-c.colors.completion.category.bg = '#83a598'
+c.colors.completion.category.bg = '#458588'
 c.colors.completion.category.border.top = 'transparent'
 c.colors.completion.item.selected.border.top = '#e8c000'
 c.colors.tabs.odd.fg = '#ebdbb2'
