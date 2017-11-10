@@ -31,7 +31,7 @@ else
 
   # Set backgrounds.
   #feh --bg-fill ~/dotfiles/resources/bg.jpg
-  xsetroot -solid "#675839"
+  xsetroot -solid "#384141"
   xcalib -d :0 ~/dotfiles/resources/asus_mg279q.icc
   #exec ~/.screenlayout/default.sh
   exec i3
