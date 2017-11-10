@@ -13,6 +13,8 @@ config.bind('<ctrl-->', 'zoom-out')
 config.bind('<ctrl-+>', 'zoom-in')
 config.bind('Gh', 'back -t')
 config.bind('Gl', 'forward -t')
+config.bind('s', 'set content.user_stylesheets ~/.local/share/qutebrowser/userstyle.css ;; reload')
+config.bind('S', 'set content.user_stylesheets "" ;; reload')
 
 def makePadding(top, bottom, left, right):
     return { 'top': top, 'bottom': bottom, 'left': left , 'right': right }
@@ -35,6 +37,7 @@ config.set('url.searchengines', {
     "sk": "http://www.sanakirja.org/search.php?q={}",
     "trans": "https://translate.google.com/#auto/en/{}"
 })
+config.set('content.webgl', False)
 
 # Colors
 c.colors.completion.fg = '#ebdbb2'
