@@ -106,20 +106,34 @@ bindsym $mod+Shift+a focus parent
 # focus the child container
 #bindcode $mod+d focus child
 
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
+set $ws5 "5: "
+set $ws6 "6: "
+set $ws7 "7: "
+set $ws8 "8: "
+set $ws9 "9: "
+set $ws10 "10: "
+set $ws11 "11: "
+set $ws12 "12: "
+set $ws13 "13: "
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-bindsym $mod+q workspace 11
-bindsym $mod+w workspace 12
-bindsym $mod+e workspace 13
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+q workspace $ws11
+bindsym $mod+w workspace $ws12
+bindsym $mod+e workspace $ws13
 
 # move focused container
 bindsym $mod+Shift+x move workspace to output right
@@ -131,19 +145,19 @@ bindsym $mod+Shift+greater move scratchpad
 bindsym $mod+greater scratchpad show
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
-bindsym $mod+Shift+Q move container to workspace 11
-bindsym $mod+Shift+W move container to workspace 12
-bindsym $mod+Shift+E move container to workspace 13
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+Q move container to workspace $ws11
+bindsym $mod+Shift+W move container to workspace $ws12
+bindsym $mod+Shift+E move container to workspace $ws13
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -185,51 +199,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-
-set $bar_bg #282828
-set $statusline #458588
-set $separator #458588
-
-bar {
-  status_command $HOME/.i3/scripts/conky
-  i3bar_command i3bar -t
-  output DP-2
-  position bottom
-  tray_output none
-  font xft:Ubuntu Mono 10
-
-  colors {
-    background $bar_bg
-    separator $separator
-    statusline $statusline
-    focused_workspace $statusline $statusline $text_invert
-    active_workspace $bar_bg $bar_bg $text
-    inactive_workspace $bar_bg $bar_bg $text
-  }
-}
-
-bar {
-  status_command "~/.i3/scripts/conky secondary"
-  i3bar_command i3bar -t
-  output HDMI-0
-  tray_output primary
-  position bottom
-  font xft:Ubuntu Mono 10
-
-  colors {
-    background $bar_bg
-    separator $separator
-    statusline $statusline
-    focused_workspace $statusline $statusline $text_invert
-    active_workspace $bar_bg $bar_bg $text
-    inactive_workspace $bar_bg $bar_bg $text
-  }
-}
-assign [class="Screenkey"] "2"
-assign [class="Steam"] "4"
-assign [class="Skype"] "7"
+assign [class="Steam"] $ws6
+assign [class="Skype"] $ws6
 
 default_orientation auto
 new_window pixel 3
@@ -242,11 +213,6 @@ gaps outer 0
 #workspace "3 • code" gaps inner 0
 #workspace "4 • code" gaps outer 0
 
-#hide_edge_borders both
-# Hide edge borders
-#hide_edge_borders both
-## Colours
-##---------
 #                         | border | backgrond | text | indigator
 client.focused            $color1   $color1    $text   $color1
 client.focused_inactive   $color3   $color3   $text   $color3
