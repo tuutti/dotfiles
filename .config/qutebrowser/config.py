@@ -22,7 +22,7 @@ def makePadding(top, bottom, left, right):
 # Tabs
 config.set('tabs.background', True)
 config.set('tabs.favicons.show', False)
-config.set('tabs.width.indicator', 0)
+config.set('tabs.indicator.width', 0)
 config.set('tabs.padding', makePadding(2, 2, 5, 5))
 # Statusbar
 config.set('statusbar.padding', makePadding(0, 2, 2, 0))
