@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=Whatsapp
-Exec=chromium --app="https://web.whatsapp.com"
-Terminal=false
-Type=Application
