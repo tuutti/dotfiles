@@ -70,6 +70,9 @@ bindsym $mod+Tab workspace next_on_output
 # Auto toggle between last used workspaces.
 workspace_auto_back_and_forth yes
 
+# Toggle between fi/us keyboard layout
+bindsym Insert exec ~/.i3/scripts/toggle-keyboard-layout.sh
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -196,8 +199,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-assign [class="Steam"] $ws6
-assign [class="Skype"] $ws6
+assign [class="Steam"] $ws4
 
 default_orientation auto
 new_window pixel 3
