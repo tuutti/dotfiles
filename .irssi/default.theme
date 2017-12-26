@@ -70,7 +70,7 @@ abstracts = {
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0$1}";
-  ownnick = "%m$*%n";
+  ownnick = "%Y$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "{msgnick $0$1}";
