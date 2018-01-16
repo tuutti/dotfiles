@@ -62,7 +62,7 @@ bindsym $mod+Shift+L move right
 
 # Toggle between 2 workspaces
 bindsym $mod+z workspace back_and_forth
-bindsym Mod1+Tab exec ~/.i3/scripts/i3-toggle.py -first="12" -second="3"
+bindsym Mod1+Tab exec ~/.i3/scripts/i3-toggle.py -first="12: " -second="3: "
 bindsym $mod+section workspace prev_on_output
 bindsym $mod+Escape workspace prev_on_output
 bindsym $mod+Tab workspace next_on_output
@@ -206,7 +206,7 @@ new_window pixel 3
 for_window[class="sxiv"] border normal;
 
 # Requires i3-gaps (https://aur.archlinux.org/packages/i3-gaps-git/)
-gaps inner 4
+gaps inner 6
 gaps outer 0
 
 #workspace "3 • code" gaps inner 0
