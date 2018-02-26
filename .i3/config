@@ -30,8 +30,8 @@ bindsym Control+Mod1+p kill
 bindsym $mod+d exec urxvt -e ranger
 # Dmenu
 # (resolution/2)-(dmenu-width/2) = center
-bindsym Mod1+space exec i3-dmenu-desktop --dmenu="dmenu -nb '$color3' -nf '$text' -sb '$color1' -sf '$color3' -i -fn 'Ubuntu Mono-10:normal' -p 'Run ' -l 5 -w 500 -x 0 -y 0 -h 25"
-bindsym $mod+a exec ~/scripts/lpassdmenu.sh
+bindsym Mod1+space exec rofi -display-drun "> " -show
+bindsym $mod+a exec rofi -modi lpass:rofi-lpass -show lpass
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
