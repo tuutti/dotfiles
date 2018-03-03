@@ -12,7 +12,7 @@ background = #282828
 background-alt = #212121
 foreground = #ebdbb4
 foreground-alt = #928374
-primary = #212121
+primary = #458588
 secondary = #fbf1c7
 alert = #fb4934
 
@@ -100,7 +100,7 @@ pin-workspaces = true
 
 ; focused = Active workspace on focused monitor
 format-padding = 0
-label-focused-background = #212121
+label-focused-background = #458588
 label-focused-foreground = ${colors.secondary}
 label-focused-padding = 2
 label-focused-padding-right = 3
