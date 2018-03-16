@@ -1,11 +1,21 @@
+# See http://www.charvolant.org/doug/xkb/html/node5.html
 xkb_symbols "fi-complete" {
-  key <AD11> { [ apostrophe, asterisk ] };
+  # Map altgr+q/w to ()
+  key <AD01> { [ q, Q, parenleft ] };
+  key <AD02> { [ W, W, parenright ] };
+
+  key <AD11> { [ apostrophe, asterisk, dollar ] };
   key <AD12> { [ asciicircum, dead_diaeresis, asciitilde ] };
   key <TLDE> { [ Delete ] };
 
-  key <AC10> { [ odiaeresis, Odiaeresis ] };
-  key <AC11> { [ adiaeresis, Adiaeresis ] };
-  //replace key <CAPS> { [ Control_R ]};
+  # Map altgr+l to [
+  key <AC09> { [ l, L, bracketleft ] };
+
+  # Map altgr+ö to ]
+  key <AC10> { [ odiaeresis, Odiaeresis, bracketright ] };
+  # Map altgr+ä to slash
+  key <AC11> { [ adiaeresis, Adiaeresis, slash ] };
+  replace key <CAPS> { [ Control_R ]};
 
   key <AE12> { [ grave, acute ] };
   key <BKSL> { [ less, greater, bar ] };
@@ -15,4 +25,8 @@ xkb_symbols "fi-complete" {
   key <AB10> { [ minus, underscore, bar ] };
   # Disable non-breaking space.
   key <SPCE> { [ space, space, space ] };
+
+  # Map brackets to altgr+q/w
+  key <AD09> { [ o, O, braceleft ] };
+  key <AD10> { [ p, P, braceright ] };
 };
