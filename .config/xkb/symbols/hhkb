@@ -2,7 +2,7 @@
 xkb_symbols "fi-complete" {
   # Map altgr+q/w to ()
   key <AD01> { [ q, Q, parenleft ] };
-  key <AD02> { [ W, W, parenright ] };
+  key <AD02> { [ w, W, parenright ] };
 
   key <AD11> { [ apostrophe, asterisk, dollar ] };
   key <AD12> { [ asciicircum, dead_diaeresis, asciitilde ] };
