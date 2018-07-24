@@ -42,7 +42,7 @@ ZSH_THEME="tuutti"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git history-substring-search tmux pass)
 
-export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/2.1.0/bin:/home/tuutti/.gem/ruby/2.2.0/bin:$HOME/.composer/vendor/bin
+export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/2.5.0/bin:/home/tuutti/.gem/ruby/2.2.0/bin:$HOME/.composer/vendor/bin
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,6 +60,14 @@ function sconsole() {
   $(git rev-parse --show-toplevel)/app/console "$@";
 }
 
+function sr() {
+  git grep -l "$1" | xargs sed -i "s/$1/$2/g"
+}
+
+function dattach() {
+  docker-compose exec --user drupal drupal bash -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; exec bash"
+}
+
 alias grep='grep -n --color=auto'
 alias ssh='TERM=xterm ssh'
 alias tmux='tmux -2'
@@ -73,6 +81,7 @@ alias phantomjstest='phantomjs --ssl-protocol=any --ignore-ssl-errors=true vendo
 
 setopt menu_complete
 #export KEYTIMEOUT=1
+export GPG_TTY=$(tty)
 
 # Load drupal specific vim settings
 alias dvim='vim "+Sauce drupal"'

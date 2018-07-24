@@ -1,6 +1,7 @@
 [user]
   email = tuutti@iki.fi
   name = "Lari Rauno"
+  signingkey = 257BF1B6FEDCAE12
 
 [github]
   user = tuutti
