@@ -25,3 +25,5 @@
   diff = auto
   status = auto
   branch = auto
+[commit]
+	gpgsign = true
