@@ -18,10 +18,10 @@ config.bind('S', 'set content.user_stylesheets "" ;; reload')
 
 def makePadding(top, bottom, left, right):
     return { 'top': top, 'bottom': bottom, 'left': left , 'right': right }
-
+# Downloads
+config.set('downloads.location.suggestion', 'both')
 # Tabs
 config.set('tabs.background', True)
-config.set('tabs.favicons.show', False)
 config.set('tabs.indicator.width', 0)
 config.set('tabs.padding', makePadding(2, 2, 5, 5))
 # Statusbar
