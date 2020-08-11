@@ -59,11 +59,9 @@ c.colors.statusbar.command.fg = '#ebdbb2'
 c.colors.statusbar.command.bg = '#282828'
 
 # Fonts
-c.fonts.tabs = '11pt monospace'
 c.fonts.messages.info = '10pt monospace'
 c.fonts.messages.error = '10pt monospace'
 c.fonts.messages.warning = '10pt monospace'
 c.fonts.completion.entry = '11pt monospace'
 c.fonts.completion.category = '11pt monospace'
 c.fonts.statusbar = '11pt monospace'
-c.fonts.monospace = 'Ubuntu Mono'
