@@ -20,8 +20,7 @@ font xft:Ubuntu Mono Bold 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
-bindsym $mod+Mod1+Return exec urxvt -bg "#32302f"
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym Control+Mod1+p kill
@@ -30,7 +29,7 @@ bindsym Control+Mod1+p kill
 bindsym $mod+d exec urxvt -e ranger
 # Dmenu
 # (resolution/2)-(dmenu-width/2) = center
-bindsym Mod1+space exec rofi -display-drun "> " -show
+bindsym $mod+space exec rofi -display-drun "> " -show
 bindsym $mod+a exec rofi -modi lpass:rofi-lpass -show lpass
 # change focus
 bindsym $mod+h focus left
@@ -53,6 +52,10 @@ bindsym $mod+Mod1+j exec sink-volume -v="-3%" -n="spotify"
 
 # Lock screen
 bindsym $mod+Mod1+Escape exec ~/scripts/lock.sh
+
+# Screenshot
+bindsym --release Print exec scrot -s
+bindsym --release $mod+Print exec scrot -s -d 3
 
 # move focused window
 bindsym $mod+Shift+H move left
@@ -98,7 +101,7 @@ bindsym $mod+Shift+space floating toggle
 floating_modifier Mod1
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+Shift+a focus parent
@@ -202,7 +205,7 @@ bindsym $mod+r mode "resize"
 assign [class="Steam"] $ws4
 
 default_orientation auto
-new_window pixel 3
+new_window pixel 2
 for_window[class="sxiv"] border normal;
 
 # Requires i3-gaps (https://aur.archlinux.org/packages/i3-gaps-git/)
@@ -216,5 +219,7 @@ gaps outer 0
 client.focused            $color1   $color1    $text   $color1
 client.focused_inactive   $color3   $color3   $text   $color3
 client.unfocused          $color3   $color3   $text   $color3
+
+focus_follows_mouse no
 
 exec albert
