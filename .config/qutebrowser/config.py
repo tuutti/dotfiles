@@ -1,3 +1,7 @@
+#import sys, os
+#sys.path.append(os.path.join(sys.path[0], 'jblock'))
+#config.source("jblock/jblock/integrations/qutebrowser.py")
+
 # Bindings
 config.bind('t', 'set-cmd-text -s :open -t')
 config.bind('O', 'set-cmd-text :open {url}')
@@ -13,8 +17,8 @@ config.bind('<ctrl-->', 'zoom-out')
 config.bind('<ctrl-+>', 'zoom-in')
 config.bind('Gh', 'back -t')
 config.bind('Gl', 'forward -t')
-config.bind('s', 'set content.user_stylesheets ~/.local/share/qutebrowser/userstyle.css ;; reload')
-config.bind('S', 'set content.user_stylesheets "" ;; reload')
+#config.bind('s', 'set content.user_stylesheets ~/.local/share/qutebrowser/userstyle.css ;; reload')
+#config.bind('S', 'set content.user_stylesheets "" ;; reload')
 
 def makePadding(top, bottom, left, right):
     return { 'top': top, 'bottom': bottom, 'left': left , 'right': right }
@@ -40,6 +44,7 @@ config.set('url.searchengines', {
 config.set('content.webgl', False)
 
 # Colors
+#c.colors.webpage.darkmode.enabled = True
 c.colors.completion.fg = '#ebdbb2'
 c.colors.completion.odd.bg = '#282828'
 c.colors.completion.category.fg = '#ebdbb2'
@@ -65,3 +70,5 @@ c.fonts.messages.warning = '10pt monospace'
 c.fonts.completion.entry = '11pt monospace'
 c.fonts.completion.category = '11pt monospace'
 c.fonts.statusbar = '11pt monospace'
+c.fonts.tabs.unselected = '10pt monospace'
+c.fonts.tabs.selected = '10pt monospace'
