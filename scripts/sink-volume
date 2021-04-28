@@ -15,7 +15,7 @@ def find_sink(binary_name):
                 continue
 
             if (sink.find('application.process.binary = "%s"' % (binary_name)) != -1):
-                return id.group()
+                yield id.group()
     raise Exception('Sink not found')
 
 def create_arg_parser():
@@ -28,11 +28,11 @@ def main():
     arguments = create_arg_parser()
 
     try:
-        id = find_sink(arguments['name'])
+        for id in find_sink(arguments['name']):
+            Popen(['pactl', 'set-sink-input-volume', id, arguments['volume']])
+
     except Exception:
         print('Sink not found')
-
-    Popen(['pactl', 'set-sink-input-volume', id, arguments['volume']])
 
 
 if __name__ == "__main__":
