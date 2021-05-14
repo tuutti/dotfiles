@@ -42,7 +42,7 @@ ZSH_THEME="tuutti"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git history-substring-search tmux pass)
 
-export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/2.5.0/bin:/home/tuutti/.gem/ruby/2.2.0/bin:$HOME/.composer/vendor/bin
+export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/2.7.0/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin
 
 source $ZSH/oh-my-zsh.sh
 
@@ -68,6 +68,7 @@ function dattach() {
   docker-compose exec --user drupal drupal bash -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; exec bash"
 }
 
+alias stonehenge='make -C /srv/http/stonehenge'
 alias grep='grep -n --color=auto'
 alias ssh='TERM=xterm ssh'
 alias tmux='tmux -2'
@@ -77,17 +78,10 @@ alias ':Q'='exit'
 alias 'tl'='tmux ls'
 alias 's'='sudo -E'
 alias less='LESSOPEN="| source-highlight-esc.sh %s" less -M'
-alias phantomjstest='phantomjs --ssl-protocol=any --ignore-ssl-errors=true vendor/jcalderonzumba/gastonjs/src/Client/main.js 8510 1024 768'
 
 setopt menu_complete
 #export KEYTIMEOUT=1
 export GPG_TTY=$(tty)
-
-# Load drupal specific vim settings
-alias dvim='vim "+Sauce drupal"'
-alias dnvim='nvim "+Sauce drupal"'
-# load symfony specific vim settings
-alias svim='vim "+Sauce symfony"'
 
 [ -s "/home/tuutti/.scm_breeze/scm_breeze.sh" ] && source "/home/tuutti/.scm_breeze/scm_breeze.sh"
 
@@ -123,3 +117,4 @@ EOF
 __git_alias "$git_last_branches" "_scmb_git_last_branches"
 
 source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette.sh"
+source /usr/share/nvm/init-nvm.sh
