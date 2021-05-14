@@ -2,6 +2,10 @@
 vnoremap < <gv
 vnoremap > >gv
 
+let mapleader = ","
+map <leader>ci :action CommentByLineComment<CR>
+map <leader>cm :action CommentByBlockComment<CR>
+
 " Keep search pattern at the center of the screen.
 nnoremap <silent> n nzz
 nnoremap <silent> N Nzz
@@ -13,3 +17,6 @@ imap <C-e> <Esc>A;<CR>
 
 nnoremap <C-s> :%s/\s\+$//<CR>
 inoremap <C-s> <esc>:%s/\s\+$//<CR>
+
+set relativenumber
+set number
