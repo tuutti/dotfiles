@@ -5,8 +5,6 @@ nnoremap d "_d
 vnoremap p "_dP
 
 let mapleader = ","
-" <TAB>: completion.
-noremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Disable scratchpad
 set completeopt-=preview
@@ -17,10 +15,6 @@ imap <M-Space> <Esc>
 set timeoutlen=500 ttimeoutlen=0
 
 set encoding=utf-8
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_at_startup = 1
-
 " To open a new empty buffer
 " This replaces :tabnew which I used to bind to this mapping
 nmap <leader>n :enew<cr>
@@ -114,30 +108,34 @@ Plugin 'gmarik/Vundle.vim'
 " non github repos
 " Plugin 'git://git.wincent.com/command-t.git'
 " ...
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'majutsushi/tagbar'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mattn/emmet-vim'
-Plugin 'gregsexton/MatchTag'
+" Plugin 'gregsexton/MatchTag'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Shougo/neocomplcache.vim'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'scrooloose/syntastic'
 Plugin 'joonty/vim-sauce.git'
 Plugin 'evidens/vim-twig'
-Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-fugitive'
+Plugin 'jamessan/vim-gnupg'
+"Plugin 'Shougo/deoplete.nvim'
+Plugin 'arnaud-lb/vim-php-namespace'
+"Plugin 'padawan-php/padawan.vim'
+"Plugin 'padawan-php/deoplete-padawan'
+"Plugin 'roxma/nvim-yarp'
+"Plugin 'roxma/vim-hug-neovim-rpc'
+"Plugin 'lvht/phpcd.vim'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -160,6 +158,8 @@ set t_Co=256
 let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='medium'
 colorscheme gruvbox
+
+set go=aegirL
 
 " use filetype plugins, e.g. for PHP
 " filetype plugin on
@@ -300,6 +300,9 @@ autocmd BufWritePre     * :call TrimWhiteSpace()
 
 " Disable ex mode.
 nnoremap Q <nop>
+nnoremap <leader>q <c-v>
+" Ctrl+q to visual block
+nnoremap <c-q> <c-v>
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
@@ -320,3 +323,14 @@ function! NumberToggle()
 endfunc
 
 nnoremap <F2> :call NumberToggle()<CR>
+
+function! Copy()
+  %w !xclip -i -sel c
+endfunc
+
+let g:GPGUseAgent = 0
+let g:GPGPreferSymmetric = 1
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+let g:deoplete#ignore_sources.php = ['omni']

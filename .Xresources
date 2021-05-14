@@ -1,2 +1,19 @@
 Xcursor.theme: Adwaita
 Xcursor.size:  16       !  32, 48 or 64 may also be good values
+
+rofi.terminal:  urxvt
+rofi.lines:   5
+rofi.eh:    1
+rofi.width:   100
+rofi.padding: 480
+rofi.opacity: 65
+rofi.bw:    0
+!rofi.bc:   #03a9f4
+rofi.bc:    #C5CCD1
+rofi.bg:    #eceff1
+!rofi.fg:   #263238
+!rofi.hlbg:   #03a9f4
+!rofi.hlfg:   #eceff1
+rofi.fg:    #C5CCD1
+rofi.hlbg:    #eceff1
+rofi.hlfg:    #263238

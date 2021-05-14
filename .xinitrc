@@ -17,7 +17,7 @@ setxkbmap -layout fi
 
 xrdb ~/.Xresources
 # Disable screen blanking until X crash bug is fixed.
-#xset -dpms; xset s off
+xset -dpms; xset s off
 
 #compton --config ~/.compton.conf -b --xrender-sync --xrender-sync-fence &
 
@@ -26,13 +26,8 @@ if [ "$(hostname)" = "pad" ]; then
   exec ~/scripts/touchpad.sh &
   exec i3
 else
-  #exec ~/scripts/update-public-ip.sh 1>&- 2>&- &
   xkbcomp -I$HOME/.config/xkb $HOME/.config/xkb/hhkb.xkb $DISPLAY
 
-  # Set backgrounds.
-  #feh --bg-fill ~/dotfiles/resources/bg.jpg
-  xsetroot -solid "#384141"
-  xcalib -d :0 ~/dotfiles/resources/asus_mg279q.icc
-  #exec ~/.screenlayout/default.sh
+  xcalib -d :0 ~/dotfiles/resources/asus_rog_Swift_pg279q.icc
   exec i3
 fi
