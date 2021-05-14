@@ -2,6 +2,7 @@
 #sys.path.append(os.path.join(sys.path[0], 'jblock'))
 #config.source("jblock/jblock/integrations/qutebrowser.py")
 
+config.set('content.blocking.method', 'adblock')
 # Bindings
 config.bind('t', 'set-cmd-text -s :open -t')
 config.bind('O', 'set-cmd-text :open {url}')
@@ -22,6 +23,8 @@ config.bind('Gl', 'forward -t')
 
 def makePadding(top, bottom, left, right):
     return { 'top': top, 'bottom': bottom, 'left': left , 'right': right }
+# Disable media keys
+config.set('input.media_keys', False)
 # Downloads
 config.set('downloads.location.suggestion', 'both')
 # Tabs
