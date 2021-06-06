@@ -26,11 +26,10 @@ bindsym $mod+Return exec alacritty
 bindsym Control+Mod1+p kill
 
 # ranger
-bindsym $mod+d exec urxvt -e ranger
+bindsym $mod+d exec alacritty -e ranger
 # Dmenu
 # (resolution/2)-(dmenu-width/2) = center
 bindsym $mod+space exec rofi -display-drun "> " -show
-bindsym $mod+a exec rofi -modi lpass:rofi-lpass -show lpass
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -54,8 +53,9 @@ bindsym $mod+Mod1+j exec sink-volume -v="-3%" -n="spotify"
 bindsym $mod+Mod1+Escape exec ~/scripts/lock.sh
 
 # Screenshot
-bindsym --release Print exec scrot -s
+bindsym --release Print exec scrot -s -d 1
 bindsym --release $mod+Print exec scrot -s -d 3
+bindsym --release $mod+shift+Print exec scrot -u
 
 # move focused window
 bindsym $mod+Shift+H move left
