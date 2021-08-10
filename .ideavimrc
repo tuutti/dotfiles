@@ -18,5 +18,8 @@ imap <C-e> <Esc>A;<CR>
 nnoremap <C-s> :%s/\s\+$//<CR>
 inoremap <C-s> <esc>:%s/\s\+$//<CR>
 
+nnoremap <C-w>L :action com.mnw.tabmover.actions.MoveTabToNextSplitter<cr>
+nnoremap <C-w>H :action com.mnw.tabmover.actions.MoveTabToPreviousSplitter<cr>
+
 set relativenumber
 set number
