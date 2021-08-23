@@ -5,7 +5,7 @@ set $mod Mod4
 
 set $text #ebdbb4
 set $text_invert #282828
-set $color1 #458588
+set $color1 #504945
 set $color2 #484850
 set $color3 #282828
 set $color4 #2a3035
@@ -109,19 +109,19 @@ bindsym $mod+Shift+a focus parent
 # focus the child container
 #bindcode $mod+d focus child
 
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4: "
-set $ws5 "5: "
-set $ws6 "6: "
-set $ws7 "7: "
-set $ws8 "8: "
-set $ws9 "9: "
-set $ws10 "10: "
-set $ws11 "11: "
-set $ws12 "12: "
-set $ws13 "13: "
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
+set $ws9 "9:"
+set $ws10 "10:"
+set $ws11 "11:"
+set $ws12 "12:"
+set $ws13 "13:"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1

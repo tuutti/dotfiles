@@ -2,6 +2,12 @@
 #sys.path.append(os.path.join(sys.path[0], 'jblock'))
 #config.source("jblock/jblock/integrations/qutebrowser.py")
 
+## Block YouTube Advertisements
+
+from qutebrowser.api import interceptor
+
+config.load_autoconfig()
+
 config.set('content.blocking.method', 'adblock')
 # Bindings
 config.bind('t', 'set-cmd-text -s :open -t')
@@ -51,7 +57,7 @@ config.set('content.webgl', False)
 c.colors.completion.fg = '#ebdbb2'
 c.colors.completion.odd.bg = '#282828'
 c.colors.completion.category.fg = '#ebdbb2'
-c.colors.completion.category.bg = '#458588'
+c.colors.completion.category.bg = '#504945'
 c.colors.completion.category.border.top = 'transparent'
 c.colors.completion.item.selected.border.top = '#e8c000'
 c.colors.tabs.odd.fg = '#ebdbb2'
@@ -59,9 +65,9 @@ c.colors.tabs.odd.bg = '#282828'
 c.colors.tabs.even.fg = '#ebdbb2'
 c.colors.tabs.even.bg = '#282828'
 c.colors.tabs.selected.odd.fg = '#ebdbb2'
-c.colors.tabs.selected.odd.bg = '#458588'
+c.colors.tabs.selected.odd.bg = '#504945'
 c.colors.tabs.selected.even.fg = '#ebdbb2'
-c.colors.tabs.selected.even.bg = '#458588'
+c.colors.tabs.selected.even.bg = '#504945'
 c.colors.statusbar.normal.bg = '#282828'
 c.colors.statusbar.command.fg = '#ebdbb2'
 c.colors.statusbar.command.bg = '#282828'
