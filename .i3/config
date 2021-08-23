@@ -29,7 +29,7 @@ bindsym Control+Mod1+p kill
 bindsym $mod+d exec alacritty -e ranger
 # Dmenu
 # (resolution/2)-(dmenu-width/2) = center
-bindsym $mod+space exec rofi -display-drun "> " -show
+bindsym $mod+space exec rofi -show drun -theme tuutti
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
