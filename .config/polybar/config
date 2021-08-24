@@ -10,7 +10,7 @@
 [colors]
 background = #282828
 background-alt = #212121
-background-light = #32302f
+background-light = #504945
 foreground = #ebdbb4
 foreground-alt = #928374
 primary = #32302f
