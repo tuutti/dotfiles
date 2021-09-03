@@ -63,14 +63,20 @@ listview {
 
 element {
     padding: 5px;
+    background-color: inherit;
+}
+
+element-text {
+    background-color: inherit;
 }
 
 element-icon {
-size: 25px;
+    size: 25px;
+    background-color: inherit;
 }
 
 element selected {
-    background-color: #504945  ;
+    background-color: #504945;
 }
 
 element urgent {
