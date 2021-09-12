@@ -12,6 +12,7 @@ configuration{
     separator-style: "solid";
     disable-history: false;
     hide-scrollbar: true;
+    drun-match-fields: "name";
 }
 
 * {
