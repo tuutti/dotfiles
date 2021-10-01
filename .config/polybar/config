@@ -145,12 +145,14 @@ label-unfocused-background = ${colors.primary}
 label-visible-background = transparent
 label-visible-padding = 3
 label-visible-padding-right = 2
+label-visible-margin-right = 1
 label-visible-foreground = ${colors.foreground-alt}
 
 ; urgent = Workspace with urgency hint set
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 3
 label-urgent-padding-right = 2
+label-urgent-margin-right = 1
 
 [module/spotify]
 type = custom/script
