@@ -3,15 +3,21 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 set $mod Mod4
 
-set $text #ebdbb4
+#set $text #ebdbb4
+#set $text_invert #282828
+#set $color1 #504945
+#set $color2 #484850
+#set $color3 #282828
+#set $color4 #2a3035
+#set $color5 #586c7c
+#set $color6 #3c4852
+#set $color7 #fb4934
+
+set $text #e0def5
 set $text_invert #282828
-set $color1 #504945
-set $color2 #484850
-set $color3 #282828
-set $color4 #2a3035
-set $color5 #586c7c
-set $color6 #3c4852
-set $color7 #fb4934
+set $color1 #ebbcba
+set $color2 #6e6a86
+set $color3 #1f1d2e
 
 # font7 for window titles. ISO 10646 = Unicode
 font xft:Ubuntu Mono Bold 9
@@ -212,14 +218,9 @@ for_window[class="sxiv"] border normal;
 gaps inner 6
 gaps outer 0
 
-#workspace "3 • code" gaps inner 0
-#workspace "4 • code" gaps outer 0
-
 #                         | border | backgrond | text | indigator
-client.focused            $color1   $color1    $text   $color1
+client.focused            $color2   $color2    $text   $color2
 client.focused_inactive   $color3   $color3   $text   $color3
 client.unfocused          $color3   $color3   $text   $color3
 
 focus_follows_mouse no
-
-exec albert

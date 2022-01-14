@@ -118,14 +118,14 @@ Plugin 'mattn/emmet-vim'
 " Plugin 'gregsexton/MatchTag'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'stephpy/vim-php-cs-fixer'
-Plugin 'scrooloose/syntastic'
-Plugin 'joonty/vim-sauce.git'
-Plugin 'evidens/vim-twig'
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'stephpy/vim-php-cs-fixer'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'joonty/vim-sauce.git'
+"Plugin 'evidens/vim-twig'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
-Plugin 'morhetz/gruvbox'
+"Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jamessan/vim-gnupg'
 "Plugin 'Shougo/deoplete.nvim'
@@ -136,6 +136,7 @@ Plugin 'arnaud-lb/vim-php-namespace'
 "Plugin 'roxma/vim-hug-neovim-rpc'
 "Plugin 'lvht/phpcd.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'iandwelker/rose-pine-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -155,9 +156,9 @@ filetype plugin indent on    " required
 set background=dark
 " Color settings
 set t_Co=256
-let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='medium'
-colorscheme gruvbox
+"let g:gruvbox_italic=1
+"let g:gruvbox_contrast_dark='medium'
+colorscheme rose-pine-dark
 
 set go=aegirL
 
@@ -265,7 +266,7 @@ let g:tagbar_width = 30
 "set noshowmode
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-"let g:airline_theme = 'tuutti'
+let g:airline_theme = 'raven'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#whitespace#trailing_format = '[%s]'
@@ -302,7 +303,7 @@ autocmd BufWritePre     * :call TrimWhiteSpace()
 nnoremap Q <nop>
 nnoremap <leader>q <c-v>
 " Ctrl+q to visual block
-nnoremap <c-q> <c-v>
+"nnoremap <c-q> <c-v>
 
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 

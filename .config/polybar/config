@@ -8,19 +8,19 @@
 ;=====================================================
 
 [colors]
-background = #282828
-background-alt = #212121
-background-light = #504945
-foreground = #ebdbb4
-foreground-alt = #928374
-primary = #32302f
+background = #1f1d2e
+background-alt = #191724
+background-light = #6e6a86
+foreground = #e0def4
+foreground-alt = #c4a7e7
+primary = #1f1d2e
 secondary = #fbf1c7
-alert = #fb4934
+alert = #eb6f92
 
 [bar/primary]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 24
+height = 22
 underline-size = 0
 overline-size = 0
 
@@ -34,7 +34,7 @@ line-color = #f00
 
 ;border-left-size = 4
 ;border-right-size = 4
-;border-bottom-size = 4
+;border-bottom-size = 5
 ;border-top-size = 4
 
 border-top-color = ${colors.background}
@@ -96,7 +96,7 @@ label-padding = 4
 type = internal/fs
 mount-0 = /
 mount-1 = /media/nfs
-label-mounted = %{F#928374}%mountpoint%%{F-} %used% / %total%
+label-mounted = %{F#c4a7e7}%mountpoint%%{F-} %used% / %total%
 label-mounted-background = ${colors.primary}
 format-padding = 0
 label-mounted-padding = 2
@@ -109,19 +109,19 @@ format = <label-state> <label-mode>
 wrapping-scroll = false
 strip-wsnumbers = true
 inline-mode = true
-ws-icon-0 = 1:;%{F#ebdbb2}
-ws-icon-1 = 2:;%{F#d3869b}
-ws-icon-2 = 3:;%{F#fabd2f}
-ws-icon-3 = 4:;%{F#8ec07c}"
-ws-icon-4 = 5:;%{F#b8bb26}
-ws-icon-5 = 6:;%{F#d19a66}
-ws-icon-6 = 7:;%{F#d19a66}
-ws-icon-7 = 8:;%{F#fe8019}
-ws-icon-8 = 9:;%{F#fb4934}
-ws-icon-9 = 10:;%{F#d19a66}
-ws-icon-10 = 11:;%{F#458588}
-ws-icon-11 = 12:;%{F#b16286}
-ws-icon-12 = 13:;%{F#d19a66}
+ws-icon-0 = 1:;%{F#ebdbb2}www
+ws-icon-1 = 2:;%{F#d3869b}irc
+ws-icon-2 = 3:;%{F#fabd2f}term
+ws-icon-3 = 4:;%{F#8ec07c}steam
+ws-icon-4 = 5:;%{F#b8bb26}music
+ws-icon-5 = 6:;%{F#d19a66}random
+ws-icon-6 = 7:;%{F#d19a66}random
+ws-icon-7 = 8:;%{F#fe8019}torrent
+ws-icon-8 = 9:;%{F#fb4934}work
+ws-icon-9 = 10:;%{F#d19a66}gimp
+ws-icon-10 = 11:;%{F#458588}vcs
+ws-icon-11 = 12:;%{F#b16286}code
+ws-icon-12 = 13:;%{F#d19a66}video
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
@@ -179,7 +179,7 @@ interval = 10
 date = " %d.%m.%Y"
 
 time = %H:%M
-time-alt = %H:%M:%S
+;time-alt = %H:%M:%S
 
 format-prefix = "DATE"
 format-prefix-foreground = ${colors.foreground-alt}

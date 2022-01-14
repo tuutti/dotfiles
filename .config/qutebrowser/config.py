@@ -54,23 +54,34 @@ config.set('content.webgl', False)
 
 # Colors
 #c.colors.webpage.darkmode.enabled = True
-c.colors.completion.fg = '#ebdbb2'
-c.colors.completion.odd.bg = '#282828'
-c.colors.completion.category.fg = '#ebdbb2'
-c.colors.completion.category.bg = '#504945'
+fg_default = '#e0def5'
+bg_default = '#191724'
+hilight_bg = '#6e6a86'
+selected_item = '#9ccfd8'
+completion_text = '#eb6f92'
+
+c.colors.completion.item.selected.match.fg = completion_text
+c.colors.completion.match.fg = completion_text
+c.colors.completion.fg = fg_default
+c.colors.completion.odd.bg = bg_default
+c.colors.completion.even.bg = bg_default
+c.colors.completion.category.fg = fg_default
+c.colors.completion.category.bg = hilight_bg
 c.colors.completion.category.border.top = 'transparent'
-c.colors.completion.item.selected.border.top = '#e8c000'
-c.colors.tabs.odd.fg = '#ebdbb2'
-c.colors.tabs.odd.bg = '#282828'
-c.colors.tabs.even.fg = '#ebdbb2'
-c.colors.tabs.even.bg = '#282828'
-c.colors.tabs.selected.odd.fg = '#ebdbb2'
-c.colors.tabs.selected.odd.bg = '#504945'
-c.colors.tabs.selected.even.fg = '#ebdbb2'
-c.colors.tabs.selected.even.bg = '#504945'
-c.colors.statusbar.normal.bg = '#282828'
-c.colors.statusbar.command.fg = '#ebdbb2'
-c.colors.statusbar.command.bg = '#282828'
+c.colors.completion.item.selected.bg = selected_item
+c.colors.completion.item.selected.border.top = selected_item
+c.colors.completion.item.selected.border.bottom = selected_item
+c.colors.tabs.odd.fg = fg_default
+c.colors.tabs.odd.bg = bg_default
+c.colors.tabs.even.fg = fg_default
+c.colors.tabs.even.bg = bg_default
+c.colors.tabs.selected.odd.fg = fg_default
+c.colors.tabs.selected.odd.bg = hilight_bg
+c.colors.tabs.selected.even.fg = fg_default
+c.colors.tabs.selected.even.bg = hilight_bg
+c.colors.statusbar.normal.bg = bg_default
+c.colors.statusbar.command.fg = fg_default
+c.colors.statusbar.command.bg = bg_default
 
 # Fonts
 c.fonts.messages.info = '10pt monospace'
