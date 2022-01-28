@@ -1,19 +1,11 @@
-#import sys, os
-#sys.path.append(os.path.join(sys.path[0], 'jblock'))
-#config.source("jblock/jblock/integrations/qutebrowser.py")
-
-## Block YouTube Advertisements
-
-from qutebrowser.api import interceptor
-
 config.load_autoconfig()
 
 config.set('content.blocking.method', 'adblock')
 # Bindings
 config.bind('t', 'set-cmd-text -s :open -t')
 config.bind('O', 'set-cmd-text :open {url}')
-config.bind('J', 'tab-focus')
-config.bind('gt', 'tab-focus')
+config.bind('J', 'tab-next')
+config.bind('gt', 'tab-next')
 config.bind('<Ctrl+l>', 'tab-next')
 config.bind('<Ctrl+h>', 'tab-prev')
 config.bind('gT', 'tab-prev')
@@ -24,8 +16,8 @@ config.bind('<ctrl-->', 'zoom-out')
 config.bind('<ctrl-+>', 'zoom-in')
 config.bind('Gh', 'back -t')
 config.bind('Gl', 'forward -t')
-#config.bind('s', 'set content.user_stylesheets ~/.local/share/qutebrowser/userstyle.css ;; reload')
-#config.bind('S', 'set content.user_stylesheets "" ;; reload')
+
+c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt', 'https://easylist-downloads.adblockplus.org/easylistdutch.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://secure.fanboy.co.nz/fanboy-cookiemonster.txt']
 
 def makePadding(top, bottom, left, right):
     return { 'top': top, 'bottom': bottom, 'left': left , 'right': right }
