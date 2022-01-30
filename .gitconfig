@@ -1,6 +1,6 @@
 [user]
   email = tuutti@iki.fi
-  name = "Lari Rauno"
+	name = tuutti
   signingkey = 257BF1B6FEDCAE12
 
 [github]
@@ -13,17 +13,15 @@
 [push]
   default = simple
 
-[merge]
-  tool = diffconflicts
-
-[mergetool "diffconflicts"]
-  cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
-  trustExitCode = true
-  keepBackup = false
-
 [color]
   diff = auto
   status = auto
   branch = auto
 [commit]
 	gpgsign = true
+[pull]
+	rebase = false
+[credential]
+	helper = cache
+[init]
+	defaultBranch = main
