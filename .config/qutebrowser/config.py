@@ -40,6 +40,7 @@ config.set('url.searchengines', {
     "DEFAULT": "https://google.com/search?hl=en&q={}",
     "imdb": "http://www.imdb.com/find?q={}",
     "sk": "http://www.sanakirja.org/search.php?q={}",
+    "gr": "https://www.goodreads.com/search?q={}",
     "trans": "https://translate.google.com/#auto/en/{}"
 })
 config.set('content.webgl', False)
