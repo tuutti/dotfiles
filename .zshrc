@@ -42,7 +42,8 @@ ZSH_THEME="tuutti"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git history-substring-search tmux pass)
 
-export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/3.0.0/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin
+export GEM_HOME="$HOME/.gems"
+export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/3.0.0/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$HOME/.gems/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
@@ -68,6 +69,7 @@ function dattach() {
   docker-compose exec --user drupal drupal bash -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; exec bash"
 }
 
+alias vim=nvim
 alias stonehenge='TRUST_STORES=system make -C /srv/http/stonehenge'
 alias grep='grep -n --color=auto'
 alias ssh='TERM=xterm ssh'

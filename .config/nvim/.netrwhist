@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/srv/http/gogolf-d7/ansible/roles/web/templates'
+let g:netrw_dirhist_2='/srv/http/attendo'
+let g:netrw_dirhist_3='/srv/http/gogolf-d7'
+let g:netrw_dirhist_4='/srv/http/reumaliitto/ansible'
+let g:netrw_dirhist_5='/srv/http/twitch-steam-trade'
+let g:netrw_dirhist_6='/srv/http/twitch-steam-trade/deploy'
