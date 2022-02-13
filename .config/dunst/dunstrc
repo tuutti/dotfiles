@@ -1,0 +1,39 @@
+[global]
+  monitor = 0
+  width = 300
+  origin = top-right
+  offset = 35x35
+  separator_color = "#1e2137aa"
+
+  # Sort messages by urgency.
+  sort = no
+
+  # Disable idle time
+  idle_threshold = 0
+
+  padding = 16
+  horizontal_padding = 16
+
+  # Disable frame (border)
+  frame_width = 0
+
+  font = "Fira Mono 12"
+
+[urgency_low]
+  background = "#1f1d2e"
+  highlight = "#fe6c5a"
+  frame_color = "#52426e"
+
+  foreground = "#e0def4"
+  timeout = 5
+
+[urgency_normal]
+  background = "#1f1d2e"
+  foreground = "#e0def4"
+  timeout = %
+
+[urgency_critical]
+  background = "#eb6f92"
+  foreground = "#e0def4"
+  timeout = 8
+  icon = abrt
