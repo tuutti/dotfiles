@@ -29,6 +29,8 @@ config.set('downloads.location.suggestion', 'both')
 config.set('tabs.background', True)
 config.set('tabs.indicator.width', 0)
 config.set('tabs.padding', makePadding(2, 2, 5, 5))
+#config.set('tabs.position', 'left');
+#config.set('tabs.width', 270);
 # Statusbar
 config.set('statusbar.padding', makePadding(0, 2, 2, 0))
 # Completion
@@ -52,7 +54,22 @@ bg_default = '#191724'
 hilight_bg = '#2E2B46'
 selected_item = '#9ccfd8'
 completion_text = '#eb6f92'
+error_color = '#eb6f92'
 
+# Messages
+c.colors.messages.error.bg = error_color
+c.colors.messages.error.fg = bg_default
+c.colors.messages.info.bg = hilight_bg
+c.colors.messages.info.fg = fg_default
+
+# Downloads
+c.colors.downloads.bar.bg = bg_default
+c.colors.downloads.start.fg = fg_default
+c.colors.downloads.stop.bg = selected_item
+c.colors.downloads.stop.fg = bg_default
+c.colors.downloads.start.bg = hilight_bg
+
+# Completion
 c.colors.completion.item.selected.match.fg = completion_text
 c.colors.completion.match.fg = completion_text
 c.colors.completion.fg = fg_default
@@ -64,6 +81,8 @@ c.colors.completion.category.border.top = 'transparent'
 c.colors.completion.item.selected.bg = selected_item
 c.colors.completion.item.selected.border.top = selected_item
 c.colors.completion.item.selected.border.bottom = selected_item
+# Tabs
+c.colors.tabs.bar.bg = bg_default
 c.colors.tabs.odd.fg = fg_default
 c.colors.tabs.odd.bg = bg_default
 c.colors.tabs.even.fg = fg_default
@@ -72,6 +91,7 @@ c.colors.tabs.selected.odd.fg = fg_default
 c.colors.tabs.selected.odd.bg = hilight_bg
 c.colors.tabs.selected.even.fg = fg_default
 c.colors.tabs.selected.even.bg = hilight_bg
+# Status
 c.colors.statusbar.normal.bg = bg_default
 c.colors.statusbar.command.fg = fg_default
 c.colors.statusbar.command.bg = bg_default
