@@ -49,7 +49,7 @@ config.set('content.webgl', False)
 #c.colors.webpage.darkmode.enabled = True
 fg_default = '#e0def5'
 bg_default = '#191724'
-hilight_bg = '#6e6a86'
+hilight_bg = '#2E2B46'
 selected_item = '#9ccfd8'
 completion_text = '#eb6f92'
 

@@ -10,7 +10,7 @@
 [colors]
 background = #1f1d2e
 background-alt = #191724
-background-light = #6e6a86
+background-light = #2E2B46
 foreground = #e0def4
 foreground-alt = #c4a7e7
 primary = #1f1d2e
@@ -116,7 +116,7 @@ ws-icon-3 = 4:;%{F#8ec07c}steam
 ws-icon-4 = 5:;%{F#b8bb26}music
 ws-icon-5 = 6:;%{F#d19a66}random
 ws-icon-6 = 7:;%{F#d19a66}random
-ws-icon-7 = 8:;%{F#fe8019}torrent
+ws-icon-7 = 8:;%{F#fe8019}teams
 ws-icon-8 = 9:;%{F#fb4934}work
 ws-icon-9 = 10:;%{F#d19a66}gimp
 ws-icon-10 = 11:;%{F#458588}vcs
