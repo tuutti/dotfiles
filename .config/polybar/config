@@ -49,6 +49,7 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = "Fira Mono:pixelsize=10:weight=medium;2"
+font-1 = "FontAwesome:pixelsize=6:antialias=false;2"
 
 modules-left = i3
 modules-center = xwindow
@@ -107,19 +108,19 @@ format = <label-state> <label-mode>
 wrapping-scroll = false
 strip-wsnumbers = true
 inline-mode = true
-ws-icon-0 = 1:;%{F#6e6a86}I
-ws-icon-1 = 2:;%{F#6e6a86}II
-ws-icon-2 = 3:;%{F#6e6a86}III
-ws-icon-3 = 4:;%{F#6e6a86}IV
-ws-icon-4 = 5:;%{F#6e6a86}V
-ws-icon-5 = 6:;%{F#6e6a86}VI
-ws-icon-6 = 7:;%{F#6e6a86}VII
-ws-icon-7 = 8:;%{F#6e6a86}VIII
-ws-icon-8 = 9:;%{F#6e6a86}IX
-ws-icon-9 = 10:;%{F#6e6a86}X
-ws-icon-10 = 11:;%{F#6e6a86}XI
-ws-icon-11 = 12:;%{F#6e6a86}XII
-ws-icon-12 = 13:;%{F#6e6a86}XIII
+ws-icon-0 = 1:;%{F#6e6a86}
+ws-icon-1 = 2:;%{F#e0def4}
+ws-icon-2 = 3:;%{F#eb6f92}
+ws-icon-3 = 4:;%{F#f6c177}
+ws-icon-4 = 5:;%{F#31748f}
+ws-icon-5 = 6:;%{F#9ccfd8}
+ws-icon-6 = 7:;%{F#c4a7e7}
+ws-icon-7 = 8:;%{F#9ccfd8}
+ws-icon-8 = 9:;%{F#c4a7e7}
+ws-icon-9 = 10:;%{F#eb6f92}
+ws-icon-10 = 11:;%{F#f6c177}
+ws-icon-11 = 12:;%{F#ea9a97}
+ws-icon-12 = 13:;%{F#3e8fb0}
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
@@ -128,29 +129,29 @@ pin-workspaces = true
 format-padding = 0
 label-focused-background = ${colors.background-light}
 label-focused-foreground = ${colors.secondary}
-label-focused-padding = 3
-label-focused-padding-right = 2
-label-focused-margin-right = 1
+label-focused-padding = 2
+label-focused-padding-right = 1
+label-focused-margin-right = 0
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused-padding = 3
-label-unfocused-padding-right = 2
-label-unfocused-margin-right = 1
+label-unfocused-padding = 2
+label-unfocused-padding-right = 1
+label-unfocused-margin-right = 0
 label-unfocused-foreground = ${colors.foreground-alt}
 label-unfocused-background = ${colors.primary}
 
 ; visible = Active workspace on unfocused monitor
 label-visible-background = transparent
-label-visible-padding = 3
-label-visible-padding-right = 2
-label-visible-margin-right = 1
+label-visible-padding = 2
+label-visible-padding-right = 1
+label-visible-margin-right = 0
 label-visible-foreground = ${colors.foreground-alt}
 
 ; urgent = Workspace with urgency hint set
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 3
-label-urgent-padding-right = 2
-label-urgent-margin-right = 1
+label-urgent-padding = 2
+label-urgent-padding-right = 1
+label-urgent-margin-right = 0
 
 [module/spotify]
 type = custom/script
