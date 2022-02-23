@@ -50,7 +50,7 @@ bindsym $mod+Mod1+j exec sink-volume -v="-3%" -n="spotify"
 bindsym $mod+Mod1+Escape exec ~/scripts/lock.sh
 
 # Screenshot
-bindsym --release Print exec scrot -s -d 1
+bindsym --release Print exec flameshot gui
 bindsym --release $mod+Print exec scrot -s -d 3
 bindsym --release $mod+shift+Print exec scrot -u
 
