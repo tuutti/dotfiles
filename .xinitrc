@@ -10,7 +10,6 @@ setxkbmap -option caps:none
 export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH
 export XDG_CONFIG_HOME="/home/tuutti/.config"
 export EDITOR=nvim
-export BROWSER=qutebrowser
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
 setxkbmap -layout fi
@@ -20,6 +19,8 @@ xrdb ~/.Xresources
 xset -dpms; xset s off
 
 #compton --config ~/.compton.conf -b --xrender-sync --xrender-sync-fence &
+
+exec ~/scripts/gh-notifications.sh &
 
 # Laptop specific configs.
 if [ "$(hostname)" = "pad" ]; then
