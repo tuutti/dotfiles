@@ -208,6 +208,7 @@ for_window[class="sxiv"] border normal;
 # Requires i3-gaps (https://aur.archlinux.org/packages/i3-gaps-git/)
 gaps inner 6
 gaps outer 0
+smart_borders on
 
 #                         | border | backgrond | text | indigator
 client.focused            $color2   $color2    $text   $color2
