@@ -49,11 +49,20 @@ config.set('content.webgl', False)
 
 # Colors
 #c.colors.webpage.darkmode.enabled = True
-fg_default = '#e0def5'
-bg_default = '#191724'
-hilight_bg = '#2E2B46'
-selected_item = '#9ccfd8'
-completion_text = '#eb6f92'
+# Dark
+#fg_default = '#e0def5'
+#bg_default = '#191724'
+#hilight_bg = '#2E2B46'
+#selected_item = '#9ccfd8'
+#completion_text = '#eb6f92'
+#error_color = '#eb6f92'
+
+# Light
+fg_default = '#575279'
+bg_default = '#faf4ed'
+hilight_bg = '#f2e9de'
+selected_item = '#f2e9de'
+completion_text = '#b4637a'
 error_color = '#eb6f92'
 
 # Messages
@@ -81,6 +90,7 @@ c.colors.completion.category.border.top = 'transparent'
 c.colors.completion.item.selected.bg = selected_item
 c.colors.completion.item.selected.border.top = selected_item
 c.colors.completion.item.selected.border.bottom = selected_item
+c.colors.completion.category.border.bottom = 'transparent'
 # Tabs
 c.colors.tabs.bar.bg = bg_default
 c.colors.tabs.odd.fg = fg_default
@@ -93,8 +103,14 @@ c.colors.tabs.selected.even.fg = fg_default
 c.colors.tabs.selected.even.bg = hilight_bg
 # Status
 c.colors.statusbar.normal.bg = bg_default
+c.colors.statusbar.normal.fg = fg_default
 c.colors.statusbar.command.fg = fg_default
 c.colors.statusbar.command.bg = bg_default
+c.colors.statusbar.url.success.https.fg = '#56949f'
+c.colors.statusbar.url.success.http.fg = completion_text
+c.colors.statusbar.url.fg = fg_default
+c.colors.statusbar.insert.bg = '#56949f'
+c.colors.statusbar.url.hover.fg = '#56949f'
 
 # Fonts
 c.fonts.messages.info = '10pt monospace'

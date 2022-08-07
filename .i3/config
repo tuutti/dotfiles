@@ -4,11 +4,11 @@
 set $mod Mod4
 set $term alacritty
 
-set $text #e0def5
+set $text #e0def4
 set $text_invert #282828
-set $color1 #ebbcba
-set $color2 #2E2B46
-set $color3 #1f1d2e
+set $color1 #908caa
+set $color2 #f2e9de
+set $color3 #faf4ed
 
 # font7 for window titles. ISO 10646 = Unicode
 font xft:Ubuntu Mono Bold 9

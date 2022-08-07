@@ -94,7 +94,8 @@ render_timer: false
 custom_cursor_colors: false
 
 import:
-  - '~/.config/alacritty/rose-pine.yml'
+  #- '~/.config/alacritty/rose-pine.yml'
+  - '~/.config/alacritty/rose-pine-dawn.yml'
 # Colors (Gruvbox dark)
 #colors:
 #  # Default colors
