@@ -27,6 +27,7 @@ bindsym $mod+d exec $term -e ranger
 # Dmenu
 # (resolution/2)-(dmenu-width/2) = center
 bindsym $mod+space exec rofi -show drun -theme theme
+bindsym $mod+m exec rofi -show snip -modi snip:~/scripts/snip -theme theme
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
