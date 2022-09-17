@@ -1,2 +1,2 @@
-xdebug: XDEBUG_SESSION_START=1 PHP_IDE_CONFIG=1
+xdebug: XDEBUG_SESSION_START=1 PHP_IDE_CONFIG=serverName=app
 phpunit: vendor/bin/phpunit -c /app/phpunit.xml.dist
