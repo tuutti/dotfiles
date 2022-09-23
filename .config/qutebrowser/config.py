@@ -45,7 +45,7 @@ config.set('url.searchengines', {
     "gr": "https://www.goodreads.com/search?q={}",
     "trans": "https://translate.google.com/#auto/en/{}"
 })
-config.set('content.webgl', False)
+#config.set('content.webgl', False)
 
 # Colors
 #c.colors.webpage.darkmode.enabled = True
