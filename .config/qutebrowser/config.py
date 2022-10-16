@@ -75,7 +75,7 @@ c.colors.messages.info.fg = fg_default
 c.colors.downloads.bar.bg = bg_default
 c.colors.downloads.start.fg = fg_default
 c.colors.downloads.stop.bg = selected_item
-c.colors.downloads.stop.fg = bg_default
+c.colors.downloads.stop.fg = fg_default
 c.colors.downloads.start.bg = hilight_bg
 
 # Completion
