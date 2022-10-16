@@ -8,13 +8,13 @@
 ;=====================================================
 
 [colors]
-background = #1f1d2e
+background = #faf4ed
 background-alt = #191724
-background-light = #2E2B46
-foreground = #e0def4
+background-light = #f2e9de
+foreground = #575279
 foreground-alt = #6e6a86
-primary = #1f1d2e
-secondary = #fbf1c7
+primary = #faf4ed
+secondary = #575279
 alert = #eb6f92
 
 [bar/primary]
