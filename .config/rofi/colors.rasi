@@ -1,10 +1,30 @@
+/**
+ * Rose pine dawn
+ */
+
+/**
 * {
-	background:			#1F1D2E;
-	sbackground:		#2E2B46;
-	foreground:			#e0def4;
-	selected:			  #31748f;
+	background:			#faf4ed;
+	sbackground:		#dfdad9;
+	foreground:			#575279;
+	selected:			  #dfdad9;
 	urgent:				  #eb6f92;
 	on:					    #9ccfd8;
 	yellow:         #9ccfd8;
 	off:				    #eb6f92;
+}*/
+
+/**
+ * Rose pine
+ */
+
+* {
+  background:			#1F1D2E;
+  sbackground:		#2E2B46;
+  foreground:			#e0def4;
+  selected:			  #31748f;
+  urgent:				  #eb6f92;
+  on:					    #9ccfd8;
+  yellow:         #9ccfd8;
+  off:				    #eb6f92;
 }

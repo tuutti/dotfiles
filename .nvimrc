@@ -16,7 +16,8 @@ syntax on
 set cursorline
 set ttyfast
 set autochdir
-set background=light
+"set background=light
+set mouse=
 
 " File type mapping
 au BufNewFile,BufRead /*.rasi setf css

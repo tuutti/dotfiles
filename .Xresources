@@ -1,2 +1,5 @@
 Xcursor.theme: Adwaita
 Xcursor.size:  16       !  32, 48 or 64 may also be good values
+
+Sxiv.background: #1f1d2e
+Sxiv.foreground: #e0def4

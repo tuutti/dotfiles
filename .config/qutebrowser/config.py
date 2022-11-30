@@ -49,20 +49,20 @@ config.set('url.searchengines', {
 # Colors
 #c.colors.webpage.darkmode.enabled = True
 # Dark
-#fg_default = '#e0def5'
-#bg_default = '#191724'
-#hilight_bg = '#2E2B46'
-#selected_item = '#9ccfd8'
-#completion_text = '#eb6f92'
-#error_color = '#eb6f92'
+fg_default = '#e0def5'
+bg_default = '#191724'
+hilight_bg = '#2E2B46'
+selected_item = '#9ccfd8'
+completion_text = '#eb6f92'
+error_color = '#eb6f92'
 
 # Light
-fg_default = '#575279'
-bg_default = '#faf4ed'
-hilight_bg = '#f2e9de'
-selected_item = '#f2e9de'
-completion_text = '#b4637a'
-error_color = '#eb6f92'
+#fg_default = '#575279'
+#bg_default = '#faf4ed'
+#hilight_bg = '#f2e9de'
+#selected_item = '#f2e9de'
+#completion_text = '#b4637a'
+#error_color = '#eb6f92'
 
 # Messages
 c.colors.messages.error.bg = error_color
