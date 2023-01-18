@@ -40,6 +40,7 @@ config.set('content.pdfjs', True)
 # Url
 config.set('url.searchengines', {
     "DEFAULT": "https://google.com/search?hl=en&q={}",
+    "you": "https://you.com/search?q={}",
     "imdb": "http://www.imdb.com/find?s=tt&q={}",
     "gr": "https://www.goodreads.com/search?q={}",
     "trans": "https://translate.google.com/#auto/en/{}"
