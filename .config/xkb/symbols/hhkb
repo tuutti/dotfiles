@@ -26,7 +26,7 @@ xkb_symbols "fi-complete" {
   # Disable non-breaking space.
   key <SPCE> { [ space, space, space ] };
 
-  # Map brackets to altgr+q/w
+  # Map brackets to altgr+o/p
   key <AD09> { [ o, O, braceleft ] };
   key <AD10> { [ p, P, braceright ] };
 };
