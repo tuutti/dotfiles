@@ -2,8 +2,8 @@ config.load_autoconfig()
 
 config.set('content.blocking.method', 'adblock')
 # Bindings
-config.bind('t', 'set-cmd-text -s :open -t')
-config.bind('O', 'set-cmd-text :open {url}')
+config.bind('t', 'cmd-set-text -s :open -t')
+config.bind('O', 'cmd-set-text :open {url}')
 config.bind('J', 'tab-next')
 config.bind('gt', 'tab-next')
 config.bind('<Ctrl+l>', 'tab-next')
@@ -17,7 +17,10 @@ config.bind('<ctrl-+>', 'zoom-in')
 config.bind('Gh', 'back -t')
 config.bind('Gl', 'forward -t')
 
-c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt', 'https://easylist-downloads.adblockplus.org/easylistdutch.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://secure.fanboy.co.nz/fanboy-cookiemonster.txt']
+c.content.blocking.adblock.lists = [
+    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2023.txt',
+    'https://easylist.to/easylist/easylist.txt',
+]
 
 def makePadding(top, bottom, left, right):
     return { 'top': top, 'bottom': bottom, 'left': left , 'right': right }
@@ -40,7 +43,6 @@ config.set('content.pdfjs', True)
 # Url
 config.set('url.searchengines', {
     "DEFAULT": "https://google.com/search?hl=en&q={}",
-    "you": "https://you.com/search?q={}",
     "imdb": "http://www.imdb.com/find?s=tt&q={}",
     "gr": "https://www.goodreads.com/search?q={}",
     "trans": "https://translate.google.com/#auto/en/{}"
