@@ -5,6 +5,7 @@ plugins=(git history-substring-search tmux pass)
 export GEM_HOME="$HOME/.gems"
 export PATH=/home/tuutti/bin:/home/tuutti/scripts:$PATH:/home/tuutti/.gem/ruby/3.0.0/bin:$HOME/.composer/vendor/bin:$HOME/.cargo/bin:$HOME/.gems/bin:$PATH
 
+export DISABLE_AUTO_UPDATE=true
 source $ZSH/oh-my-zsh.sh
 
 function unixt() {
