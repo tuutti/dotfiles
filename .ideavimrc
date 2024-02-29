@@ -21,6 +21,12 @@ inoremap <C-s> <esc>:%s/\s\+$//<CR>
 nnoremap <C-w>L :action com.mnw.tabmover.actions.MoveTabToNextSplitter<cr>
 nnoremap <C-w>H :action com.mnw.tabmover.actions.MoveTabToPreviousSplitter<cr>
 
+nnoremap <leader>q :action QuickJavaDoc<CR>
+nnoremap <leader>i :action ShowHoverInfo<CR>
+
+" fix mistype :W
+command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>w<bang> <args>
+
 set relativenumber
 set number
 set showmode
