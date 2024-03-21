@@ -1,2 +1,6 @@
-xdebug: XDEBUG_SESSION_START=1 PHP_IDE_CONFIG=serverName=app
+xdebug: XDEBUG_SESSION_START=1
 phpunit: vendor/bin/phpunit -c /app/phpunit.xml.dist
+drupal-phpcs: vendor/bin/phpcs --standard=Drupal,DrupalPractice --extensions=php,module,install
+phpstan: vendor/bin/phpstan analyze -c
+drupal-schema-version: drush ev "\Drupal::service('update.update_hook_registry')->setInstalledVersion('helfi_tpr', 8047);"
+
