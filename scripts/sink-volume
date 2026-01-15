@@ -20,7 +20,7 @@ def find_sink(binary_name):
 
 def create_arg_parser():
     parser = argparse.ArgumentParser(description='Set sink volume for given binary.')
-    parser.add_argument( '-v', '--volume', required=True, type=str, help='Relative / absolute volume, like +-5% or 50%')
+    parser.add_argument( '-v', '--volume', required=True, type=str, help='Relative / absolute volume')
     parser.add_argument( '-n', '--name', required=True, type=str, help='Binary name')
     return vars(parser.parse_args());
 
