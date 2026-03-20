@@ -1,19 +1,16 @@
-vim.cmd [[packadd packer.nvim]]
-
-return require('packer').startup(function(use)
-  use {
-    'Raimondi/delimitMate'
-  }
-
-  use {
-    'mattn/vim-gist', requires = { 'mattn/webapi-vim' }
-  }
-
-  use {
+return {
+  "Raimondi/delimitMate",
+  { "mattn/vim-gist", dependencies = { 'mattn/webapi-vim' } },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    config = function()
+      vim.cmd("colorscheme rose-pine")
+    end
+  },
+  {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    -- Fix mismatch palette between variants
-    event = 'ColorScheme',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
       require('lualine').setup({
         options = {
@@ -23,13 +20,4 @@ return require('packer').startup(function(use)
       })
     end
   }
-
-  use {
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    tag = 'v0.*',
-    config = function()
-      vim.cmd('colorscheme rose-pine')
-    end
-  }
-end)
+}

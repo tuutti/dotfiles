@@ -13,7 +13,7 @@ set $color5 #586c7c
 set $color6 #3c4852
 set $color7 #fb4934
 
-set $background /home/tuutti/Downloads/Pictures/w/wallhaven-g7v1qq.jpg fill
+set $background /home/tuutti/Downloads/Pictures/w/wallhaven-g7v1qq.jpg fill #FFFFFF
 
 # font7 for window titles. ISO 10646 = Unicode
 font xft:Ubuntu Mono Bold 9
@@ -32,6 +32,7 @@ bindsym $mod+d exec alacritty -e ranger
 # Dmenu
 # (resolution/2)-(dmenu-width/2) = center
 bindsym $mod+space exec rofi -show drun -theme theme
+bindsym $mod+m exec rofi -show snip -modi snip:~/scripts/snip -theme theme
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -55,8 +56,8 @@ bindsym $mod+Mod1+j exec sink-volume -v="-3%" -n="spotify"
 bindsym $mod+Mod1+Escape exec ~/scripts/lock.sh
 
 # Screenshot
-#bindsym --release Print exec scrot -s -d 1
-bindsym --release Print exec flameshot gui
+bindsym --release Print exec grimshot copy area
+#bindsym --release Print exec flameshot gui
 bindsym --release $mod+Print exec scrot -s -d 3
 bindsym --release $mod+shift+Print exec scrot -u
 
@@ -234,3 +235,5 @@ exec dunst
 exec flameshot
 bar swaybar_command waybar
 exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
+
+include /etc/sway/config.d/*
