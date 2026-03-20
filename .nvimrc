@@ -1,5 +1,3 @@
-lua require('plugins')
-
 set relativenumber
 set showmatch
 set ignorecase
@@ -12,6 +10,9 @@ set autoindent
 set number
 filetype plugin indent on
 filetype plugin on
+
+autocmd FileType make setlocal noexpandtab
+
 syntax on
 set cursorline
 set ttyfast
@@ -43,11 +44,6 @@ function! Copy()
   %w !xclip -i -sel c
 endfunc
 
-augroup packer_user_config
-  autocmd!
-  autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-augroup end
-
 " Undo history between sessions
 set undodir=~/.nvim/undodir
 set undofile
@@ -76,4 +72,6 @@ autocmd FileAppendPre   * :call TrimWhiteSpace()
 autocmd FilterWritePre  * :call TrimWhiteSpace()
 autocmd BufWritePre     * :call TrimWhiteSpace()
 
-autocmd VimEnter * PackerCompile
+if has('nvim')
+  lua require("config.lazy")
+endif
