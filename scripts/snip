@@ -29,8 +29,5 @@ else
   then
       exit 0
   fi
-  if [ ${MYSNIPPETS[$snippet]+_} ]
-  then
-    wl-copy ${MYSNIPPETS[$snippet]}
-  fi
+  wl-copy "${MYSNIPPETS[$snippet]}"
 fi
