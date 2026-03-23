@@ -13,7 +13,8 @@ set $color5 #586c7c
 set $color6 #3c4852
 set $color7 #fb4934
 
-set $background /home/tuutti/Downloads/Pictures/w/wallhaven-g7v1qq.jpg fill #FFFFFF
+#set $background /home/tuutti/Downloads/Pictures/w/wallhaven-g7v1qq.jpg fill #FFFFFF
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 # font7 for window titles. ISO 10646 = Unicode
 font xft:Ubuntu Mono Bold 9

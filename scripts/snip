@@ -31,12 +31,6 @@ else
   fi
   if [ ${MYSNIPPETS[$snippet]+_} ]
   then
-    if [[ $snippet = cmd* ]]
-    then
-      x=`eval ${MYSNIPPETS[$snippet]}`
-      coproc (echo -n "$x" | xdotool type --clearmodifiers --file -)
-    else
-      coproc (echo -n ${MYSNIPPETS[$snippet]} | xdotool type --clearmodifiers --file -)
-    fi
+    wl-copy ${MYSNIPPETS[$snippet]}
   fi
 fi
