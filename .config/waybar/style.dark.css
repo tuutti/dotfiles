@@ -1,13 +1,13 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: 'Fira Mono';
-    font-size: 13px;
+    font-family: 'Ubuntu Mono';
+    font-size: 14px;
 }
 
 window#waybar {
-    background-color: #faf4ed;
+    background-color: #191724;
     border-bottom: 3px solid transparent;
-    color: #575279;
+    color: #e0def4;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -34,7 +34,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-    background-color: #f2e9e1;
+    background-color: #1f1d2e;
 }
 
 #workspaces button.urgent {
@@ -61,7 +61,7 @@ window#waybar.hidden {
 #idle_inhibitor,
 #mpd {
     padding: 0 10px;
-    color: #575279;
+    color: #e0def4;
 }
 
 #window,
