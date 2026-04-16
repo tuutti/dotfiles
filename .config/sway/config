@@ -3,18 +3,25 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 set $mod Mod4
 
-set $text #ebdbb4
+# Dark mode
+#set $text #ebdbb4
+#set $text_invert #282828
+#set $color1 #504945
+#set $color2 #484850
+#set $color3 #282828
+# Light mode
+set $text #e0def4
 set $text_invert #282828
-set $color1 #504945
-set $color2 #484850
-set $color3 #282828
-set $color4 #2a3035
-set $color5 #586c7c
-set $color6 #3c4852
-set $color7 #fb4934
+set $color1 #908caa
+set $color2 #f2e9de
+set $color3 #faf4ed
 
-#set $background /home/tuutti/Downloads/Pictures/w/wallhaven-g7v1qq.jpg fill #FFFFFF
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+input * {
+    xkb_layout fi
+    xkb_file ~/.config/xkb/hhkb.xkb
+}
+
+output * bg /home/tuutti/dotfiles/resources/2.jpg fill
 
 # font7 for window titles. ISO 10646 = Unicode
 font xft:Ubuntu Mono Bold 9
@@ -209,11 +216,6 @@ bindsym $mod+r mode "resize"
 
 assign [class="Steam"] $ws4
 
-input * {
-    xkb_layout fi
-    xkb_file ~/.config/xkb/hhkb.xkb
-}
-
 default_orientation auto
 default_border pixel 2
 #for_window[class="sxiv"] border normal;
@@ -234,7 +236,9 @@ focus_follows_mouse no
 
 exec dunst
 exec flameshot
+exec kanshi
+exec_always kanshictl reload
 bar swaybar_command waybar
-exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
+#exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
 
 include /etc/sway/config.d/*

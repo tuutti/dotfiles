@@ -498,7 +498,7 @@ mods = "Super"
 
 [general]
 live_config_reload = true
-import = ["/home/tuutti/.config/alacritty/rose-pine.toml"]
+import = ["/home/tuutti/.config/alacritty/rose-pine-dawn.toml"]
 
 [[mouse.bindings]]
 action = "PasteSelection"
@@ -551,3 +551,8 @@ y = 10
 draw_bold_text_with_bright_colors = true
 
 [keyboard]
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
