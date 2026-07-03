@@ -41,7 +41,7 @@ nnoremap <silent> g* g*zz
 nnoremap <silent> g# g#zz
 
 function! Copy()
-  %w !xclip -i -sel c
+  %w !wl-copy
 endfunc
 
 " Undo history between sessions

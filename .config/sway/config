@@ -21,6 +21,11 @@ input * {
     xkb_file ~/.config/xkb/hhkb.xkb
 }
 
+input "type:pointer" {
+  pointer_accel -0.3
+  accel_profile flat
+}
+
 output * bg /home/tuutti/dotfiles/resources/2.jpg fill
 
 # font7 for window titles. ISO 10646 = Unicode
@@ -231,6 +236,9 @@ gaps outer 0
 client.focused            $color2   $color2    $text   $color2
 client.focused_inactive   $color3   $color3   $text   $color3
 client.unfocused          $color3   $color3   $text   $color3
+
+for_window [app_id="jetbrains-phpstorm"] border none
+for_window [class="jetbrains-phpstorm"] border none
 
 focus_follows_mouse no
 
