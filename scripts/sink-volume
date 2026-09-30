@@ -1,40 +1,35 @@
 #!/usr/bin/python
-from subprocess import Popen, PIPE, STDOUT
 import argparse
-import re
+import json
+import subprocess
+import sys
 
-def find_sink(binary_name):
-    p = Popen(['pactl', 'list', 'sink-inputs'], stdout=PIPE, stdin=PIPE, stderr=STDOUT)
-    out = p.communicate()[0].decode('utf-8')
+MATCH_KEYS = ('application.process.binary', 'application.name', 'node.name')
 
-    for item in out.split("\l\l"):
-        for sink in item.split('Sink Input #'):
-            id = re.search(r'(\d+)', sink)
-
-            if not id:
-                continue
-
-            if (sink.find('application.process.binary = "%s"' % (binary_name)) != -1):
-                yield id.group()
-    raise Exception('Sink not found')
-
-def create_arg_parser():
-    parser = argparse.ArgumentParser(description='Set sink volume for given binary.')
-    parser.add_argument( '-v', '--volume', required=True, type=str, help='Relative / absolute volume')
-    parser.add_argument( '-n', '--name', required=True, type=str, help='Binary name')
-    return vars(parser.parse_args());
+def find_sink_inputs(name):
+    out = subprocess.run(
+        ['pactl', '--format=json', 'list', 'sink-inputs'],
+        capture_output=True, text=True, check=True,
+    ).stdout
+    name = name.lower()
+    for sink in json.loads(out):
+        props = sink.get('properties', {})
+        if any(props.get(key, '').lower() == name for key in MATCH_KEYS):
+            yield str(sink['index'])
 
 def main():
-    arguments = create_arg_parser()
+    parser = argparse.ArgumentParser(description='Set sink volume for given binary.')
+    parser.add_argument('-v', '--volume', required=True, help='Relative / absolute volume')
+    parser.add_argument('-n', '--name', required=True, help='Binary name')
+    args = parser.parse_args()
 
-    try:
-        for id in find_sink(arguments['name']):
-            Popen(['pactl', 'set-sink-input-volume', id, arguments['volume']])
+    ids = list(find_sink_inputs(args.name))
+    if not ids:
+        print('Sink not found', file=sys.stderr)
+        sys.exit(1)
 
-    except Exception:
-        print('Sink not found')
+    for sink_id in ids:
+        subprocess.run(['pactl', 'set-sink-input-volume', sink_id, args.volume], check=True)
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
-
