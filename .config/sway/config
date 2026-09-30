@@ -87,6 +87,10 @@ bindsym $mod+section workspace prev_on_output
 bindsym $mod+Escape workspace prev_on_output
 bindsym $mod+Tab workspace next_on_output
 
+# Push-to-talk on a keyboard key
+bindsym --no-repeat Super_R exec ~/.local/bin/ts3ptt on
+bindsym --release   Super_R exec ~/.local/bin/ts3ptt off
+
 # Auto toggle between last used workspaces.
 workspace_auto_back_and_forth yes
 
@@ -246,6 +250,7 @@ exec dunst
 exec flameshot
 exec kanshi
 exec_always kanshictl reload
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 bar swaybar_command waybar
 #exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
 
