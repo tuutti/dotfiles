@@ -1,0 +1,15 @@
+#!/bin/bash
+# Usage: ts3ptt on | off
+# You can find the API key from Tools -> Options -> Addons -> ClientQuery -> Settings
+APIKEY=""
+
+case "$1" in
+  on)  val=0 ;;   # mic active
+  off) val=1 ;;   # mic deactivated
+  *) echo "usage: $0 on|off"; exit 1 ;;
+esac
+
+exec 3<>/dev/tcp/127.0.0.1/25639 || exit 1
+printf 'auth apikey=%s\nclientupdate client_input_deactivated=%s\nquit\n' "$APIKEY" "$val" >&3
+timeout 1 cat <&3 >/dev/null
+exec 3>&-
